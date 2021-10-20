@@ -61,3 +61,6 @@ Downloadable PDF files have been numbered in ascending order, starting from “0
 
 Forum has been removed from the website. An improved Forum is under construction.
 Meanwhile, please submit general inquiries to the OSP team by completing the [Google Form “OSP Feedback Form”](https://forms.gle/WXt8XbyV5FeAryGe7).
+
+Go to this link to the [older GitHub repository for 2020B and previous releases](https://github.com/nihospr01/OpenSpeechPlatform-2020B).
+URL: https://github.com/nihospr01/OpenSpeechPlatform-2020B
