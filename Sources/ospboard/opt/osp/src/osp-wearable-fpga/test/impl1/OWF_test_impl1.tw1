@@ -1,0 +1,302 @@
+
+Loading design for application trce from file OWF_test_impl1_map.ncd.
+Design name: OSP_Carrier_Basic
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: /usr/local/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Fri Jun 15 15:47:35 2018
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o OWF_test_impl1.tw1 -gui -msgset /data/School/Research/THE_Lab/FPGA/OWF_test/promote.xml OWF_test_impl1_map.ncd OWF_test_impl1.prf 
+Design file:     OWF_test_impl1_map.ncd
+Preference file: OWF_test_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   2.500 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+            866 items scored, 23 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 2.255ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/i2s_ws  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               7.191ns  (37.1% logic, 62.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      7.191ns physical path delay SLICE_111 to r_car_core/e_car_sequencer/SLICE_63 exceeds
+      5.086ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 2.255ns
+
+ Physical Path Details:
+
+      Data path SLICE_111 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409  SLICE_111.CLK to   SLICE_111.Q0 SLICE_111 (from hr_clk_0_0)
+ROUTE         1   e 1.030   SLICE_111.Q0 to *r/SLICE_74.B1 r_car_core/i2s_lr_st
+CTOF_DEL    ---     0.452 *r/SLICE_74.B1 to *r/SLICE_74.F1 r_car_core/e_car_sequencer/SLICE_74
+ROUTE         1   e 1.030 *r/SLICE_74.F1 to   SLICE_119.A1 r_car_core/e_car_sequencer/N_136
+CTOF_DEL    ---     0.452   SLICE_119.A1 to   SLICE_119.F1 SLICE_119
+ROUTE         1   e 0.401   SLICE_119.F1 to   SLICE_119.A0 r_car_core/e_car_sequencer/N_66
+CTOF_DEL    ---     0.452   SLICE_119.A0 to   SLICE_119.F0 SLICE_119
+ROUTE         1   e 1.030   SLICE_119.F0 to */SLICE_117.A1 r_car_core/e_car_sequencer/N_52
+CTOF_DEL    ---     0.452 */SLICE_117.A1 to */SLICE_117.F1 r_car_core/e_car_sequencer/SLICE_117
+ROUTE         1   e 1.030 */SLICE_117.F1 to *r/SLICE_63.A0 r_car_core/e_car_sequencer/N_57
+CTOF_DEL    ---     0.452 *r/SLICE_63.A0 to *r/SLICE_63.F0 r_car_core/e_car_sequencer/SLICE_63
+ROUTE         1   e 0.001 *r/SLICE_63.F0 to */SLICE_63.DI0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_0 (to hr_clk_0_0)
+                  --------
+                    7.191   (37.1% logic, 62.9% route), 6 logic levels.
+
+Warning: 136.221MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "codec_clk_c" 12.288000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "hr_clk_0_0" 196.608000   |             |             |
+MHz ;                                   |  196.608 MHz|  136.221 MHz|   6 *
+                                        |             |             |
+FREQUENCY NET "codec_clk_c" 12.288000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+l_car_core/e_car_sequencer/un1_i2s_spkr_|        |        |
+dat_u_0                                 |       1|       7|     30.43%
+                                        |        |        |
+r_car_core/e_car_sequencer/un1_i2s_spkr_|        |        |
+dat_u_0_0                               |       1|       7|     30.43%
+                                        |        |        |
+l_car_core/e_i2s_dio/N_25               |       3|       6|     26.09%
+                                        |        |        |
+l_car_core/e_i2s_dio/i2s_ws_0_sqmuxa_0_a|        |        |
+2_RNI56JC1                              |       2|       6|     26.09%
+                                        |        |        |
+l_car_core/e_i2s_dio/i2s_ws_0_sqmuxa    |       2|       6|     26.09%
+                                        |        |        |
+l_car_core/e_car_sequencer/N_99         |       1|       5|     21.74%
+                                        |        |        |
+l_car_core/e_car_sequencer/N_81         |       1|       5|     21.74%
+                                        |        |        |
+l_car_core/e_car_sequencer/N_87         |       1|       5|     21.74%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_66         |       1|       5|     21.74%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_52         |       1|       5|     21.74%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_57         |       1|       5|     21.74%
+                                        |        |        |
+l_car_core/e_car_sequencer/lvdscounter_p|        |        |
+ipe_2_Q                                 |      12|       3|     13.04%
+                                        |        |        |
+r_car_core/e_i2s_dio/N_26               |       3|       3|     13.04%
+                                        |        |        |
+r_car_core/e_i2s_dio/i2s_ws_0_sqmuxa_0_a|        |        |
+2_RNIBM2F1                              |       1|       3|     13.04%
+                                        |        |        |
+r_car_core/e_i2s_dio/i2s_ws_0_sqmuxa    |       2|       3|     13.04%
+                                        |        |        |
+r_car_core/e_car_sequencer/lvdscounter_p|        |        |
+ipe_2_Q_0                               |      12|       3|     13.04%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: codec_clk_c   Source: codec_clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: hr_clk_0_0   Source: e_primary_pll/PLLInst_0.CLKOP   Loads: 121
+   Covered under: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 23  Score: 20521
+Cumulative negative slack: 20521
+
+Constraints cover 866 paths, 2 nets, and 867 connections (95.70% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Fri Jun 15 15:47:35 2018
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o OWF_test_impl1.tw1 -gui -msgset /data/School/Research/THE_Lab/FPGA/OWF_test/promote.xml OWF_test_impl1_map.ncd OWF_test_impl1.prf 
+Design file:     OWF_test_impl1_map.ncd
+Preference file: OWF_test_impl1.prf
+Device,speed:    LCMXO3LF-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   2.500 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+            866 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/lrst_1  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/i2s_ws  (to hr_clk_0_0 +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_111 to SLICE_111 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_111 to SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_111.CLK to   SLICE_111.Q1 SLICE_111 (from hr_clk_0_0)
+ROUTE         1   e 0.199   SLICE_111.Q1 to   SLICE_111.M0 r_car_core/e_i2s_dio/lrst_1 (to hr_clk_0_0)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "codec_clk_c" 12.288000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "hr_clk_0_0" 196.608000   |             |             |
+MHz ;                                   |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET "codec_clk_c" 12.288000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: codec_clk_c   Source: codec_clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: hr_clk_0_0   Source: e_primary_pll/PLLInst_0.CLKOP   Loads: 121
+   Covered under: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 866 paths, 2 nets, and 867 connections (95.70% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 23 (setup), 0 (hold)
+Score: 20521 (setup), 0 (hold)
+Cumulative negative slack: 20521 (20521+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

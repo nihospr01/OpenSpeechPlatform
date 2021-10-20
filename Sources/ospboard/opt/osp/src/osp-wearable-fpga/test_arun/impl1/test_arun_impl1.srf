@@ -1,0 +1,654 @@
+#Build: Synplify Pro (R) M-2017.03L-SP1-1, Build 086R, Aug  4 2017
+#install: /usr/local/diamond/3.10_x64/synpbase
+#OS: Linux 
+#Hostname: sys76-desktop
+
+# Fri Mar 15 11:54:33 2019
+
+#Implementation: impl1
+
+Synopsys HDL Compiler, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Running on host :sys76-desktop
+@N: CD720 :"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std.vhd":123:18:123:21|Setting time resolution to ps
+@N:"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":6:7:6:21|Top entity is set to test_togglepins.
+
+File Dependency file is up to date.  It will not be rewritten.
+
+VHDL syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":5:7:5:21|Synthesizing work.test_togglepins.a.
+@W: CD638 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":23:8:23:15|Signal counter4 is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_arun/plltest.vhd":14:7:14:13|Synthesizing work.plltest.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":2175:10:2175:16|Synthesizing work.ehxpllj.syn_black_box.
+Post processing for work.ehxpllj.syn_black_box
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1490:10:1490:12|Synthesizing work.vlo.syn_black_box.
+Post processing for work.vlo.syn_black_box
+Post processing for work.plltest.structure
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_arun/fifotest.vhd":14:7:14:14|Synthesizing work.fifotest.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1874:10:1874:16|Synthesizing work.fifo8kb.syn_black_box.
+Post processing for work.fifo8kb.syn_black_box
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1483:10:1483:12|Synthesizing work.vhi.syn_black_box.
+Post processing for work.vhi.syn_black_box
+Post processing for work.fifotest.structure
+Post processing for work.test_togglepins.a
+@N: CL159 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":11:11:11:18|Input spi_mosi is unused.
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 71MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 15 11:54:33 2019
+
+###########################################################]
+Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 15 11:54:33 2019
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 15 11:54:33 2019
+
+###########################################################]
+Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+File /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/synwork/test_arun_impl1_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 15 11:54:34 2019
+
+###########################################################]
+Pre-mapping Report
+
+# Fri Mar 15 11:54:34 2019
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1796R, Built Aug  4 2017 09:36:35
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version M-2017.03L-SP1-1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@L: /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/test_arun_impl1_scck.rpt 
+Printing clock  summary report in "/home/hari/Documents/osp-wearable-fpga/test_arun/impl1/test_arun_impl1_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=240  set on top level netlist test_togglepins
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+
+Clock Summary
+******************
+
+          Start                       Requested     Requested     Clock        Clock                   Clock
+Level     Clock                       Frequency     Period        Type         Group                   Load 
+------------------------------------------------------------------------------------------------------------
+0 -       System                      1.0 MHz       1000.000      system       system_clkgroup         0    
+                                                                                                            
+0 -       test_togglepins|clock       1.0 MHz       1000.000      inferred     Inferred_clkgroup_1     18   
+                                                                                                            
+0 -       test_togglepins|spi_clk     1.0 MHz       1000.000      inferred     Inferred_clkgroup_0     9    
+============================================================================================================
+
+@W: MT529 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":119:2:119:3|Found inferred clock test_togglepins|spi_clk which controls 9 sequential elements including counter3[3:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":103:2:103:3|Found inferred clock test_togglepins|clock which controls 18 sequential elements including counter[14:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 55MB peak: 141MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Mar 15 11:54:34 2019
+
+###########################################################]
+Map & Optimize Report
+
+# Fri Mar 15 11:54:34 2019
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 1796R, Built Aug  4 2017 09:36:35
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version M-2017.03L-SP1-1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 111MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+@N: MO231 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":103:2:103:3|Found counter in view:work.test_togglepins(a) instance counter[14:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		   995.54ns		  23 /        27
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 27 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@K:CKID0001       clock               port                   18         counter2[0]    
+@K:CKID0002       spi_clk             port                   9          spi_data       
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 141MB)
+
+Writing Analyst data base /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/synwork/test_arun_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/test_arun_impl1.edi
+M-2017.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 144MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 143MB peak: 144MB)
+
+@W: MT246 :"/home/hari/Documents/osp-wearable-fpga/test_arun/plltest.vhd":105:4:105:12|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"/home/hari/Documents/osp-wearable-fpga/test_arun/fifotest.vhd":332:4:332:16|Blackbox fifo8kb is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock test_togglepins|clock with period 1000.00ns. Please declare a user-defined clock on object "p:clock"
+@W: MT420 |Found inferred clock test_togglepins|spi_clk with period 1000.00ns. Please declare a user-defined clock on object "p:spi_clk"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Mar 15 11:54:35 2019
+#
+
+
+Top view:               test_togglepins
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 994.972
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                            Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock              Frequency     Frequency     Period        Period        Slack       Type         Group              
+--------------------------------------------------------------------------------------------------------------------------------
+test_togglepins|clock       1.0 MHz       198.9 MHz     1000.000      5.028         994.972     inferred     Inferred_clkgroup_1
+test_togglepins|spi_clk     1.0 MHz       231.9 MHz     1000.000      4.312         995.688     inferred     Inferred_clkgroup_0
+System                      1.0 MHz       445.7 MHz     1000.000      2.244         997.756     system       system_clkgroup    
+================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                            |    rise  to  rise      |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Starting                 Ending                   |  constraint  slack     |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------------------------------
+System                   System                   |  1000.000    1000.000  |  No paths    -      |  No paths    -      |  No paths    -    
+System                   test_togglepins|spi_clk  |  1000.000    997.756   |  No paths    -      |  No paths    -      |  No paths    -    
+test_togglepins|spi_clk  System                   |  1000.000    998.748   |  No paths    -      |  No paths    -      |  No paths    -    
+test_togglepins|spi_clk  test_togglepins|spi_clk  |  1000.000    995.688   |  No paths    -      |  No paths    -      |  No paths    -    
+test_togglepins|clock    System                   |  1000.000    998.744   |  No paths    -      |  No paths    -      |  No paths    -    
+test_togglepins|clock    test_togglepins|clock    |  1000.000    994.972   |  No paths    -      |  No paths    -      |  No paths    -    
+===========================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: test_togglepins|clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+               Starting                                                     Arrival            
+Instance       Reference                 Type        Pin     Net            Time        Slack  
+               Clock                                                                           
+-----------------------------------------------------------------------------------------------
+counter[0]     test_togglepins|clock     FD1S3AX     Q       counter[0]     0.972       994.972
+counter[1]     test_togglepins|clock     FD1S3AX     Q       counter[1]     0.972       995.115
+counter[2]     test_togglepins|clock     FD1S3AX     Q       counter[2]     0.972       995.115
+counter[3]     test_togglepins|clock     FD1S3AX     Q       counter[3]     0.972       995.258
+counter[4]     test_togglepins|clock     FD1S3AX     Q       counter[4]     0.972       995.258
+counter[5]     test_togglepins|clock     FD1S3AX     Q       counter[5]     0.972       995.401
+counter[6]     test_togglepins|clock     FD1S3AX     Q       counter[6]     0.972       995.401
+counter[7]     test_togglepins|clock     FD1S3AX     Q       counter[7]     0.972       995.543
+counter[8]     test_togglepins|clock     FD1S3AX     Q       counter[8]     0.972       995.543
+counter[9]     test_togglepins|clock     FD1S3AX     Q       counter[9]     0.972       995.686
+===============================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                Starting                                                        Required            
+Instance        Reference                 Type        Pin     Net               Time         Slack  
+                Clock                                                                               
+----------------------------------------------------------------------------------------------------
+counter[13]     test_togglepins|clock     FD1S3AX     D       counter_s[13]     999.894      994.972
+counter[14]     test_togglepins|clock     FD1S3AX     D       counter_s[14]     999.894      994.972
+counter[11]     test_togglepins|clock     FD1S3AX     D       counter_s[11]     999.894      995.115
+counter[12]     test_togglepins|clock     FD1S3AX     D       counter_s[12]     999.894      995.115
+counter[9]      test_togglepins|clock     FD1S3AX     D       counter_s[9]      999.894      995.258
+counter[10]     test_togglepins|clock     FD1S3AX     D       counter_s[10]     999.894      995.258
+counter[7]      test_togglepins|clock     FD1S3AX     D       counter_s[7]      999.894      995.401
+counter[8]      test_togglepins|clock     FD1S3AX     D       counter_s[8]      999.894      995.401
+counter[5]      test_togglepins|clock     FD1S3AX     D       counter_s[5]      999.894      995.543
+counter[6]      test_togglepins|clock     FD1S3AX     D       counter_s[6]      999.894      995.543
+====================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.894
+
+    - Propagation time:                      4.922
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     994.972
+
+    Number of logic level(s):                8
+    Starting point:                          counter[0] / Q
+    Ending point:                            counter[14] / D
+    The start point is clocked by            test_togglepins|clock [rising] on pin CK
+    The end   point is clocked by            test_togglepins|clock [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                  Type        Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+counter[0]            FD1S3AX     Q        Out     0.972     0.972       -         
+counter[0]            Net         -        -       -         -           1         
+counter_cry_0[0]      CCU2D       A1       In      0.000     0.972       -         
+counter_cry_0[0]      CCU2D       COUT     Out     1.544     2.516       -         
+counter_cry[0]        Net         -        -       -         -           1         
+counter_cry_0[1]      CCU2D       CIN      In      0.000     2.516       -         
+counter_cry_0[1]      CCU2D       COUT     Out     0.143     2.659       -         
+counter_cry[2]        Net         -        -       -         -           1         
+counter_cry_0[3]      CCU2D       CIN      In      0.000     2.659       -         
+counter_cry_0[3]      CCU2D       COUT     Out     0.143     2.802       -         
+counter_cry[4]        Net         -        -       -         -           1         
+counter_cry_0[5]      CCU2D       CIN      In      0.000     2.802       -         
+counter_cry_0[5]      CCU2D       COUT     Out     0.143     2.945       -         
+counter_cry[6]        Net         -        -       -         -           1         
+counter_cry_0[7]      CCU2D       CIN      In      0.000     2.945       -         
+counter_cry_0[7]      CCU2D       COUT     Out     0.143     3.087       -         
+counter_cry[8]        Net         -        -       -         -           1         
+counter_cry_0[9]      CCU2D       CIN      In      0.000     3.087       -         
+counter_cry_0[9]      CCU2D       COUT     Out     0.143     3.230       -         
+counter_cry[10]       Net         -        -       -         -           1         
+counter_cry_0[11]     CCU2D       CIN      In      0.000     3.230       -         
+counter_cry_0[11]     CCU2D       COUT     Out     0.143     3.373       -         
+counter_cry[12]       Net         -        -       -         -           1         
+counter_cry_0[13]     CCU2D       CIN      In      0.000     3.373       -         
+counter_cry_0[13]     CCU2D       S1       Out     1.549     4.922       -         
+counter_s[14]         Net         -        -       -         -           1         
+counter[14]           FD1S3AX     D        In      0.000     4.922       -         
+===================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: test_togglepins|spi_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                Starting                                                        Arrival            
+Instance        Reference                   Type        Pin     Net             Time        Slack  
+                Clock                                                                              
+---------------------------------------------------------------------------------------------------
+counter3[1]     test_togglepins|spi_clk     FD1S3IX     Q       counter3[1]     1.228       995.688
+counter3[0]     test_togglepins|spi_clk     FD1S3IX     Q       counter3[0]     1.220       995.696
+counter3[3]     test_togglepins|spi_clk     FD1S3IX     Q       counter3[3]     1.204       995.712
+counter3[2]     test_togglepins|spi_clk     FD1S3IX     Q       counter3[2]     1.180       995.736
+counter5[1]     test_togglepins|spi_clk     FD1S3IX     Q       counter5[1]     1.220       996.785
+toggle          test_togglepins|spi_clk     FD1S3AX     Q       toggle          1.252       998.220
+counter5[0]     test_togglepins|spi_clk     FD1S3IX     Q       counter5[0]     1.044       998.428
+spi_data        test_togglepins|spi_clk     FD1S3AX     Q       spi_data        0.972       998.923
+===================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                Starting                                                                    Required            
+Instance        Reference                   Type        Pin     Net                         Time         Slack  
+                Clock                                                                                           
+----------------------------------------------------------------------------------------------------------------
+counter3[0]     test_togglepins|spi_clk     FD1S3IX     CD      un2_spi_data_11_RNIDF9C     999.197      995.688
+counter3[1]     test_togglepins|spi_clk     FD1S3IX     CD      un2_spi_data_11_RNIDF9C     999.197      995.688
+counter3[2]     test_togglepins|spi_clk     FD1S3IX     CD      un2_spi_data_11_RNIDF9C     999.197      995.688
+counter3[3]     test_togglepins|spi_clk     FD1S3IX     CD      un2_spi_data_11_RNIDF9C     999.197      995.688
+toggle          test_togglepins|spi_clk     FD1S3AX     D       toggle_0                    1000.089     996.139
+spi_data        test_togglepins|spi_clk     FD1S3AX     D       spi_data_1                  1000.089     996.553
+counter3[3]     test_togglepins|spi_clk     FD1S3IX     D       un1_counter3[4]             1000.089     997.235
+counter3[1]     test_togglepins|spi_clk     FD1S3IX     D       un1_counter3[2]             1000.089     998.244
+counter3[2]     test_togglepins|spi_clk     FD1S3IX     D       un1_counter3[3]             1000.089     998.244
+counter3[0]     test_togglepins|spi_clk     FD1S3IX     D       un1_counter3[1]             1000.089     998.252
+================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.803
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.197
+
+    - Propagation time:                      3.509
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 995.688
+
+    Number of logic level(s):                2
+    Starting point:                          counter3[1] / Q
+    Ending point:                            counter3[0] / CD
+    The start point is clocked by            test_togglepins|spi_clk [rising] on pin CK
+    The end   point is clocked by            test_togglepins|spi_clk [rising] on pin CK
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                        Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+counter3[1]                 FD1S3IX      Q        Out     1.228     1.228       -         
+counter3[1]                 Net          -        -       -         -           9         
+un2_spi_data_11             ORCALUT4     B        In      0.000     1.228       -         
+un2_spi_data_11             ORCALUT4     Z        Out     1.089     2.317       -         
+un2_spi_data[11]            Net          -        -       -         -           2         
+un2_spi_data_11_RNIDF9C     ORCALUT4     C        In      0.000     2.317       -         
+un2_spi_data_11_RNIDF9C     ORCALUT4     Z        Out     1.193     3.509       -         
+un2_spi_data_11_RNIDF9C     Net          -        -       -         -           4         
+counter3[0]                 FD1S3IX      CD       In      0.000     3.509       -         
+==========================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                       Starting                                         Arrival            
+Instance               Reference     Type        Pin     Net            Time        Slack  
+                       Clock                                                               
+-------------------------------------------------------------------------------------------
+fifo.fifotest_0_11     System        fifo8kb     do0     fifo_Q[0]      0.000       997.756
+fifo.fifotest_1_10     System        fifo8kb     do0     fifo_Q[1]      0.000       997.756
+fifo.fifotest_8_3      System        fifo8kb     do0     fifo_Q[8]      0.000       997.756
+fifo.fifotest_9_2      System        fifo8kb     do0     fifo_Q[9]      0.000       997.756
+fifo.fifotest_2_9      System        fifo8kb     do0     fifo_Q[2]      0.000       997.787
+fifo.fifotest_3_8      System        fifo8kb     do0     fifo_Q[3]      0.000       997.787
+fifo.fifotest_10_1     System        fifo8kb     do0     fifo_Q[10]     0.000       997.787
+fifo.fifotest_11_0     System        fifo8kb     do0     fifo_Q[11]     0.000       997.787
+fifo.fifotest_4_7      System        fifo8kb     do0     fifo_Q[4]      0.000       998.241
+fifo.fifotest_5_6      System        fifo8kb     do0     fifo_Q[5]      0.000       998.241
+===========================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                       Starting                                            Required             
+Instance               Reference     Type        Pin        Net            Time         Slack   
+                       Clock                                                                    
+------------------------------------------------------------------------------------------------
+spi_data               System        FD1S3AX     D          spi_data_1     1000.089     997.756 
+pll1.PLLInst_0         System        EHXPLLJ     CLKFB      CLKFB_t        1000.000     1000.000
+fifo.fifotest_0_11     System        fifo8kb     emptyi     Empty          1000.000     1000.000
+fifo.fifotest_0_11     System        fifo8kb     fulli      Full           1000.000     1000.000
+fifo.fifotest_1_10     System        fifo8kb     emptyi     Empty          1000.000     1000.000
+fifo.fifotest_1_10     System        fifo8kb     fulli      Full           1000.000     1000.000
+fifo.fifotest_2_9      System        fifo8kb     emptyi     Empty          1000.000     1000.000
+fifo.fifotest_2_9      System        fifo8kb     fulli      Full           1000.000     1000.000
+fifo.fifotest_3_8      System        fifo8kb     emptyi     Empty          1000.000     1000.000
+fifo.fifotest_3_8      System        fifo8kb     fulli      Full           1000.000     1000.000
+================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1000.089
+
+    - Propagation time:                      2.332
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 997.756
+
+    Number of logic level(s):                4
+    Starting point:                          fifo.fifotest_0_11 / do0
+    Ending point:                            spi_data / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            test_togglepins|spi_clk [rising] on pin CK
+
+Instance / Net                      Pin      Pin                Arrival     No. of    
+Name                   Type         Name     Dir     Delay      Time        Fan Out(s)
+--------------------------------------------------------------------------------------
+fifo.fifotest_0_11     fifo8kb      do0      Out     0.000      0.000       -         
+fifo_Q[0]              Net          -        -       -          -           1         
+spi_data_1_3_am        ORCALUT4     B        In      0.000      0.000       -         
+spi_data_1_3_am        ORCALUT4     Z        Out     1.017      1.017       -         
+spi_data_1_3_am        Net          -        -       -          -           1         
+spi_data_1_3           PFUMX        BLUT     In      0.000      1.017       -         
+spi_data_1_3           PFUMX        Z        Out     -0.033     0.984       -         
+N_22                   Net          -        -       -          -           1         
+spi_data_1_7           L6MUX21      D0       In      0.000      0.984       -         
+spi_data_1_7           L6MUX21      Z        Out     0.732      1.716       -         
+N_26                   Net          -        -       -          -           1         
+spi_data_1_11          ORCALUT4     A        In      0.000      1.716       -         
+spi_data_1_11          ORCALUT4     Z        Out     0.617      2.332       -         
+spi_data_1             Net          -        -       -          -           1         
+spi_data               FD1S3AX      D        In      0.000      2.332       -         
+======================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 144MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 144MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo3lf_6900c-5
+
+Register bits: 27 of 54912 (0%)
+PIC Latch:       0
+I/O cells:       23
+
+
+Details:
+CCU2D:          8
+FD1S3AX:        20
+FD1S3IX:        6
+GSR:            1
+IB:             16
+INV:            2
+L6MUX21:        1
+OB:             7
+OFS1P3DX:       1
+ORCALUT4:       21
+PFUMX:          3
+PUR:            1
+VHI:            3
+VLO:            3
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 30MB peak: 144MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Mar 15 11:54:35 2019
+
+###########################################################]

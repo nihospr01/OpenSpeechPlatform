@@ -1,0 +1,468 @@
+
+         Lattice Mapping Report File for Design Module 'tl_car_field'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA256 -s 5 -oc
+     Commercial OWF_car_field_v6_impl1.ngd -o OWF_car_field_v6_impl1_map.ncd -pr
+     OWF_car_field_v6_impl1.prf -mp OWF_car_field_v6_impl1.mrp -lpf /home/hari/D
+     ocuments/osp-wearable-fpga/car_field_v6/impl1/OWF_car_field_v6_impl1_synpli
+     fy.lpf -lpf
+     /home/hari/Documents/osp-wearable-fpga/car_field_v6/OWF_car_field_v6.lpf -c
+     0 -gui -msgset
+     /home/hari/Documents/osp-wearable-fpga/car_field_v6/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA256
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  02/14/19  13:36:26
+
+Design Summary
+--------------
+
+   Number of registers:    170 out of  7485 (2%)
+      PFU registers:          163 out of  6864 (2%)
+      PIO registers:            7 out of   621 (1%)
+   Number of SLICEs:        99 out of  3432 (3%)
+      SLICEs as Logic/ROM:     99 out of  3432 (3%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:          8 out of  3432 (0%)
+   Number of LUT4s:        142 out of  6864 (2%)
+      Number used as logic LUTs:        126
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       16
+      Number used as shift registers:     0
+   Number of PIO sites used: 26 + 4(JTAG) out of 207 (14%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+
+                                    Page 1
+
+
+
+
+Design:  tl_car_field                                  Date:  02/14/19  13:36:26
+
+Design Summary (cont)
+---------------------
+     Net hr_clk_0: 107 loads, 107 rising, 0 falling (Driver: e_pll_4/PLLInst_0 )
+     
+     Net test_l1_c: 1 loads, 1 rising, 0 falling (Driver: PIO ext_clk_in )
+   Number of Clock Enables:  17
+     Net lvdscounter_RNIJSM32[1]: 1 loads, 0 LSLICEs
+     Net buf_cnv[0]: 5 loads, 4 LSLICEs
+     Net un2_divider: 26 loads, 26 LSLICEs
+     Net divider_RNINKMV[1]: 10 loads, 10 LSLICEs
+     Net r_car_core/e_car_sequencer/djb_present_RNO_0: 1 loads, 1 LSLICEs
+     Net djb_got167_0_a2_0_RNIHQFK1: 1 loads, 0 LSLICEs
+     Net lvdscounter_RNIHD4G2[1]: 1 loads, 0 LSLICEs
+     Net r_car_core/e_i2s_dio/in_lvds_sr/buf_cnv_4[0]: 5 loads, 5 LSLICEs
+     Net buf_cnv_0[0]: 10 loads, 8 LSLICEs
+     Net r_car_core/e_i2s_dio/reg_cnv_0[0]: 8 loads, 8 LSLICEs
+     Net r_car_core/e_i2s_dio/out_lvds_sr/buf_cnv_2[0]: 4 loads, 4 LSLICEs
+     Net l_car_core/e_car_sequencer/djb_present_RNO: 1 loads, 1 LSLICEs
+     Net djb_got167_0_a2_0_RNIVNUN1: 1 loads, 0 LSLICEs
+     Net l_car_core/e_i2s_dio/in_lvds_sr/buf_cnv_3[0]: 5 loads, 5 LSLICEs
+     Net l_car_core/e_i2s_dio/cycle_begin_RNIT3T51: 9 loads, 9 LSLICEs
+     Net l_car_core/e_i2s_dio/reg_cnv[0]: 8 loads, 8 LSLICEs
+     Net l_car_core/e_i2s_dio/out_lvds_sr/buf_cnv_1[0]: 4 loads, 4 LSLICEs
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net un2_divider: 26 loads
+     Net l_car_core.e_i2s_dio.cycle_begin: 18 loads
+     Net divider_RNINKMV[1]: 16 loads
+     Net e_car_clock_gen.divider[0]: 15 loads
+     Net e_car_clock_gen.divider[1]: 14 loads
+     Net l_car_core/e_car_sequencer/lvdscounter[0]: 13 loads
+     Net r_car_core/e_car_sequencer/lvdscounter[0]: 13 loads
+     Net l_car_core/e_car_sequencer/lvdscounter_pipe_2_Q: 12 loads
+     Net r_car_core/e_car_sequencer/lvdscounter_pipe_2_Q_0: 12 loads
+     Net buf_cnv_0[0]: 10 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| l_lvds_io           | BIDIR     | BLVDS25E  | IN         |
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  tl_car_field                                  Date:  02/14/19  13:36:26
+
+IO (PIO) Attributes (cont)
+--------------------------
+| osc_out             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| osc_in              | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| test_m2             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| test_m1             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| test_l2             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| test_l1             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi3_cs3            | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi3_cs0            | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi3_miso           | OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| spi3_mosi           | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi3_clk            | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi1_cs2            | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi1_cs0            | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi1_miso           | OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| spi1_mosi           | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi1_clk            | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i2s2_d1             | OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| i2s2_d0             | OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| i2s2_ws             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i2s2_sck            | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i2s1_d0             | INPUT     | LVCMOS18  | IN         |
++---------------------+-----------+-----------+------------+
+| i2s1_ws             | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i2s1_sck            | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| r_lvds_io           | BIDIR     | BLVDS25E  | IN         |
++---------------------+-----------+-----------+------------+
+| ext_clk_in          | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block VCC undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  tl_car_field                                  Date:  02/14/19  13:36:26
+
+Removed logic (cont)
+--------------------
+Block GND undriven or does not drive anything - clipped.
+Block e_pll_4/VCC undriven or does not drive anything - clipped.
+Block l_car_core/GND undriven or does not drive anything - clipped.
+Block l_car_core/VCC undriven or does not drive anything - clipped.
+Block l_car_core/e_i2s_dio/VCC undriven or does not drive anything - clipped.
+Block l_car_core/e_i2s_dio/out_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_2/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_2/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_2/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_2/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_car_sequencer/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_car_sequencer/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/GND undriven or does not drive anything - clipped.
+Block r_car_core/VCC undriven or does not drive anything - clipped.
+Block r_car_core/e_i2s_dio/GND undriven or does not drive anything - clipped.
+Block r_car_core/e_i2s_dio/VCC undriven or does not drive anything - clipped.
+Block r_car_core/e_i2s_dio/out_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_2/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_2/VCC undriven or does not drive anything -
+
+                                    Page 4
+
+
+
+
+Design:  tl_car_field                                  Date:  02/14/19  13:36:26
+
+Removed logic (cont)
+--------------------
+     clipped.
+Block r_car_core/e_i2s_dio/out_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_car_sequencer/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_car_sequencer/GND undriven or does not drive anything -
+     clipped.
+Signal e_pll_4/GND undriven or does not drive anything - clipped.
+Signal e_car_clock_gen/GND undriven or does not drive anything - clipped.
+Signal l_car_core/e_i2s_dio/GND undriven or does not drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Signal GND undriven or does not drive anything - clipped.
+Signal e_pll_4/CLKINTFB undriven or does not drive anything - clipped.
+Signal e_pll_4/DPHSRC undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLACK undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO0 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO1 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO2 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO3 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO4 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO5 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO6 undriven or does not drive anything - clipped.
+Signal e_pll_4/PLLDATO7 undriven or does not drive anything - clipped.
+Signal e_pll_4/REFCLK undriven or does not drive anything - clipped.
+Signal e_pll_4/INTLOCK undriven or does not drive anything - clipped.
+Signal e_pll_4/LOCK undriven or does not drive anything - clipped.
+Signal e_pll_4/CLKOS3 undriven or does not drive anything - clipped.
+Signal e_pll_4/CLKOS2 undriven or does not drive anything - clipped.
+Signal e_pll_4/CLKOS undriven or does not drive anything - clipped.
+Signal e_car_clock_gen/lvds_ctr_s_0_S1[7] undriven or does not drive anything -
+     clipped.
+Signal e_car_clock_gen/lvds_ctr_s_0_COUT[7] undriven or does not drive anything
+     - clipped.
+Signal e_car_clock_gen/lvds_ctr_cry_0_S0[0] undriven or does not drive anything
+     - clipped.
+Signal e_car_clock_gen/N_1 undriven or does not drive anything - clipped.
+Signal l_car_core/e_i2s_dio/lvds_bit_ctr_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal l_car_core/e_i2s_dio/N_1 undriven or does not drive anything - clipped.
+Signal l_car_core/e_i2s_dio/lvds_bit_ctr_cry_0_COUT[3] undriven or does not
+     drive anything - clipped.
+Block e_pll_4/GND was optimized away.
+Block e_car_clock_gen/GND was optimized away.
+Block l_car_core/e_i2s_dio/GND was optimized away.
+
+Memory Usage
+------------
+
+
+     
+
+                                    Page 5
+
+
+
+
+Design:  tl_car_field                                  Date:  02/14/19  13:36:26
+
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                e_pll_4/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      test_l1_c
+  Output Clock(P):                         NODE     hr_clk_0
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     hr_clk_0
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      12.2880
+  Output Clock(P) Frequency (MHz):                  49.1520
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+
+                                    Page 6
+
+
+
+
+Design:  tl_car_field                                  Date:  02/14/19  13:36:26
+
+PLL/DLL Summary (cont)
+----------------------
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    4
+  CLKOP Divider:                                    11
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+ASIC Components
+---------------
+
+Instance Name: e_pll_4/PLLInst_0
+         Type: EHXPLLJ
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 196 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 7
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

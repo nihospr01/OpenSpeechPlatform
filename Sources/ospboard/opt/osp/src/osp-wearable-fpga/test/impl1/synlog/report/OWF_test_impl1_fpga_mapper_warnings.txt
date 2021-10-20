@@ -1,0 +1,3 @@
+@W: BN132 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_core.vhd":68:2:68:3|Removing instance r_car_core.i2s_lr_st_pre because it is equivalent to instance l_car_core.i2s_lr_st_pre. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: MT246 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/primary_pll.vhd":105:4:105:12|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock primary_pll|CLKOP_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:e_primary_pll.CLKOP"

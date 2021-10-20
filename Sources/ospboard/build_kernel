@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function print_help () {
+    printf "Usage: build_kernel [-n]\n"
+    printf "Builds the 5.10 kernel\n\n"
+}
+
+help=0
+while getopts hn flag
+do
+    case "${flag}" in
+        h) help=1;;
+    esac
+done
+
+if [ $help -ne 0 ]
+then
+    print_help
+    exit 1
+fi
+
+docker run -v $PWD/opt:/opt --privileged -e OSP_FUNC=buildKernel5 osp-builder

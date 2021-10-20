@@ -1,0 +1,247 @@
+#!/usr/bin/env python3
+"""
+Serial port utility for PCD Devices
+
+pcdtool conn[ect]
+    Connects to attached pcd device and displays output. Hit ^Z to exit.
+
+pcdtool flash [-b]
+    Connects to attached pcd device, flashes the the rootfs
+    and restarts the device.  If -b flag is there, it first flashes the bootloader.
+    
+pcdtool send {filename}
+    Sends the file to the current directory on the device.
+
+pcdtool recv {filename}
+    Receives a file from the device.
+
+A device must first be connected via USB on /dev/ttyUSB0 (or /dev/cu.usbserial* for Mac)
+
+"""
+from time import sleep
+import os
+import sys
+import argparse
+import shutil
+import threading
+import time
+import contextlib
+import glob
+
+PCD_VERSION = "1.1.0"
+
+try:
+    from serial import Serial
+except ImportError:
+    print('Package "pyserial" is needed')
+    print('Run "pip3 install pyserial"')
+    sys.exit(-1)
+
+if sys.platform == 'win32': 
+    import msvcrt
+    import serial.tools.list_ports
+else:
+    import tty
+    import termios
+
+
+try:
+    import colorama
+    colorama.init()
+    from colorama import Fore, Style
+    if sys.platform == 'win32':
+        # bright looks better on powershell terminal
+        RED = Fore.RED + Style.BRIGHT
+        GREEN = Fore.GREEN + Style.BRIGHT
+        YELLOW = Fore.YELLOW + Style.BRIGHT
+    else:
+        RED = Fore.RED
+        GREEN = Fore.GREEN
+        YELLOW = Fore.YELLOW
+    NORM = Style.RESET_ALL
+except ImportError:
+    print("Module 'colorama' not found. To install, run")
+    print('"pip3 install colorama"')
+    sys.exit(-1)
+
+def connect():
+    if sys.platform == 'win32':
+        ports = serial.tools.list_ports.comports()
+        for port, desc, hwid in sorted(ports):
+            print(f"Trying {port}: {desc} [{hwid}]")
+            try:
+                ser = Serial(port, 115200, timeout=1)
+                if ser:
+                    return ser, port
+            except Exception as e:
+                print(e)
+    elif sys.platform == 'darwin':  # mac
+        for d in glob.glob('/dev/cu.usbserial*'):
+            if os.path.exists(d):
+                print(f"Trying device {d}")
+                ser = Serial(d, 115200, timeout=1)
+                if ser:
+                    return ser, d                
+    else:
+        for d in ['/dev/ttyUSB0', '/dev/ttyUSB1']:
+            if os.path.exists(d):
+                print(f"Trying device {d}")
+                ser = Serial(d, 115200, timeout=1)
+                if ser:
+                    return ser, d                
+    print("ERROR: Unable to open a USB serial connection to the device")                
+    return None, None
+
+def check_zmodem():
+    if shutil.which('sz') is None:
+        print("'sz' and 'rz' are not installed on your system.")
+        print("Install it with:")
+        print("sudo apt install lrzsz\n")
+        sys.exit(-1)
+
+@contextlib.contextmanager
+def pushd(new_dir):
+    previous_dir = os.getcwd()
+    os.chdir(new_dir)
+    try:
+        yield
+    finally:
+        os.chdir(previous_dir)
+
+def flash():
+    print(f"{GREEN}\nHold mute button and power on device{NORM}")
+    if args.b:
+        print(f"{YELLOW}\nReady To Flash Bootloader\n{NORM}")
+        with pushd('opt/osp/share/dragonboard-410c-bootloader-emmc-linux-159'):
+            if sys.platform == 'darwin':  # mac
+                ret = os.system("sudo ./flashall_mac")
+            else:
+                ret = os.system("sudo ./flashall")
+            if ret:
+                print(f"ERROR: flashall returned {ret}")
+                sys.exit(ret)
+
+    ver = 9
+
+    print(f"{YELLOW}\nWaiting to Flash rootfs\n{NORM}")
+    for cmd in [f"flash:raw boot opt/osp/var/build/boot-v{ver}.img", "flash rootfs opt/osp/share/rootfs.simg", "reboot"]:
+        if sys.platform == 'darwin':  # mac
+            ret = os.system("sudo mac/fastboot " + cmd)
+        elif sys.platform == 'win32':
+            ret = os.system("win\\fastboot.exe " + cmd)
+        else:
+            ret = os.system("sudo fastboot " + cmd)
+        if ret:
+            print(f"ERROR: \"{cmd}\" returned {ret}")
+            sys.exit(ret)
+        print()
+
+
+run_thread = True
+
+def read_from_port(ser):
+    global run_thread
+    while run_thread:
+        try:
+            if sys.platform == 'win32':
+                ch = ser.readline()
+            else:
+                ch = ser.read(1)
+            if ch:
+                print(ch.decode(), end='', flush=True)
+        except:
+            pass
+
+def send_to_port(ser):
+    global run_thread
+    if sys.platform == 'win32':
+        while run_thread:
+            ch = msvcrt.getch()
+            if ord(ch) == 26:  # Ctrl-Z
+                run_thread = False
+            ser.write(ch)
+    else:
+        fd = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(fd)
+        tty.setraw(fd)
+
+        while run_thread:
+            try:
+                ch = sys.stdin.read(1)
+                if ord(ch) == 26:  # Ctrl-Z
+                    run_thread = False
+                ser.write(ch.encode())
+            except:
+                pass
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+
+def main(args):
+    if args.version:
+        print(f"pcdtool version {PCD_VERSION}\n")
+        return 0
+
+    if args.func == 'flash':
+        return flash()
+
+    ser, device = connect()
+    if ser is None:
+        print("Unable to connect to device.\n")
+        sys.exit(-1)
+
+    if args.func == 'connect':
+        print(f"{YELLOW}\nHit Ctrl-Z to exit{NORM}\n")
+        thread = threading.Thread(target=read_from_port, args=(ser,))
+        thread.start()
+        in_thread = threading.Thread(target=send_to_port, args=(ser,))
+        in_thread.start()
+        thread.join()
+        in_thread.join()
+        ser.close()
+        print()
+        return 0
+
+    if args.func == 'send':
+        check_zmodem()
+        ser.write(b'rz -v\n')
+        time.sleep(2)
+        os.system("sz %s < %s > %s" % (args.file, device, device))
+        ser.close()
+        return 0
+
+    if args.func == 'recv':
+        check_zmodem()
+        cmd = f"sz -v {args.file}\n"
+        ser.write(cmd.encode())
+        time.sleep(2)
+        os.system("rz < %s > %s" % (device, device))
+        ser.close()
+        return 0
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__,
+                            formatter_class=argparse.RawDescriptionHelpFormatter)
+
+    subparsers = parser.add_subparsers()
+    parser.add_argument('--version', action='store_true', help='Print version and exit')
+
+    connect_parser = subparsers.add_parser('connect')
+    connect_parser.set_defaults(func='connect')
+
+    conn_parser = subparsers.add_parser('conn')
+    conn_parser.set_defaults(func='connect')
+
+    flash_parser = subparsers.add_parser('flash')
+    flash_parser.add_argument('-b', action='store_true', help='First [re]flash the bootloader')
+    flash_parser.set_defaults(func='flash')
+
+    recv_parser = subparsers.add_parser('recv')
+    recv_parser.add_argument('file', help='filename')
+    recv_parser.set_defaults(func='recv')
+
+    send_parser = subparsers.add_parser('send')
+    send_parser.add_argument('file', help='filename')
+    send_parser.set_defaults(func='send')
+
+    args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
+    sys.exit(main(args))
+

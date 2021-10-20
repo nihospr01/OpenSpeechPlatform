@@ -1,0 +1,1 @@
+@W: MT529 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_clock_gen.vhd":19:2:19:3|Found inferred clock primary_pll|CLKOP_inferred_clock which controls 10 sequential elements including e_car_clock_gen.lvds_ctr[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

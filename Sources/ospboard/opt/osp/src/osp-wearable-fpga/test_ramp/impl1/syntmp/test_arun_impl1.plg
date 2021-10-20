@@ -1,0 +1,19 @@
+@P:  Worst Slack : 993.850
+@P:  test_togglepins|clock - Estimated Frequency : 198.9 MHz
+@P:  test_togglepins|clock - Requested Frequency : 1.0 MHz
+@P:  test_togglepins|clock - Estimated Period : 5.028
+@P:  test_togglepins|clock - Requested Period : 1000.000
+@P:  test_togglepins|clock - Slack : 994.972
+@P:  test_togglepins|spi_clk - Estimated Frequency : 162.6 MHz
+@P:  test_togglepins|spi_clk - Requested Frequency : 1.0 MHz
+@P:  test_togglepins|spi_clk - Estimated Period : 6.150
+@P:  test_togglepins|spi_clk - Requested Period : 1000.000
+@P:  test_togglepins|spi_clk - Slack : 993.850
+@P:  System - Estimated Frequency : NA
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : 0.000
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : 1000.000
+@P:  Total Area : 20.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:00s

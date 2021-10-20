@@ -1,0 +1,9 @@
+.idea/
+CMakeFiles/
+cmake-build-debug/
+cmake-build-release/
+build/
+
+release/
+ewsnodejs-client/node_modules/
+libosp/release/

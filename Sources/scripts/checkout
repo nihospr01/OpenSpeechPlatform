@@ -1,0 +1,44 @@
+#!/bin/bash
+
+function gdrive_download () {
+    CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
+    wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
+    rm -rf /tmp/cookies.txt
+}
+
+if [ ! -d "openMHA" ]
+then
+    git clone https://github.com/nihospr01/openMHA.git
+    pushd openMHA
+    git checkout development
+    popd
+else
+    pushd openMHA
+    git pull
+    printf "\n"
+    git status
+    printf "\n"
+    popd
+fi
+
+### Uncomment everything below here if you want to build PCD images
+
+if [ ! -d "liblsl" ]
+then
+    git clone https://github.com/sccn/liblsl.git
+    pushd liblsl
+    git checkout 1.14
+    popd
+fi
+
+pushd ospboard
+if [ -f opt/osp/share/rootfs.simg.7z ] || [ -f opt/osp/share/rootfs.simg ] || [ -f opt/osp/share/rootfs.img ]
+then
+    printf "rootfs found\n"
+else
+    printf "\nDOWNLOADING ROOTFS\n"
+    gdrive_download 1om8mAVqPbfmI2iyw2wWDA215dOEaqBQv opt/osp/share/rootfs.simg.7z
+    printf "ROOTFS DOWNLOADED\n"
+fi
+popd
+

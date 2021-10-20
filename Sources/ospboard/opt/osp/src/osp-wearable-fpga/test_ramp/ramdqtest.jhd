@@ -1,0 +1,17 @@
+MODULE ramdqtest DEFIN ramdqtest.vhd
+	SUBMODULE DP8KC
+		INSTANCE ramdqtest_0_5_0
+	SUBMODULE VLO
+		INSTANCE scuba_vlo_inst
+	SUBMODULE VHI
+		INSTANCE scuba_vhi_inst
+	SUBMODULE DP8KC
+		INSTANCE ramdqtest_0_4_1
+	SUBMODULE DP8KC
+		INSTANCE ramdqtest_0_3_2
+	SUBMODULE DP8KC
+		INSTANCE ramdqtest_0_2_3
+	SUBMODULE DP8KC
+		INSTANCE ramdqtest_0_1_4
+	SUBMODULE DP8KC
+		INSTANCE ramdqtest_0_0_5

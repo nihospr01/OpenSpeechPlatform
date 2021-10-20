@@ -1,0 +1,9 @@
+[Unit]
+Description=wcn36xx firmware bug monitor
+
+[Service]
+ExecStart= wcn36xx-monitor
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

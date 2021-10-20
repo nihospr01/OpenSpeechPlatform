@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sudo ../../../../mac/fastboot flash partition gpt_both0.bin
+sudo ../../../../mac/fastboot flash hyp hyp.mbn
+sudo ../../../../mac/fastboot flash rpm rpm.mbn
+sudo ../../../../mac/fastboot flash sbl1 sbl1.mbn
+sudo ../../../../mac/fastboot flash tz tz.mbn
+sudo ../../../../mac/fastboot flash aboot emmc_appsboot.mbn
+sudo ../../../../mac/fastboot flash cdt sbc_1.0_8016.bin
+sudo ../../../../mac/fastboot flash fsg fs_image_linux.tar.gz.mbn.img
+
+sudo ../../../../mac/fastboot erase boot
+sudo ../../../../mac/fastboot erase rootfs
+sudo ../../../../mac/fastboot erase devinfo

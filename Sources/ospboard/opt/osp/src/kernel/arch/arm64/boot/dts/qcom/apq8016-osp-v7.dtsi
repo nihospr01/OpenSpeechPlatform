@@ -1,0 +1,700 @@
+/*
+ * Copyright (c) 2015, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+#include "msm8916-pm8916.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/pinctrl/qcom,pmic-gpio.h>
+#include <dt-bindings/pinctrl/qcom,pmic-mpp.h>
+#include <dt-bindings/sound/apq8016-lpass.h>
+
+/ {
+	aliases {
+		serial0 = &blsp1_uart2;
+		serial1 = &blsp1_uart1;
+	};
+
+	chosen {
+		stdout-path = "serial0";
+	};
+
+	reserved-memory {
+		ramoops@bff00000{
+			compatible = "ramoops";
+			reg = <0x0 0xbff00000 0x0 0x100000>;
+
+			record-size = <0x20000>;
+			console-size = <0x20000>;
+			ftrace-size = <0x20000>;
+		};
+	};
+
+	leds {
+		pinctrl-names = "default";
+		pinctrl-0 = <&ospboard_leds_v7>,
+			    <&pm8916_gpios_leds>,
+			    <&pm8916_mpps_leds>;
+
+		compatible = "gpio-leds";
+
+		led@1 {
+			label = "ospboard:green:kern";
+			gpios = <&msmgpio 21 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "heartbeat";
+			default-state = "off";
+		};
+
+		led@2 {
+			label = "ospboard:green:emmc";
+			gpios = <&msmgpio 33 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "mmc0";
+			default-state = "off";
+		};
+
+		led@3 {
+			label = "ospboard:green:sd";
+			gpios = <&pm8916_gpios 1 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "mmc1";
+			default-state = "off";
+		};
+
+		led@4 {
+			label = "ospboard:green:user";
+			gpios = <&pm8916_gpios 2 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "none";
+			panic-indicator;
+			default-state = "off";
+		};
+
+		led@5 {
+			label = "ospboard:yellow:wlan";
+			gpios = <&pm8916_mpps 2 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "phy0tx";
+			default-state = "off";
+		};
+
+		led@6 {
+			label = "ospboard:blue:bt";
+			gpios = <&pm8916_mpps 3 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "bluetooth-power";
+			default-state = "off";
+		};
+	};
+
+	usb2513 {
+		compatible = "smsc,usb3503";
+		reset-gpios = <&pm8916_gpios 3 GPIO_ACTIVE_LOW>;
+		initial-mode = <1>;
+	};
+
+	usb_id: usb-id {
+		compatible = "linux,extcon-usb-gpio";
+		vbus-gpio = <&msmgpio 121 GPIO_ACTIVE_HIGH>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&usb_id_default>;
+	};
+
+	soc {
+		sound {
+			compatible = "qcom,apq8016-sbc-sndcard";
+			status = "disabled";
+		};
+
+		sound_osp {
+			compatible = "qcom,apq8016-osp-sndcard";
+			reg = <0x07702000 0x4>, <0x07702004 0x4>;
+			reg-names = "mic-iomux", "spkr-iomux";
+			status = "okay";
+			pinctrl-0 = <&ext_pri_tlmm_lines_act &ext_pri_ws_act &ext_sec_tlmm_lines_act
+					&cdc_pdm_lines_act>;
+			pinctrl-1 = <&ext_pri_tlmm_lines_sus &ext_pri_ws_sus &ext_sec_tlmm_lines_sus
+					&cdc_pdm_lines_sus>;
+
+			pinctrl-names = "default", "sleep";
+			qcom,model = "OSP-BOARD-SND-CARD";
+
+			djbus@0 {
+				link-name = "Playback";
+				cpu {
+					sound-dai = <&lpass MI2S_PRIMARY>;
+				};
+				codec {
+					sound-dai = <&djbur>;
+				};
+			};
+
+			djbum@1 {
+				link-name = "Capture";
+				cpu {
+					sound-dai = <&lpass MI2S_QUATERNARY>;
+				};
+				codec {
+					sound-dai = <&djbul>;
+				};
+			};
+
+			internal-codec-capture-dai-link@0 {
+				link-name = "WCD-Capture";
+				cpu {
+					sound-dai = <&lpass MI2S_TERTIARY>;
+				};
+				codec {
+					sound-dai = <&lpass_codec 1>, <&wcd_codec 1>;
+				};
+			};
+
+		};
+
+	};
+};
+
+&blsp_dma {
+	status = "okay";
+};
+
+&blsp1_uart2 {
+	label = "LS-UART1";
+	status = "okay";
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&blsp1_uart2_default>;
+	pinctrl-1 = <&blsp1_uart2_sleep>;
+};
+
+&blsp_spi1 {
+	// SPI1, GPIO0:3
+	label = "SPI1-GPIO03";
+	status = "okay";
+	num-cs = <2>;
+	cs-gpios = <&msmgpio   2 GPIO_ACTIVE_LOW>, //GPIO2   = SPI1_CS0
+		   <&msmgpio  16 GPIO_ACTIVE_LOW>; //GPIO16  = SPI1_CS2
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&spi1_default>, <&ospboard_spi1cs2_default>;
+	pinctrl-1 = <&spi1_sleep>, <&ospboard_spi1cs2_sleep>;
+
+	djbul: codec@0 {
+		#sound-dai-cells = <0>;
+		label = "DJBUL";
+		status = "okay";
+		compatible = "adi,djbul";
+		reg = <0>; //CS index from the list above
+		spi-max-frequency = <51000>; //Max 50kHz because FPGA
+	};
+
+	imul: bmi160@1 {
+		label = "IMUL";
+		status = "okay";
+		// compatible = "bosch,bmi160";
+		compatible = "spidev";
+		reg = <1>;
+		spi-max-frequency = <51000>; //Max 50kHz because FPGA
+	};
+};
+
+&blsp_spi3 {
+	// SPI3, GPIO8:11
+	label = "HS-SPI1";
+	status = "okay";
+	num-cs = <3>;
+	cs-gpios = <&msmgpio  10 GPIO_ACTIVE_LOW>,  //GPIO10  = SPI3_CS0
+		   <&msmgpio  120 GPIO_ACTIVE_LOW>, //GPIO120 = SPI3_CS1
+		   <&msmgpio  69 GPIO_ACTIVE_LOW>;  //GPIO69  = SPI3_CS3
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&spi3_default>, <&ospboard_spi3cs1_default>, <&ospboard_spi3cs3_default>;
+	pinctrl-1 = <&spi3_sleep>, <&ospboard_spi3cs1_sleep>, <&ospboard_spi3cs3_sleep>;
+
+	djbur: codec@0 {
+		#sound-dai-cells = <0>;
+		label = "DJBUR";
+		status = "okay";
+		compatible = "adi,djbur";
+		reg = <0>; //CS index from the list above
+		spi-max-frequency = <51000>; //Max 50kHz because FPGA
+	};
+
+	imub: bmi160@1 {
+		label = "IMUB";
+		status = "okay";
+		// compatible = "bosch,bmi160";
+		compatible = "spidev";
+		reg = <1>;
+		spi-max-frequency = <51000>; //Max 50kHz because FPGA
+	};
+
+	imur: bmi160@2 {
+		label = "IMUR";
+		status = "okay";
+		// compatible = "bosch,bmi160";
+		compatible = "spidev";
+		reg = <2>;
+		spi-max-frequency = <51000>; //Max 50kHz because FPGA
+	};
+};
+
+&blsp_spi4 {
+	label = "SPI4-GPIO1215";
+	status = "okay";
+	num-cs = <1>;
+	cs-gpios = <&msmgpio 14 GPIO_ACTIVE_LOW>; //GPIO14 = SPI4_CS0
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&spi4_default>, <&ospboard_fmeeg_int_default>;
+	pinctrl-1 = <&spi4_sleep>, <&ospboard_fmeeg_int_sleep>;
+
+	arun_spidev: spidev@0 {
+		label = "arun_spidev";
+		status = "okay";
+		compatible = "spidev";
+		reg = <0>;
+		spi-max-frequency = <50000000>;
+	};
+};
+
+&gpu {
+	status = "disabled";
+};
+
+&lpass {
+	status = "okay";
+};
+
+&lpass_codec {
+	status = "okay";
+};
+
+&mdss {
+	status = "disabled";
+};
+
+&mpss {
+	status = "okay";
+};
+
+&pronto {
+	status = "okay";
+};
+
+&sdhc_1 {
+	vmmc-supply = <&pm8916_l8>;
+	vqmmc-supply = <&pm8916_l5>;
+
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&sdc1_clk_on &sdc1_cmd_on &sdc1_data_on>;
+	pinctrl-1 = <&sdc1_clk_off &sdc1_cmd_off &sdc1_data_off>;
+	status = "okay";
+};
+
+&sdhc_2 {
+	vmmc-supply = <&pm8916_l11>;
+	vqmmc-supply = <&pm8916_l12>;
+
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&sdc2_clk_on &sdc2_cmd_on &sdc2_data_on &sdc2_cd_on>;
+	pinctrl-1 = <&sdc2_clk_off &sdc2_cmd_off &sdc2_data_off &sdc2_cd_off>;
+
+	cd-gpios = <&msmgpio 38 0x1>;
+	status = "okay";
+};
+
+&usb {
+	extcon = <&usb_id>;
+	status = "okay";
+	adp-disable;
+	hnp-disable;
+	srp-disable;
+	dr_mode = "host";
+	pinctrl-names = "default";
+	pinctrl-0 = <&usb_sw_sel_pm>;
+	ulpi {
+		phy {
+			v1p8-supply = <&pm8916_l7>;
+			v3p3-supply = <&pm8916_l13>;
+			extcon = <&usb_id>;
+		};
+	};
+};
+
+&venus {
+	status = "disabled";
+};
+
+&wcd_codec {
+	status = "okay";
+	clocks = <&gcc GCC_CODEC_DIGCODEC_CLK>;
+	clock-names = "mclk";
+};
+
+&smd_rpm_regulators {
+	vdd_l1_l2_l3-supply = <&pm8916_s3>;
+	vdd_l4_l5_l6-supply = <&pm8916_s4>;
+	vdd_l7-supply = <&pm8916_s4>;
+
+	s1 {
+		regulator-min-microvolt = <375000>;
+		regulator-max-microvolt = <1562000>;
+	};
+
+	s3 {
+		regulator-min-microvolt = <375000>;
+		regulator-max-microvolt = <1562000>;
+		regulator-always-on;
+	};
+
+	s4 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		regulator-always-on;
+		regulator-boot-on;
+	};
+
+	l1 {
+		regulator-min-microvolt = <375000>;
+		regulator-max-microvolt = <1525000>;
+	};
+
+	l2 {
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
+	};
+
+	l3 {
+		regulator-min-microvolt = <375000>;
+		regulator-max-microvolt = <1525000>;
+		regulator-always-on;
+	};
+
+	l4 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l5 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l6 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+	};
+
+	l7 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l8 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l9 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l10 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l11 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+		regulator-allow-set-load;
+		regulator-system-load = <400000>;
+	};
+
+	l12 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l13 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l14 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+
+	l15 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+		regulator-always-on;
+	};
+
+	l16 {
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		regulator-always-on;
+	};
+
+	l17 {
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		regulator-always-on;
+	};
+
+	l18 {
+		regulator-min-microvolt = <1750000>;
+		regulator-max-microvolt = <3337000>;
+	};
+};
+
+/*
+ * GPIO name legend: proper name = the GPIO line is used as GPIO
+ *         NC = not connected (pin out but not routed from the chip to
+ *              anything the board)
+ *         "[PER]" = pin is muxed for [peripheral] (not GPIO)
+ *
+ * For the lines routed to the external connectors the
+ * lines are named after the 96Boards CE Specification 1.0,
+ * Appendix "Expansion Connector Signal Description".
+ *
+ * When the 96Board naming of a line and the schematic name of
+ * the same line are in conflict, the 96Board specification
+ * takes precedence, which means that the external UART on the
+ * LSEC is named UART0 while the schematic and SoC names this
+ * UART3. This is only for the informational lines i.e. "[FOO]",
+ * the GPIO named lines "GPIO-A" thru "GPIO-L" are the only
+ * ones actually used for GPIO.
+ */
+
+&msmgpio {
+
+	msmgpio_leds: msmgpio_leds {
+		pinconf {
+			pins = "gpio21", "gpio120";
+			function = "gpio";
+			output-low;
+		};
+	};
+
+	usb_id_default: usb-id-default {
+		pinmux {
+			function = "gpio";
+			pins = "gpio121";
+		};
+
+		pinconf {
+			pins = "gpio121";
+			drive-strength = <8>;
+			input-enable;
+			bias-pull-up;
+		};
+	};
+
+	msm_key_volp_n_default: msm_key_volp_n_default {
+		pinmux {
+			function = "gpio";
+			pins = "gpio107";
+		};
+		pinconf {
+			pins = "gpio107";
+			drive-strength = <8>;
+			input-enable;
+			bias-pull-up;
+		};
+	};
+
+	ospboard_leds: msmgpio_leds {
+		pinconf {
+			pins = "gpio21", "gpio109";
+			function = "gpio";
+			output-low;
+		};
+	};
+
+	ospboard_leds_v7: msmgpio_leds {
+		pinconf {
+			pins = "gpio21", "gpio33";
+			function = "gpio";
+			output-low;
+		};
+	};
+
+	ospboard_spi1cs2_default: ospboard_spi1cs2_default {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio16";
+	    };
+	    pinconf {
+	        pins = "gpio16";
+	        drive-strength = <16>;
+	        bias-disable;
+	        output-high;
+	    };
+	};
+
+	ospboard_spi1cs2_sleep: ospboard_spi1cs2_sleep {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio16";
+	    };
+	    pinconf {
+	        pins = "gpio16";
+	        drive-strength = <2>;
+	        bias-pull-down;
+	    };
+	};
+
+	ospboard_spi3cs1_default: ospboard_spi3cs1_default {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio120";
+	    };
+	    pinconf {
+	        pins = "gpio120";
+	        drive-strength = <16>;
+	        bias-disable;
+	        output-high;
+	    };
+	};
+
+	ospboard_spi3cs1_sleep: ospboard_spi3cs1_sleep {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio120";
+	    };
+	    pinconf {
+	        pins = "gpio120";
+	        drive-strength = <2>;
+	        bias-pull-down;
+	    };
+	};
+
+	ospboard_spi3cs3_default: ospboard_spi3cs3_default {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio69";
+	    };
+	    pinconf {
+	        pins = "gpio69";
+	        drive-strength = <16>;
+	        bias-disable;
+	        output-high;
+	    };
+	};
+
+	ospboard_spi3cs3_sleep: ospboard_spi3cs3_sleep {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio69";
+	    };
+	    pinconf {
+	        pins = "gpio69";
+	        drive-strength = <2>;
+	        bias-pull-down;
+	    };
+	};
+
+	ospboard_fmeeg_int_default: ospboard_fmeeg_int_default {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio62";
+	    };
+	    pinconf {
+	        pins = "gpio62";
+	        drive-strength = <16>;
+	        bias-disable;
+	        output-high;
+	    };
+	};
+
+	ospboard_fmeeg_int_sleep: ospboard_fmeeg_int_sleep {
+	    pinmux {
+	        function = "gpio";
+	        pins = "gpio62";
+	    };
+	    pinconf {
+	        pins = "gpio62";
+	        drive-strength = <2>;
+	        bias-pull-down;
+	    };
+	};
+};
+
+&pm8916_gpios {
+	gpio-line-names =
+		"USR_LED_3_CTRL",
+		"USR_LED_4_CTRL",
+		"USB_HUB_RESET_N_PM",
+		"USB_SW_SEL_PM";
+
+	usb_hub_reset_pm: usb-hub-reset-pm {
+		pins = "gpio3";
+		function = PMIC_GPIO_FUNC_NORMAL;
+
+		input-disable;
+		output-high;
+	};
+
+	usb_hub_reset_pm_device: usb-hub-reset-pm-device {
+		pins = "gpio3";
+		function = PMIC_GPIO_FUNC_NORMAL;
+
+		output-low;
+	};
+
+	usb_sw_sel_pm: usb-sw-sel-pm {
+		pins = "gpio4";
+		function = PMIC_GPIO_FUNC_NORMAL;
+
+		power-source = <PM8916_GPIO_VPH>;
+		input-disable;
+		output-high;
+	};
+
+	usb_sw_sel_pm_device: usb-sw-sel-pm-device {
+		pins = "gpio4";
+		function = PMIC_GPIO_FUNC_NORMAL;
+
+		power-source = <PM8916_GPIO_VPH>;
+		input-disable;
+		output-low;
+	};
+
+	pm8916_gpios_leds: pm8916-gpios-leds {
+		pins = "gpio1", "gpio2";
+		function = PMIC_GPIO_FUNC_NORMAL;
+
+		output-low;
+	};
+};
+
+&pm8916_mpps {
+	gpio-line-names =
+		"VDD_PX_BIAS",
+		"WLAN_LED_CTRL",
+		"BT_LED_CTRL",
+		"GPIO-F"; /* LS_EXP_GPIO_F, LSEC pin 28 */
+
+	pinctrl-names = "default";
+	pinctrl-0 = <&ls_exp_gpio_f>;
+
+	ls_exp_gpio_f: pm8916-mpp4 {
+		pins = "mpp4";
+		function = "digital";
+
+		output-low;
+		power-source = <PM8916_MPP_L5>;	// 1.8V
+	};
+
+	pm8916_mpps_leds: pm8916-mpps-leds {
+		pins = "mpp2", "mpp3";
+		function = "digital";
+
+		output-low;
+	};
+};

@@ -1,0 +1,12 @@
+@E: CL219 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Multiple non-tristate drivers for net counter3(3) in test_togglepins
+@E: CL219 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Multiple non-tristate drivers for net counter3(2) in test_togglepins
+@E: CL219 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Multiple non-tristate drivers for net counter3(1) in test_togglepins
+@E: CL219 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Multiple non-tristate drivers for net counter3(0) in test_togglepins
+@E: CL229 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Unresolved tristate drivers for net counter3(0) in test_togglepins
+@E: CL229 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Unresolved tristate drivers for net counter3(1) in test_togglepins
+@E: CL229 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Unresolved tristate drivers for net counter3(2) in test_togglepins
+@E: CL229 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":22:8:22:15|Unresolved tristate drivers for net counter3(3) in test_togglepins
+@E: MF420 |Netlist read from file /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/synwork/layer0.srs failed
+@E: Could not find specified top level test_togglepins (library: work, cell: test_togglepins)Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+@E::Error while linking, aborting.
+

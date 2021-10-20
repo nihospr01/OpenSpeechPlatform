@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "OWF_djb_bench_impl1.log"
+-o "OWF_djb_bench_impl1.csv"
+-pr "OWF_djb_bench_impl1.prf"

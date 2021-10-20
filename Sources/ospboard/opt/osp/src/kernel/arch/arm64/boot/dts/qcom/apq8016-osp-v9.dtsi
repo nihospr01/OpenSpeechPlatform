@@ -1,0 +1,34 @@
+/*
+ * Copyright (c) 2021, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+#include "apq8016-osp-v7.dtsi"
+
+&blsp_i2c5 {
+       label = "I2C5";
+       status = "okay";
+       mcp7940x_rtc: mcp7940x@6f {
+               label = "RTC-MCP7940";
+               compatible = "microchip,mcp7940x";
+               reg = <0x6f>;
+               status = "okay";
+       };
+};
+
+&blsp_i2c6 {
+       label = "BATT-CH-MAX14747";
+       status = "okay";
+};
+
+&pm8916_rtc {
+       status = "disabled";
+};

@@ -1,0 +1,44 @@
+Loading design for application iotiming from file test_arun_impl1.ncd.
+Design name: test_togglepins
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Loading design for application iotiming from file test_arun_impl1.ncd.
+Design name: test_togglepins
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+// Design: test_togglepins
+// Package: CABGA256
+// ncd File: test_arun_impl1.ncd
+// Version: Diamond (64-bit) 3.10.0.111.2
+// Written on Thu Mar 14 14:36:55 2019
+// M: Minimum Performance Grade
+// iotiming test_arun_impl1.ncd test_arun_impl1.prf -gui -msgset /home/hari/Documents/osp-wearable-fpga/test_ramp/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port         Clock   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+adc_clk_copy clock   R    11.370         5        3.628          M
+interrupt    clock   R    10.846         5        3.186          M
+spi_miso     spi_clk R    10.515         5        3.170          M

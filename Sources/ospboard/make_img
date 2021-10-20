@@ -1,0 +1,43 @@
+#!/bin/bash
+
+compress=0
+help=0
+while getopts ch flag
+do
+    case "${flag}" in
+        c) compress=1;;
+        h) help=1;;
+    esac
+done
+
+if [ $help -ne 0 ]
+then
+    printf "Usage: make_img [-c]\n"
+    printf "Converts the rootfs.img file to rootfs.simg required for flashing the device.\n"
+    printf "\t-c\tcompress rootfs using 7z\n\n"
+    exit
+fi
+
+if grep -qs rootfs /proc/mounts
+then
+    ./umount_rootfs
+fi
+
+sudo chown $USER.$USER opt/osp/share/rootfs*
+
+# shrink image
+e2fsck -pf opt/osp/share/rootfs.img   
+resize2fs -M opt/osp/share/rootfs.img
+e2fsck -pf opt/osp/share/rootfs.img   
+
+## Update and Compress Filesystem Image
+
+# makes simg file
+docker run -v $PWD/opt:/opt --privileged -e OSP_FUNC=updateRootfs osp-builder
+
+if [ $compress -ne 0 ]
+then
+    # makes simg.7z file
+    printf "Compressing rootfs\n"
+    docker run -v $PWD/opt:/opt --privileged -e OSP_FUNC=compressRootfs osp-builder
+fi

@@ -1,0 +1,308 @@
+[ START MERGED ]
+[ END MERGED ]
+[ START CLIPPED ]
+fifo/VCC
+fifo/GND
+pll1/GND
+counter_cry_0_COUT[13]
+fifo/ff_9
+fifo/aff_9
+fifo/aef_9
+fifo/ef_9
+fifo/do17_9
+fifo/do16_9
+fifo/do15_9
+fifo/do14_9
+fifo/do13_9
+fifo/do12_9
+fifo/do11_9
+fifo/do10_9
+fifo/do9_9
+fifo/do8_9
+fifo/do7_9
+fifo/do6_9
+fifo/do5_9
+fifo/do4_9
+fifo/do3_9
+fifo/do2_9
+fifo/do1_9
+fifo/ff_8
+fifo/aff_8
+fifo/aef_8
+fifo/ef_8
+fifo/do17_8
+fifo/do16_8
+fifo/do15_8
+fifo/do14_8
+fifo/do13_8
+fifo/do12_8
+fifo/do11_8
+fifo/do10_8
+fifo/do9_8
+fifo/do8_8
+fifo/do7_8
+fifo/do6_8
+fifo/do5_8
+fifo/do4_8
+fifo/do3_8
+fifo/do2_8
+fifo/do1_8
+fifo/ff_7
+fifo/aff_7
+fifo/aef_7
+fifo/ef_7
+fifo/do17_7
+fifo/do16_7
+fifo/do15_7
+fifo/do14_7
+fifo/do13_7
+fifo/do12_7
+fifo/do11_7
+fifo/do10_7
+fifo/do9_7
+fifo/do8_7
+fifo/do7_7
+fifo/do6_7
+fifo/do5_7
+fifo/do4_7
+fifo/do3_7
+fifo/do2_7
+fifo/do1_7
+fifo/ff_6
+fifo/aff_6
+fifo/aef_6
+fifo/ef_6
+fifo/do17_6
+fifo/do16_6
+fifo/do15_6
+fifo/do14_6
+fifo/do13_6
+fifo/do12_6
+fifo/do11_6
+fifo/do10_6
+fifo/do9_6
+fifo/do8_6
+fifo/do7_6
+fifo/do6_6
+fifo/do5_6
+fifo/do4_6
+fifo/do3_6
+fifo/do2_6
+fifo/do1_6
+fifo/ff_5
+fifo/aff_5
+fifo/aef_5
+fifo/ef_5
+fifo/do17_5
+fifo/do16_5
+fifo/do15_5
+fifo/do14_5
+fifo/do13_5
+fifo/do12_5
+fifo/do11_5
+fifo/do10_5
+fifo/do9_5
+fifo/do8_5
+fifo/do7_5
+fifo/do6_5
+fifo/do5_5
+fifo/do4_5
+fifo/do3_5
+fifo/do2_5
+fifo/do1_5
+fifo/ff_4
+fifo/aff_4
+fifo/aef_4
+fifo/ef_4
+fifo/do17_4
+fifo/do16_4
+fifo/do15_4
+fifo/do14_4
+fifo/do13_4
+fifo/do12_4
+fifo/do11_4
+fifo/do10_4
+fifo/do9_4
+fifo/do8_4
+fifo/do7_4
+fifo/do6_4
+fifo/do5_4
+fifo/do4_4
+fifo/do3_4
+fifo/do2_4
+fifo/do1_4
+fifo/ff_3
+fifo/aff_3
+fifo/aef_3
+fifo/ef_3
+fifo/do17_3
+fifo/do16_3
+fifo/do15_3
+fifo/do14_3
+fifo/do13_3
+fifo/do12_3
+fifo/do11_3
+fifo/do10_3
+fifo/do9_3
+fifo/do8_3
+fifo/do7_3
+fifo/do6_3
+fifo/do5_3
+fifo/do4_3
+fifo/do3_3
+fifo/do2_3
+fifo/do1_3
+fifo/ff_2
+fifo/aff_2
+fifo/aef_2
+fifo/ef_2
+fifo/do17_2
+fifo/do16_2
+fifo/do15_2
+fifo/do14_2
+fifo/do13_2
+fifo/do12_2
+fifo/do11_2
+fifo/do10_2
+fifo/do9_2
+fifo/do8_2
+fifo/do7_2
+fifo/do6_2
+fifo/do5_2
+fifo/do4_2
+fifo/do3_2
+fifo/do2_2
+fifo/do1_2
+fifo/ff_1
+fifo/aff_1
+fifo/aef_1
+fifo/ef_1
+fifo/do17_1
+fifo/do16_1
+fifo/do15_1
+fifo/do14_1
+fifo/do13_1
+fifo/do12_1
+fifo/do11_1
+fifo/do10_1
+fifo/do9_1
+fifo/do8_1
+fifo/do7_1
+fifo/do6_1
+fifo/do5_1
+fifo/do4_1
+fifo/do3_1
+fifo/do2_1
+fifo/do1_1
+fifo/ff_0
+fifo/aff_0
+fifo/aef_0
+fifo/ef_0
+fifo/do17_0
+fifo/do16_0
+fifo/do15_0
+fifo/do14_0
+fifo/do13_0
+fifo/do12_0
+fifo/do11_0
+fifo/do10_0
+fifo/do9_0
+fifo/do8_0
+fifo/do7_0
+fifo/do6_0
+fifo/do5_0
+fifo/do4_0
+fifo/do3_0
+fifo/do2_0
+fifo/do1_0
+fifo/ff
+fifo/aff
+fifo/aef
+fifo/ef
+fifo/do17
+fifo/do16
+fifo/do15
+fifo/do14
+fifo/do13
+fifo/do12
+fifo/do11
+fifo/do10
+fifo/do9
+fifo/do8
+fifo/do7
+fifo/do6
+fifo/do5
+fifo/do4
+fifo/do3
+fifo/do2
+fifo/do1
+fifo/AlmostFull
+fifo/AlmostEmpty
+fifo/do17_10
+fifo/do16_10
+fifo/do15_10
+fifo/do14_10
+fifo/do13_10
+fifo/do12_10
+fifo/do11_10
+fifo/do10_10
+fifo/do9_10
+fifo/do8_10
+fifo/do7_10
+fifo/do6_10
+fifo/do5_10
+fifo/do4_10
+fifo/do3_10
+fifo/do2_10
+fifo/do1_10
+pll1/DPHSRC
+pll1/PLLACK
+pll1/PLLDATO0
+pll1/PLLDATO1
+pll1/PLLDATO2
+pll1/PLLDATO3
+pll1/PLLDATO4
+pll1/PLLDATO5
+pll1/PLLDATO6
+pll1/PLLDATO7
+pll1/REFCLK
+pll1/INTLOCK
+pll1/LOCK
+pll1/CLKOS3
+pll1/CLKOS2
+pll1/CLKOS
+counter_cry_0_S0[0]
+N_1
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.10.0.111.2 -- WARNING: Map write only section -- Fri Mar 15 11:54:35 2019
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "xtal_out" SITE "D2" ;
+LOCATE COMP "clock" SITE "E2" ;
+LOCATE COMP "interrupt" SITE "T7" ;
+LOCATE COMP "adc_data[11]" SITE "K15" ;
+LOCATE COMP "adc_data[10]" SITE "J16" ;
+LOCATE COMP "adc_data[9]" SITE "J15" ;
+LOCATE COMP "adc_data[8]" SITE "H16" ;
+LOCATE COMP "adc_data[7]" SITE "H15" ;
+LOCATE COMP "adc_data[6]" SITE "G16" ;
+LOCATE COMP "adc_data[5]" SITE "G15" ;
+LOCATE COMP "adc_data[4]" SITE "F16" ;
+LOCATE COMP "adc_data[3]" SITE "F15" ;
+LOCATE COMP "adc_data[2]" SITE "E16" ;
+LOCATE COMP "adc_data[1]" SITE "E15" ;
+LOCATE COMP "adc_data[0]" SITE "D16" ;
+LOCATE COMP "adc_pdwn" SITE "D15" ;
+LOCATE COMP "adc_clk_copy2" SITE "L1" ;
+LOCATE COMP "adc_clk_copy" SITE "L2" ;
+LOCATE COMP "adc_clk" SITE "C16" ;
+LOCATE COMP "spi_miso" SITE "R9" ;
+LOCATE COMP "spi_cs" SITE "R8" ;
+LOCATE COMP "spi_clk" SITE "T8" ;
+LOCATE COMP "xtal_in" SITE "C1" ;
+FREQUENCY NET "clock_c" 12.800000 MHz ;
+FREQUENCY NET "adc_clk_c" 1.600000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

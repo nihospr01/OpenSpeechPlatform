@@ -1,0 +1,45 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Fri Jun 15 15:49:09 2018 *
+NOTE DESIGN NAME: OSP_Carrier_Basic *
+NOTE DEVICE NAME: LCMXO3LF-6900C-5CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS l_lvds_io : A5 : inout *
+NOTE PINS db_leds[0] : P16 : out *
+NOTE PINS db_clk : C8 : in *
+NOTE PINS spi3_cs3 : T15 : in *
+NOTE PINS spi3_cs0 : R14 : in *
+NOTE PINS spi3_miso : T14 : out *
+NOTE PINS spi3_mosi : R13 : in *
+NOTE PINS spi3_clk : T13 : in *
+NOTE PINS spi1_cs2 : T12 : in *
+NOTE PINS spi1_cs0 : R11 : in *
+NOTE PINS spi1_miso : T11 : out *
+NOTE PINS spi1_mosi : R10 : in *
+NOTE PINS spi1_clk : T10 : in *
+NOTE PINS i2s2_d1 : R6 : out *
+NOTE PINS i2s2_d0 : T5 : out *
+NOTE PINS i2s2_ws : R5 : out *
+NOTE PINS i2s2_sck : T4 : out *
+NOTE PINS i2s1_d1 : R4 : in *
+NOTE PINS i2s1_d0 : T3 : in *
+NOTE PINS i2s1_ws : R3 : out *
+NOTE PINS i2s1_sck : T2 : out *
+NOTE PINS xtal_in : C1 : in *
+NOTE PINS xtal_out : D2 : out *
+NOTE PINS codec_clk : E2 : in *
+NOTE PINS r_lvds_io : B11 : inout *
+NOTE PINS db_leds[7] : H11 : out *
+NOTE PINS db_leds[6] : J13 : out *
+NOTE PINS db_leds[5] : J11 : out *
+NOTE PINS db_leds[4] : L12 : out *
+NOTE PINS db_leds[3] : K11 : out *
+NOTE PINS db_leds[2] : L13 : out *
+NOTE PINS db_leds[1] : N15 : out *
+NOTE PINS db_switches[3] : N1 : in *
+NOTE PINS db_switches[2] : M3 : in *
+NOTE PINS db_switches[1] : P1 : in *
+NOTE PINS db_switches[0] : N2 : in *
+NOTE PINS db_reset : B3 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

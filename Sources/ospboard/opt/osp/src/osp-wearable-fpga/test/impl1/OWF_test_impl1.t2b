@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "/data/School/Research/THE_Lab/FPGA/OWF_test"  

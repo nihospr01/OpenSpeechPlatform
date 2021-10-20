@@ -1,0 +1,20 @@
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":5:7:5:21|Synthesizing work.test_togglepins.a.
+@W: CD638 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":23:8:23:15|Signal counter4 is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/plltest.vhd":14:7:14:13|Synthesizing work.plltest.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":2175:10:2175:16|Synthesizing work.ehxpllj.syn_black_box.
+Post processing for work.ehxpllj.syn_black_box
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1490:10:1490:12|Synthesizing work.vlo.syn_black_box.
+Post processing for work.vlo.syn_black_box
+Post processing for work.plltest.structure
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/fifotest.vhd":14:7:14:14|Synthesizing work.fifotest.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1874:10:1874:16|Synthesizing work.fifo8kb.syn_black_box.
+Post processing for work.fifo8kb.syn_black_box
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1483:10:1483:12|Synthesizing work.vhi.syn_black_box.
+Post processing for work.vhi.syn_black_box
+Post processing for work.fifotest.structure
+Post processing for work.test_togglepins.a
+@W: CL169 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":123:2:123:3|Pruning unused register toggle_4. Make sure that there are no unused intermediate registers.
+@W: CL168 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":67:1:67:4|Removing instance fifo because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CL159 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":11:11:11:18|Input spi_mosi is unused.
+@N: CL159 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":11:21:11:26|Input spi_cs is unused.
+@N: CL159 :"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":14:2:14:9|Input adc_data is unused.

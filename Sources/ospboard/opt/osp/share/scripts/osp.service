@@ -1,0 +1,13 @@
+[Unit]
+Description=Open Speech Platform Audio Daemon
+
+[Service]
+Environment="OSP_MEDIA=/opt/osp/release/media"
+Type=forking
+ExecStart=/opt/osp/bin/osp -d -i 1 -I 2 -o 0 -O 2 -m 1
+StandardOutput=append:/var/log/osp_out.log
+StandardError=inherit
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

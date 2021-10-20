@@ -1,0 +1,18 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Mar 14 12:49:55 2019 *
+NOTE DESIGN NAME: test_togglepins *
+NOTE DEVICE NAME: LCMXO3LF-6900C-5CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS xtal_out : D2 : out *
+NOTE PINS clock : E2 : in *
+NOTE PINS interrupt : T7 : out *
+NOTE PINS adc_pdwn : D15 : out *
+NOTE PINS adc_clk_copy2 : L1 : out *
+NOTE PINS adc_clk_copy : L2 : out *
+NOTE PINS adc_clk : C16 : out *
+NOTE PINS spi_miso : R9 : out *
+NOTE PINS spi_clk : T8 : in *
+NOTE PINS xtal_in : C1 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

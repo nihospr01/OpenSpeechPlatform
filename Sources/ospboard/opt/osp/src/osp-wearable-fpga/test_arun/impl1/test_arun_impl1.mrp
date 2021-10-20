@@ -1,0 +1,732 @@
+
+       Lattice Mapping Report File for Design Module 'test_togglepins'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA256 -s 5 -oc
+     Commercial test_arun_impl1.ngd -o test_arun_impl1_map.ncd -pr
+     test_arun_impl1.prf -mp test_arun_impl1.mrp -lpf /home/hari/Documents/osp-w
+     earable-fpga/test_arun/impl1/test_arun_impl1_synplify.lpf -lpf
+     /home/hari/Documents/osp-wearable-fpga/test_arun/test_arun.lpf -c 0 -gui
+     -msgset /home/hari/Documents/osp-wearable-fpga/test_arun/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA256
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  03/15/19  11:54:35
+
+Design Summary
+--------------
+
+   Number of registers:     27 out of  7485 (0%)
+      PFU registers:           26 out of  6864 (0%)
+      PIO registers:            1 out of   621 (0%)
+   Number of SLICEs:        20 out of  3432 (1%)
+      SLICEs as Logic/ROM:     20 out of  3432 (1%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:          8 out of  3432 (0%)
+   Number of LUT4s:         40 out of  6864 (1%)
+      Number used as logic LUTs:         24
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       16
+      Number used as shift registers:     0
+   Number of PIO sites used: 23 + 4(JTAG) out of 207 (13%)
+   Number of block RAMs:  12 out of 26 (46%)
+   Number of GSRs:  0 out of 1 (0%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net clock_c: 11 loads, 11 rising, 0 falling (Driver: PIO clock )
+     Net spi_clk_c: 6 loads, 6 rising, 0 falling (Driver: PIO spi_clk )
+
+                                    Page 1
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Design Summary (cont)
+---------------------
+     Net adc_clk_copy_c: 12 loads, 12 rising, 0 falling (Driver: counter2[2] )
+     Net toggle: 12 loads, 12 rising, 0 falling (Driver: toggle )
+   Number of Clock Enables:  0
+   Number of LSRs:  2
+     Net un2_spi_data_11_RNIDF9C: 2 loads, 2 LSLICEs
+     Net spi_cs_c: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net fifo/Empty: 12 loads
+     Net fifo/Full: 12 loads
+     Net counter3[1]: 9 loads
+     Net counter3[0]: 8 loads
+     Net counter5[1]: 8 loads
+     Net counter3[3]: 7 loads
+     Net counter3[2]: 5 loads
+     Net counter2[0]: 3 loads
+     Net spi_cs_c: 3 loads
+     Net adc_clk_c: 2 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: IO buffer missing for top level port spi_mosi...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| xtal_out            | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| clock               | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| interrupt           | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[11]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[10]        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[9]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[8]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[7]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[6]         | INPUT     | LVCMOS33  |            |
+
+                                    Page 2
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| adc_data[5]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[4]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[3]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[2]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[1]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_data[0]         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_pdwn            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk_copy2       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk_copy        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi_miso            | OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| spi_cs              | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| spi_clk             | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| xtal_in             | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block pll1/VCC undriven or does not drive anything - clipped.
+Signal fifo/VCC undriven or does not drive anything - clipped.
+Signal fifo/GND undriven or does not drive anything - clipped.
+Signal pll1/GND undriven or does not drive anything - clipped.
+Signal counter_cry_0_COUT[13] undriven or does not drive anything - clipped.
+Signal fifo/ff_9 undriven or does not drive anything - clipped.
+Signal fifo/aff_9 undriven or does not drive anything - clipped.
+Signal fifo/aef_9 undriven or does not drive anything - clipped.
+Signal fifo/ef_9 undriven or does not drive anything - clipped.
+Signal fifo/do17_9 undriven or does not drive anything - clipped.
+Signal fifo/do16_9 undriven or does not drive anything - clipped.
+Signal fifo/do15_9 undriven or does not drive anything - clipped.
+Signal fifo/do14_9 undriven or does not drive anything - clipped.
+Signal fifo/do13_9 undriven or does not drive anything - clipped.
+Signal fifo/do12_9 undriven or does not drive anything - clipped.
+Signal fifo/do11_9 undriven or does not drive anything - clipped.
+Signal fifo/do10_9 undriven or does not drive anything - clipped.
+Signal fifo/do9_9 undriven or does not drive anything - clipped.
+Signal fifo/do8_9 undriven or does not drive anything - clipped.
+Signal fifo/do7_9 undriven or does not drive anything - clipped.
+Signal fifo/do6_9 undriven or does not drive anything - clipped.
+Signal fifo/do5_9 undriven or does not drive anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Removed logic (cont)
+--------------------
+Signal fifo/do4_9 undriven or does not drive anything - clipped.
+Signal fifo/do3_9 undriven or does not drive anything - clipped.
+Signal fifo/do2_9 undriven or does not drive anything - clipped.
+Signal fifo/do1_9 undriven or does not drive anything - clipped.
+Signal fifo/ff_8 undriven or does not drive anything - clipped.
+Signal fifo/aff_8 undriven or does not drive anything - clipped.
+Signal fifo/aef_8 undriven or does not drive anything - clipped.
+Signal fifo/ef_8 undriven or does not drive anything - clipped.
+Signal fifo/do17_8 undriven or does not drive anything - clipped.
+Signal fifo/do16_8 undriven or does not drive anything - clipped.
+Signal fifo/do15_8 undriven or does not drive anything - clipped.
+Signal fifo/do14_8 undriven or does not drive anything - clipped.
+Signal fifo/do13_8 undriven or does not drive anything - clipped.
+Signal fifo/do12_8 undriven or does not drive anything - clipped.
+Signal fifo/do11_8 undriven or does not drive anything - clipped.
+Signal fifo/do10_8 undriven or does not drive anything - clipped.
+Signal fifo/do9_8 undriven or does not drive anything - clipped.
+Signal fifo/do8_8 undriven or does not drive anything - clipped.
+Signal fifo/do7_8 undriven or does not drive anything - clipped.
+Signal fifo/do6_8 undriven or does not drive anything - clipped.
+Signal fifo/do5_8 undriven or does not drive anything - clipped.
+Signal fifo/do4_8 undriven or does not drive anything - clipped.
+Signal fifo/do3_8 undriven or does not drive anything - clipped.
+Signal fifo/do2_8 undriven or does not drive anything - clipped.
+Signal fifo/do1_8 undriven or does not drive anything - clipped.
+Signal fifo/ff_7 undriven or does not drive anything - clipped.
+Signal fifo/aff_7 undriven or does not drive anything - clipped.
+Signal fifo/aef_7 undriven or does not drive anything - clipped.
+Signal fifo/ef_7 undriven or does not drive anything - clipped.
+Signal fifo/do17_7 undriven or does not drive anything - clipped.
+Signal fifo/do16_7 undriven or does not drive anything - clipped.
+Signal fifo/do15_7 undriven or does not drive anything - clipped.
+Signal fifo/do14_7 undriven or does not drive anything - clipped.
+Signal fifo/do13_7 undriven or does not drive anything - clipped.
+Signal fifo/do12_7 undriven or does not drive anything - clipped.
+Signal fifo/do11_7 undriven or does not drive anything - clipped.
+Signal fifo/do10_7 undriven or does not drive anything - clipped.
+Signal fifo/do9_7 undriven or does not drive anything - clipped.
+Signal fifo/do8_7 undriven or does not drive anything - clipped.
+Signal fifo/do7_7 undriven or does not drive anything - clipped.
+Signal fifo/do6_7 undriven or does not drive anything - clipped.
+Signal fifo/do5_7 undriven or does not drive anything - clipped.
+Signal fifo/do4_7 undriven or does not drive anything - clipped.
+Signal fifo/do3_7 undriven or does not drive anything - clipped.
+Signal fifo/do2_7 undriven or does not drive anything - clipped.
+Signal fifo/do1_7 undriven or does not drive anything - clipped.
+Signal fifo/ff_6 undriven or does not drive anything - clipped.
+Signal fifo/aff_6 undriven or does not drive anything - clipped.
+Signal fifo/aef_6 undriven or does not drive anything - clipped.
+Signal fifo/ef_6 undriven or does not drive anything - clipped.
+Signal fifo/do17_6 undriven or does not drive anything - clipped.
+Signal fifo/do16_6 undriven or does not drive anything - clipped.
+Signal fifo/do15_6 undriven or does not drive anything - clipped.
+Signal fifo/do14_6 undriven or does not drive anything - clipped.
+Signal fifo/do13_6 undriven or does not drive anything - clipped.
+Signal fifo/do12_6 undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Removed logic (cont)
+--------------------
+Signal fifo/do11_6 undriven or does not drive anything - clipped.
+Signal fifo/do10_6 undriven or does not drive anything - clipped.
+Signal fifo/do9_6 undriven or does not drive anything - clipped.
+Signal fifo/do8_6 undriven or does not drive anything - clipped.
+Signal fifo/do7_6 undriven or does not drive anything - clipped.
+Signal fifo/do6_6 undriven or does not drive anything - clipped.
+Signal fifo/do5_6 undriven or does not drive anything - clipped.
+Signal fifo/do4_6 undriven or does not drive anything - clipped.
+Signal fifo/do3_6 undriven or does not drive anything - clipped.
+Signal fifo/do2_6 undriven or does not drive anything - clipped.
+Signal fifo/do1_6 undriven or does not drive anything - clipped.
+Signal fifo/ff_5 undriven or does not drive anything - clipped.
+Signal fifo/aff_5 undriven or does not drive anything - clipped.
+Signal fifo/aef_5 undriven or does not drive anything - clipped.
+Signal fifo/ef_5 undriven or does not drive anything - clipped.
+Signal fifo/do17_5 undriven or does not drive anything - clipped.
+Signal fifo/do16_5 undriven or does not drive anything - clipped.
+Signal fifo/do15_5 undriven or does not drive anything - clipped.
+Signal fifo/do14_5 undriven or does not drive anything - clipped.
+Signal fifo/do13_5 undriven or does not drive anything - clipped.
+Signal fifo/do12_5 undriven or does not drive anything - clipped.
+Signal fifo/do11_5 undriven or does not drive anything - clipped.
+Signal fifo/do10_5 undriven or does not drive anything - clipped.
+Signal fifo/do9_5 undriven or does not drive anything - clipped.
+Signal fifo/do8_5 undriven or does not drive anything - clipped.
+Signal fifo/do7_5 undriven or does not drive anything - clipped.
+Signal fifo/do6_5 undriven or does not drive anything - clipped.
+Signal fifo/do5_5 undriven or does not drive anything - clipped.
+Signal fifo/do4_5 undriven or does not drive anything - clipped.
+Signal fifo/do3_5 undriven or does not drive anything - clipped.
+Signal fifo/do2_5 undriven or does not drive anything - clipped.
+Signal fifo/do1_5 undriven or does not drive anything - clipped.
+Signal fifo/ff_4 undriven or does not drive anything - clipped.
+Signal fifo/aff_4 undriven or does not drive anything - clipped.
+Signal fifo/aef_4 undriven or does not drive anything - clipped.
+Signal fifo/ef_4 undriven or does not drive anything - clipped.
+Signal fifo/do17_4 undriven or does not drive anything - clipped.
+Signal fifo/do16_4 undriven or does not drive anything - clipped.
+Signal fifo/do15_4 undriven or does not drive anything - clipped.
+Signal fifo/do14_4 undriven or does not drive anything - clipped.
+Signal fifo/do13_4 undriven or does not drive anything - clipped.
+Signal fifo/do12_4 undriven or does not drive anything - clipped.
+Signal fifo/do11_4 undriven or does not drive anything - clipped.
+Signal fifo/do10_4 undriven or does not drive anything - clipped.
+Signal fifo/do9_4 undriven or does not drive anything - clipped.
+Signal fifo/do8_4 undriven or does not drive anything - clipped.
+Signal fifo/do7_4 undriven or does not drive anything - clipped.
+Signal fifo/do6_4 undriven or does not drive anything - clipped.
+Signal fifo/do5_4 undriven or does not drive anything - clipped.
+Signal fifo/do4_4 undriven or does not drive anything - clipped.
+Signal fifo/do3_4 undriven or does not drive anything - clipped.
+Signal fifo/do2_4 undriven or does not drive anything - clipped.
+Signal fifo/do1_4 undriven or does not drive anything - clipped.
+Signal fifo/ff_3 undriven or does not drive anything - clipped.
+Signal fifo/aff_3 undriven or does not drive anything - clipped.
+Signal fifo/aef_3 undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Removed logic (cont)
+--------------------
+Signal fifo/ef_3 undriven or does not drive anything - clipped.
+Signal fifo/do17_3 undriven or does not drive anything - clipped.
+Signal fifo/do16_3 undriven or does not drive anything - clipped.
+Signal fifo/do15_3 undriven or does not drive anything - clipped.
+Signal fifo/do14_3 undriven or does not drive anything - clipped.
+Signal fifo/do13_3 undriven or does not drive anything - clipped.
+Signal fifo/do12_3 undriven or does not drive anything - clipped.
+Signal fifo/do11_3 undriven or does not drive anything - clipped.
+Signal fifo/do10_3 undriven or does not drive anything - clipped.
+Signal fifo/do9_3 undriven or does not drive anything - clipped.
+Signal fifo/do8_3 undriven or does not drive anything - clipped.
+Signal fifo/do7_3 undriven or does not drive anything - clipped.
+Signal fifo/do6_3 undriven or does not drive anything - clipped.
+Signal fifo/do5_3 undriven or does not drive anything - clipped.
+Signal fifo/do4_3 undriven or does not drive anything - clipped.
+Signal fifo/do3_3 undriven or does not drive anything - clipped.
+Signal fifo/do2_3 undriven or does not drive anything - clipped.
+Signal fifo/do1_3 undriven or does not drive anything - clipped.
+Signal fifo/ff_2 undriven or does not drive anything - clipped.
+Signal fifo/aff_2 undriven or does not drive anything - clipped.
+Signal fifo/aef_2 undriven or does not drive anything - clipped.
+Signal fifo/ef_2 undriven or does not drive anything - clipped.
+Signal fifo/do17_2 undriven or does not drive anything - clipped.
+Signal fifo/do16_2 undriven or does not drive anything - clipped.
+Signal fifo/do15_2 undriven or does not drive anything - clipped.
+Signal fifo/do14_2 undriven or does not drive anything - clipped.
+Signal fifo/do13_2 undriven or does not drive anything - clipped.
+Signal fifo/do12_2 undriven or does not drive anything - clipped.
+Signal fifo/do11_2 undriven or does not drive anything - clipped.
+Signal fifo/do10_2 undriven or does not drive anything - clipped.
+Signal fifo/do9_2 undriven or does not drive anything - clipped.
+Signal fifo/do8_2 undriven or does not drive anything - clipped.
+Signal fifo/do7_2 undriven or does not drive anything - clipped.
+Signal fifo/do6_2 undriven or does not drive anything - clipped.
+Signal fifo/do5_2 undriven or does not drive anything - clipped.
+Signal fifo/do4_2 undriven or does not drive anything - clipped.
+Signal fifo/do3_2 undriven or does not drive anything - clipped.
+Signal fifo/do2_2 undriven or does not drive anything - clipped.
+Signal fifo/do1_2 undriven or does not drive anything - clipped.
+Signal fifo/ff_1 undriven or does not drive anything - clipped.
+Signal fifo/aff_1 undriven or does not drive anything - clipped.
+Signal fifo/aef_1 undriven or does not drive anything - clipped.
+Signal fifo/ef_1 undriven or does not drive anything - clipped.
+Signal fifo/do17_1 undriven or does not drive anything - clipped.
+Signal fifo/do16_1 undriven or does not drive anything - clipped.
+Signal fifo/do15_1 undriven or does not drive anything - clipped.
+Signal fifo/do14_1 undriven or does not drive anything - clipped.
+Signal fifo/do13_1 undriven or does not drive anything - clipped.
+Signal fifo/do12_1 undriven or does not drive anything - clipped.
+Signal fifo/do11_1 undriven or does not drive anything - clipped.
+Signal fifo/do10_1 undriven or does not drive anything - clipped.
+Signal fifo/do9_1 undriven or does not drive anything - clipped.
+Signal fifo/do8_1 undriven or does not drive anything - clipped.
+Signal fifo/do7_1 undriven or does not drive anything - clipped.
+Signal fifo/do6_1 undriven or does not drive anything - clipped.
+Signal fifo/do5_1 undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Removed logic (cont)
+--------------------
+Signal fifo/do4_1 undriven or does not drive anything - clipped.
+Signal fifo/do3_1 undriven or does not drive anything - clipped.
+Signal fifo/do2_1 undriven or does not drive anything - clipped.
+Signal fifo/do1_1 undriven or does not drive anything - clipped.
+Signal fifo/ff_0 undriven or does not drive anything - clipped.
+Signal fifo/aff_0 undriven or does not drive anything - clipped.
+Signal fifo/aef_0 undriven or does not drive anything - clipped.
+Signal fifo/ef_0 undriven or does not drive anything - clipped.
+Signal fifo/do17_0 undriven or does not drive anything - clipped.
+Signal fifo/do16_0 undriven or does not drive anything - clipped.
+Signal fifo/do15_0 undriven or does not drive anything - clipped.
+Signal fifo/do14_0 undriven or does not drive anything - clipped.
+Signal fifo/do13_0 undriven or does not drive anything - clipped.
+Signal fifo/do12_0 undriven or does not drive anything - clipped.
+Signal fifo/do11_0 undriven or does not drive anything - clipped.
+Signal fifo/do10_0 undriven or does not drive anything - clipped.
+Signal fifo/do9_0 undriven or does not drive anything - clipped.
+Signal fifo/do8_0 undriven or does not drive anything - clipped.
+Signal fifo/do7_0 undriven or does not drive anything - clipped.
+Signal fifo/do6_0 undriven or does not drive anything - clipped.
+Signal fifo/do5_0 undriven or does not drive anything - clipped.
+Signal fifo/do4_0 undriven or does not drive anything - clipped.
+Signal fifo/do3_0 undriven or does not drive anything - clipped.
+Signal fifo/do2_0 undriven or does not drive anything - clipped.
+Signal fifo/do1_0 undriven or does not drive anything - clipped.
+Signal fifo/ff undriven or does not drive anything - clipped.
+Signal fifo/aff undriven or does not drive anything - clipped.
+Signal fifo/aef undriven or does not drive anything - clipped.
+Signal fifo/ef undriven or does not drive anything - clipped.
+Signal fifo/do17 undriven or does not drive anything - clipped.
+Signal fifo/do16 undriven or does not drive anything - clipped.
+Signal fifo/do15 undriven or does not drive anything - clipped.
+Signal fifo/do14 undriven or does not drive anything - clipped.
+Signal fifo/do13 undriven or does not drive anything - clipped.
+Signal fifo/do12 undriven or does not drive anything - clipped.
+Signal fifo/do11 undriven or does not drive anything - clipped.
+Signal fifo/do10 undriven or does not drive anything - clipped.
+Signal fifo/do9 undriven or does not drive anything - clipped.
+Signal fifo/do8 undriven or does not drive anything - clipped.
+Signal fifo/do7 undriven or does not drive anything - clipped.
+Signal fifo/do6 undriven or does not drive anything - clipped.
+Signal fifo/do5 undriven or does not drive anything - clipped.
+Signal fifo/do4 undriven or does not drive anything - clipped.
+Signal fifo/do3 undriven or does not drive anything - clipped.
+Signal fifo/do2 undriven or does not drive anything - clipped.
+Signal fifo/do1 undriven or does not drive anything - clipped.
+Signal fifo/AlmostFull undriven or does not drive anything - clipped.
+Signal fifo/AlmostEmpty undriven or does not drive anything - clipped.
+Signal fifo/do17_10 undriven or does not drive anything - clipped.
+Signal fifo/do16_10 undriven or does not drive anything - clipped.
+Signal fifo/do15_10 undriven or does not drive anything - clipped.
+Signal fifo/do14_10 undriven or does not drive anything - clipped.
+Signal fifo/do13_10 undriven or does not drive anything - clipped.
+Signal fifo/do12_10 undriven or does not drive anything - clipped.
+Signal fifo/do11_10 undriven or does not drive anything - clipped.
+Signal fifo/do10_10 undriven or does not drive anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Removed logic (cont)
+--------------------
+Signal fifo/do9_10 undriven or does not drive anything - clipped.
+Signal fifo/do8_10 undriven or does not drive anything - clipped.
+Signal fifo/do7_10 undriven or does not drive anything - clipped.
+Signal fifo/do6_10 undriven or does not drive anything - clipped.
+Signal fifo/do5_10 undriven or does not drive anything - clipped.
+Signal fifo/do4_10 undriven or does not drive anything - clipped.
+Signal fifo/do3_10 undriven or does not drive anything - clipped.
+Signal fifo/do2_10 undriven or does not drive anything - clipped.
+Signal fifo/do1_10 undriven or does not drive anything - clipped.
+Signal pll1/DPHSRC undriven or does not drive anything - clipped.
+Signal pll1/PLLACK undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO0 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO1 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO2 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO3 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO4 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO5 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO6 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO7 undriven or does not drive anything - clipped.
+Signal pll1/REFCLK undriven or does not drive anything - clipped.
+Signal pll1/INTLOCK undriven or does not drive anything - clipped.
+Signal pll1/LOCK undriven or does not drive anything - clipped.
+Signal pll1/CLKOS3 undriven or does not drive anything - clipped.
+Signal pll1/CLKOS2 undriven or does not drive anything - clipped.
+Signal pll1/CLKOS undriven or does not drive anything - clipped.
+Signal counter_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Block fifo/VCC was optimized away.
+Block fifo/GND was optimized away.
+Block pll1/GND was optimized away.
+
+Memory Usage
+------------
+
+/fifo:
+    EBRs: 12
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR fifotest_0_11:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_11_0:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_10_1:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_9_2:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_8_3:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_7_4:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_6_5:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_5_6:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_4_7:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+
+                                    Page 8
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+Memory Usage (cont)
+-------------------
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_3_8:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_2_9:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+    -Contains EBR fifotest_1_10:  TYPE= FIFO8KB,  REGMODE= NOREG,  RESETMODE=
+         ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll1/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      clock_c
+  Output Clock(P):                         PIN      adc_clk_c
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     pll1/CLKFB_t
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      12.8000
+  Output Clock(P) Frequency (MHz):                   1.6000
+
+                                    Page 9
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+PLL/DLL Summary (cont)
+----------------------
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               REFCLK
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          INT_OP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    1
+  CLKOP Divider:                                    8
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+ASIC Components
+---------------
+
+Instance Name: pll1/PLLInst_0
+         Type: EHXPLLJ
+Instance Name: fifo/fifotest_0_11
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_11_0
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_10_1
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_9_2
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_8_3
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_7_4
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_6_5
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_5_6
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_4_7
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_3_8
+
+                                   Page 10
+
+
+
+
+Design:  test_togglepins                               Date:  03/15/19  11:54:35
+
+ASIC Components (cont)
+----------------------
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_2_9
+         Type: FIFO8KB
+Instance Name: fifo/fifotest_1_10
+         Type: FIFO8KB
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 195 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 11
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

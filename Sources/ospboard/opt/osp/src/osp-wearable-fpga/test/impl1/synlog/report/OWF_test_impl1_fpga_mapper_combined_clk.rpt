@@ -1,0 +1,20 @@
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 196 clock pin(s) of sequential element(s)
+0 instances converted, 196 sequential instances remain driven by gated/generated clocks
+
+================================================================================ Gated/Generated Clocks =================================================================================
+Clock Tree ID     Driving Element             Drive Element Type     Fanout     Sample Instance                            Explanation                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       e_primary_pll.PLLInst_0     EHXPLLJ                196        l_car_core_e_car_sequencer_djb_got16io     No gated clock conversion method for cell cell:LUCENT.IFS1P3BX
+=========================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+

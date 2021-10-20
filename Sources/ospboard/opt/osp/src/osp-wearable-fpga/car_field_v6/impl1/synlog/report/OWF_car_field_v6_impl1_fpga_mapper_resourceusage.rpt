@@ -1,0 +1,22 @@
+Resource Usage Report
+Part: lcmxo3lf_6900c-5
+
+Register bits: 170 of 54912 (0%)
+PIC Latch:       0
+I/O cells:       26
+
+Details:
+BB:             2
+CCU2D:          8
+FD1P3AX:        155
+FD1S3AX:        8
+GSR:            1
+IB:             11
+IFS1P3DX:       3
+INV:            4
+OB:             13
+OFS1P3DX:       4
+ORCALUT4:       122
+PUR:            1
+VHI:            22
+VLO:            22

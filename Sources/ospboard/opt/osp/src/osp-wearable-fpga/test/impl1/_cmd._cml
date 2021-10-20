@@ -1,0 +1,1 @@
+-link    -encrypt        -top OSP_Carrier_Basic -osyn /data/School/Research/THE_Lab/FPGA/OWF_test/impl1/synwork/OWF_test_impl1_comp.srs /data/School/Research/THE_Lab/FPGA/OWF_test/impl1/synwork/layer0.srs   

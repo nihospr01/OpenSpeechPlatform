@@ -1,0 +1,14 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std.vhd":123:18:123:21|Setting time resolution to ps
+@N:"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":6:7:6:21|Top entity is set to test_togglepins.
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":5:7:5:21|Synthesizing work.test_togglepins.a.
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_arun/plltest.vhd":14:7:14:13|Synthesizing work.plltest.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":2175:10:2175:16|Synthesizing work.ehxpllj.syn_black_box.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1490:10:1490:12|Synthesizing work.vlo.syn_black_box.
+@N: CD630 :"/home/hari/Documents/osp-wearable-fpga/test_arun/fifotest.vhd":14:7:14:14|Synthesizing work.fifotest.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1874:10:1874:16|Synthesizing work.fifo8kb.syn_black_box.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1483:10:1483:12|Synthesizing work.vhi.syn_black_box.
+@N: CL159 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":11:11:11:18|Input spi_mosi is unused.
+@N|Running in 64-bit mode
+

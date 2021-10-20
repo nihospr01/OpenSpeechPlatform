@@ -1,0 +1,4 @@
+@W: MT246 :"/home/hari/Documents/osp-wearable-fpga/test_arun/plltest.vhd":105:4:105:12|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"/home/hari/Documents/osp-wearable-fpga/test_arun/fifotest.vhd":332:4:332:16|Blackbox fifo8kb is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock test_togglepins|clock with period 1000.00ns. Please declare a user-defined clock on object "p:clock"
+@W: MT420 |Found inferred clock test_togglepins|spi_clk with period 1000.00ns. Please declare a user-defined clock on object "p:spi_clk"

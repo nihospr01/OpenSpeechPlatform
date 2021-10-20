@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Runs openMHA
+
+lib=`dirname "$0"`/../lib
+bin=`dirname "$0"`/../bin
+if [[ "$OSTYPE" == "linux-gnu"* ]]
+then
+    export LD_LIBRARY_PATH=`realpath $lib`
+else
+    export MHA_LIBRARY_PATH=`realpath $lib`
+fi
+export PATH=`realpath $bin`:$PATH
+
+# run mha with all arguments
+mha "$@"

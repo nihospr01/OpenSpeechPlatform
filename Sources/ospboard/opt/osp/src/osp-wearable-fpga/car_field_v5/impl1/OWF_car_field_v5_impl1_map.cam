@@ -1,0 +1,68 @@
+[ START MERGED ]
+[ END MERGED ]
+[ START CLIPPED ]
+e_pll_4/GND
+e_car_clock_gen/GND
+l_car_core/e_i2s_dio/GND
+VCC
+GND
+e_pll_4/CLKINTFB
+e_pll_4/DPHSRC
+e_pll_4/PLLACK
+e_pll_4/PLLDATO0
+e_pll_4/PLLDATO1
+e_pll_4/PLLDATO2
+e_pll_4/PLLDATO3
+e_pll_4/PLLDATO4
+e_pll_4/PLLDATO5
+e_pll_4/PLLDATO6
+e_pll_4/PLLDATO7
+e_pll_4/REFCLK
+e_pll_4/INTLOCK
+e_pll_4/LOCK
+e_pll_4/CLKOS3
+e_pll_4/CLKOS2
+e_pll_4/CLKOS
+e_car_clock_gen/lvds_ctr_s_0_S1[7]
+e_car_clock_gen/lvds_ctr_s_0_COUT[7]
+e_car_clock_gen/lvds_ctr_cry_0_S0[0]
+e_car_clock_gen/N_1
+l_car_core/e_i2s_dio/lvds_bit_ctr_cry_0_S0[0]
+l_car_core/e_i2s_dio/N_1
+l_car_core/e_i2s_dio/lvds_bit_ctr_cry_0_COUT[3]
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.10.0.111.2 -- WARNING: Map write only section -- Wed Feb 20 17:31:02 2019
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "l_lvds_io" SITE "A5" ;
+LOCATE COMP "osc_out" SITE "D2" ;
+LOCATE COMP "osc_in" SITE "C1" ;
+LOCATE COMP "test_m2" SITE "M2" ;
+LOCATE COMP "test_m1" SITE "M1" ;
+LOCATE COMP "test_l2" SITE "L2" ;
+LOCATE COMP "test_l1" SITE "L1" ;
+LOCATE COMP "spi3_cs3" SITE "T15" ;
+LOCATE COMP "spi3_cs0" SITE "R14" ;
+LOCATE COMP "spi3_miso" SITE "T14" ;
+LOCATE COMP "spi3_mosi" SITE "R13" ;
+LOCATE COMP "spi3_clk" SITE "T13" ;
+LOCATE COMP "spi1_cs2" SITE "T12" ;
+LOCATE COMP "spi1_cs0" SITE "R11" ;
+LOCATE COMP "spi1_miso" SITE "T11" ;
+LOCATE COMP "spi1_mosi" SITE "R10" ;
+LOCATE COMP "spi1_clk" SITE "T10" ;
+LOCATE COMP "i2s2_d1" SITE "R6" ;
+LOCATE COMP "i2s2_d0" SITE "T5" ;
+LOCATE COMP "i2s2_ws" SITE "R5" ;
+LOCATE COMP "i2s2_sck" SITE "T4" ;
+LOCATE COMP "i2s1_d0" SITE "T3" ;
+LOCATE COMP "i2s1_ws" SITE "R3" ;
+LOCATE COMP "i2s1_sck" SITE "T2" ;
+LOCATE COMP "r_lvds_io" SITE "A13" ;
+LOCATE COMP "ext_clk_in" SITE "E2" ;
+FREQUENCY NET "hr_clk_0" 49.152000 MHz ;
+FREQUENCY NET "test_l1_c" 12.288000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

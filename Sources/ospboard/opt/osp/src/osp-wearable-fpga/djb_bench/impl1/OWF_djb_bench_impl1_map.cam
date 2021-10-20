@@ -1,0 +1,63 @@
+[ START MERGED ]
+[ END MERGED ]
+[ START CLIPPED ]
+e_pll_4/GND
+e_djb_core/e_i2s_dio_2/GND
+e_pll_4/CLKINTFB
+e_pll_4/DPHSRC
+e_pll_4/PLLACK
+e_pll_4/PLLDATO0
+e_pll_4/PLLDATO1
+e_pll_4/PLLDATO2
+e_pll_4/PLLDATO3
+e_pll_4/PLLDATO4
+e_pll_4/PLLDATO5
+e_pll_4/PLLDATO6
+e_pll_4/PLLDATO7
+e_pll_4/REFCLK
+e_pll_4/INTLOCK
+e_pll_4/LOCK
+e_pll_4/CLKOS3
+e_pll_4/CLKOS2
+e_pll_4/CLKOS
+e_djb_core/e_i2s_dio_2/lvds_bit_ctr_s_0_S1[4]
+e_djb_core/e_i2s_dio_2/lvds_bit_ctr_s_0_COUT[4]
+e_djb_core/e_i2s_dio_2/lvds_bit_ctr_lcry_0_S1
+e_djb_core/e_i2s_dio_2/lvds_bit_ctr_lcry_0_S0
+e_djb_core/e_i2s_dio_2/N_1
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.10.0.111.2 -- WARNING: Map write only section -- Sat Sep 29 16:59:59 2018
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "lvds_io" SITE "A13" ;
+LOCATE COMP "db_leds[0]" SITE "P16" ;
+LOCATE COMP "db_clk" SITE "C8" ;
+LOCATE COMP "test_sync_late" SITE "F14" ;
+LOCATE COMP "test_sync_early" SITE "B16" ;
+LOCATE COMP "spi_cs1" SITE "T10" ;
+LOCATE COMP "spi_cs0" SITE "P10" ;
+LOCATE COMP "spi_miso" SITE "R10" ;
+LOCATE COMP "spi_mosi" SITE "N9" ;
+LOCATE COMP "spi_clk" SITE "M8" ;
+LOCATE COMP "i2s_dspk" SITE "T14" ;
+LOCATE COMP "i2s_dmic" SITE "R13" ;
+LOCATE COMP "i2s_ws" SITE "M11" ;
+LOCATE COMP "i2s_sck" SITE "N10" ;
+LOCATE COMP "db_leds[7]" SITE "H11" ;
+LOCATE COMP "db_leds[6]" SITE "J13" ;
+LOCATE COMP "db_leds[5]" SITE "J11" ;
+LOCATE COMP "db_leds[4]" SITE "L12" ;
+LOCATE COMP "db_leds[3]" SITE "K11" ;
+LOCATE COMP "db_leds[2]" SITE "L13" ;
+LOCATE COMP "db_leds[1]" SITE "N15" ;
+LOCATE COMP "db_switches[3]" SITE "N1" ;
+LOCATE COMP "db_switches[2]" SITE "M3" ;
+LOCATE COMP "db_switches[1]" SITE "P1" ;
+LOCATE COMP "db_switches[0]" SITE "N2" ;
+LOCATE COMP "db_reset" SITE "B3" ;
+FREQUENCY NET "db_clk_c" 12.000000 MHz ;
+FREQUENCY NET "hr_clk_0" 49.152100 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

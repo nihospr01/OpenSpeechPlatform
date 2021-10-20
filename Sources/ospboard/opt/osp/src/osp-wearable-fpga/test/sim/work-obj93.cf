@@ -1,0 +1,7 @@
+v 4
+file "/data/School/Research/THE_Lab/FPGA/OWF_test/" "testbench/clock_sync_tb.vhd" "51853970fce250d5071858d15c5a1aa4d6880f58" "20180604194036.665":
+  entity clock_sync_tb at 1( 0) + 0 on 4;
+  architecture a of clock_sync_tb at 8( 111) + 0 on 4;
+file "/data/School/Research/THE_Lab/FPGA/OWF_test/" "src/clock_sync.vhd" "7d6ee677eaf71986b64ee7e58aff4696a1ada96b" "20180604194036.665":
+  entity clock_sync at 1( 0) + 0 on 4;
+  architecture a of clock_sync at 18( 436) + 0 on 4;

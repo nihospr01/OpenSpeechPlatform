@@ -1,0 +1,694 @@
+import React, { Component } from 'react';
+import { makeStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import teal from '@material-ui/core/colors/teal';
+import {Link} from 'react-router-dom';
+import { compose } from 'recompose';
+import {axios} from 'utils/utils';
+
+import SettingsIcon from '@material-ui/icons/Settings';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog from '@material-ui/core/Dialog';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
+<<<<<<< HEAD
+var tenBandlocal;
+
+=======
+>>>>>>> feature/band-persist
+const tealTheme = createMuiTheme({ palette: {primary: teal}});
+
+const styles = (theme) => ({
+    root: {
+      minWidth: 275,
+    },
+    bullet: {
+      display: 'inline-block',
+      margin: '0 2px',
+      transform: 'scale(0.8)',
+    },
+    title: {
+      fontSize: 14,
+    },
+    pos: {
+      marginBottom: 12,
+    },
+    gridContainer: {
+        paddingLeft: '20px',
+        paddingRight: '20px',
+    },
+    submitButton: {
+        width: 200
+    },
+    settingsBar: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        width: "100%"
+    },
+    settingsWindow: {
+        width: "100%",
+        paddingLeft: 30,
+        paddingRight: 30,
+        paddingBottom: 30,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start'
+    },
+    volumeTitle: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    saveSettingsButton: {
+        alignSelf: 'center'
+    },
+    alertWindow: {
+        width: 400,
+        display: 'flex',
+        justifyContent: 'center',
+        paddingLeft: 30,
+        paddingRight: 30,
+        paddingBottom: 20
+    },
+    switchMsgWindow: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: 20,
+    }
+  });
+
+class Testing extends Component {
+    constructor(props) {
+        super(props);
+        // Don't call this.setState() here!
+<<<<<<< HEAD
+=======
+        /*
+>>>>>>> feature/band-persist
+        if(localStorage.getItem('tenBand') != null){
+            tenBandlocal = localStorage.getItem('tenBand');
+        }
+        else {
+            tenBandlocal = false;
+        }
+<<<<<<< HEAD
+        
+
+        this.state = {
+            openSettings: false,
+            tenBand: tenBandlocal,
+            showBandSwitchMsg: false,
+            
+        };
+      }
+
+=======
+        */
+
+        this.updateBand().then(console.log)
+        .catch(console.error);
+
+        this.state = {
+            openSettings: false,
+            tenBand: false,
+            showBandSwitchMsg: false,
+        };
+      }
+
+    updateBand = async () => {
+        try {
+            const response = await axios.post("/api/param/getparam");
+            let data = response.data;
+            console.log(Object.values(data));
+
+            console.log("update band from OSP");
+            let param_left = data["left"];
+            var g50_Left = param_left["g50"];
+            var bandNumber = g50_Left.length;
+            if(bandNumber == 6){
+                this.setState({
+                    tenBand: false,
+                });
+            }
+            else {
+                this.setState({
+                    tenBand: true,
+                });
+            }
+
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    };
+
+>>>>>>> feature/band-persist
+    /**
+     * handle the settings page's close.
+     */
+     handleSettingsClose = () => {
+        this.setState({
+            openSettings: false
+        });
+
+    }
+
+    /**
+     * Handles the settings page's open
+     */
+    handleSettingsClick = () => {
+        this.setState({
+            openSettings: true
+        });
+    }
+
+    /**
+     * Handles the band mode switch
+     * @param {*} event event object sent by the select component. Here, event.target.value -- 0 means
+     *                  the user is using the 6-band mode, 1 means the user is using the 10-band mode.
+     */
+    handleBandSwitch = async (event) => {
+        this.setState({
+            tenBand: event.target.value,
+        }, ()=>{
+            this.updateParam();
+        });
+
+        // let tenBand persist after refresh
+<<<<<<< HEAD
+        localStorage.setItem( 'tenBand', event.target.value);
+=======
+        //localStorage.setItem( 'tenBand', event.target.value);
+>>>>>>> feature/band-persist
+
+        // Show the switch msg to the user.
+        this.handleSwitchMsgOpen();
+
+        try {
+            const response = await axios.post("/api/researcher/restartRTMHA", {data: event.target.value});
+            console.log(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    /**
+     * Close the confirmation message window for band mode switch.
+     */
+    handleSwitchMsgClose = () => {
+        this.setState({
+            showBandSwitchMsg: false
+        });
+    }
+
+    /**
+     * Open the confirmation message window for band mode switch.
+     */
+    handleSwitchMsgOpen = () => {
+        this.setState({
+            showBandSwitchMsg: true
+        });
+    }
+
+    /**
+     * This function loads the HA profile last saved in the database.
+     */
+     updateParam = async () => {
+        var num = 6;
+        if(this.state.tenBand){
+            num = 10;
+        }
+        try {
+            const response = await axios.post("/api/param/setparam", {
+                method: "set",
+                data: {
+                    num_bands: num,
+                }
+            });
+            const data = response.data;
+            console.log(data);
+        } catch (error) {
+            alert(error);
+        }
+    }
+
+
+    reset = async() => {
+        const dataInputSix ={
+            left:{
+                alpha: 0.0,
+                en_ha:1,
+                afc:1,
+                freping:1,
+                rear_mics:0,
+                g50:[0,0,0,0,0,0],
+                g80:[0,0,0,0,0,0],
+                knee_low:[45,45,45,45,45,45],
+                mpo_band:[120,120,120,120,120,120],
+                attack:[5,5,5,5,5,5],
+                release:[20,20,20,20,20,20],
+                global_mpo:120,
+                freping_alpha:[0,0,0,0,0.0,0]
+            },
+            right:{
+                en_ha:1,
+                afc:1,
+                freping:1,
+                rear_mics:0,
+                g50:[0,0,0,0,0,0],
+                g80:[0,0,0,0,0,0],
+                knee_low:[45,45,45,45,45,45],
+                mpo_band:[120,120,120,120,120,120],
+                attack:[5,5,5,5,5,5],
+                release:[20,20,20,20,20,20],
+                global_mpo:120,
+                freping_alpha:[0,0,0,0,0.0,0]
+            }
+        };
+        const dataInputTen ={
+            left:{
+                alpha: 0.0,
+                en_ha:1,
+                afc:1,
+                freping:1,
+                rear_mics:0,
+                g50:[0,0,0,0,0,0,0,0,0,0],
+                g80:[0,0,0,0,0,0,0,0,0,0],
+                knee_low:[45,45,45,45,45,45,45,45,45,45],
+                mpo_band:[120,120,120,120,120,120,120,120,120,120],
+                attack:[5,5,5,5,5,5,5,5,5,5],
+                release:[20,20,20,20,20,20,20,20,20,20],
+                global_mpo:120,
+                freping_alpha:[0,0,0,0,0,0,0,0,0,0]
+            },
+            right:{
+                alpha: 0.0,
+                en_ha:1,
+                afc:1,
+                freping:1,
+                rear_mics:0,
+                g50:[0,0,0,0,0,0,0,0,0,0],
+                g80:[0,0,0,0,0,0,0,0,0,0],
+                knee_low:[45,45,45,45,45,45,45,45,45,45],
+                mpo_band:[120,120,120,120,120,120,120,120,120,120],
+                attack:[5,5,5,5,5,5,5,5,5,5],
+                release:[20,20,20,20,20,20,20,20,20,20],
+                global_mpo:120,
+                freping_alpha:[0,0,0,0,0,0,0,0,0,0]
+            }
+        };
+        try {
+            if (this.state.tenBand == true) {
+                const response = await axios.post("/api/param/setparam", {
+                    method: 'set',
+                    data: dataInputTen,
+                });
+                const data = response.data;
+                console.log(data);
+            }
+            else {
+                const response = await axios.post("/api/param/setparam", {
+                    method: 'set',
+                    data: dataInputSix,
+                });
+                const data = response.data;
+                console.log(data);
+            }
+            
+        }
+        catch(error) {
+            alert(error.response.data);
+        }
+    }
+
+    render() {
+        const {classes} = this.props;
+        var buttonStyle = {
+            display: 'block',
+            width: '100%',
+            height: '150%',
+            fontSize: '15px',
+            textTransform: 'none',
+        };
+
+<<<<<<< HEAD
+        if (this.state.tenBand === "true") {
+=======
+        console.log("render");
+        console.log(this.state.tenBand);
+        console.log(this.state.tenBand == true);
+
+        if (this.state.tenBand == true) {
+>>>>>>> feature/band-persist
+            return (
+                <div className={classes.root}>
+                    <div className={classes.settingsBar} style={{
+                        display:"flex",
+                        justifyContent:"flex-end",}}>
+                            <SettingsIcon className={classes.iconHover} fontSize="large" onClick={this.handleSettingsClick}></SettingsIcon>
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignContent: "center",
+                    }}
+                    >
+                        <h1 className="display-5"> The Open Speech Platform </h1>
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignContent: "center",
+                    }}
+                    >
+                        <h3 className="display-5"> A Real-time, Open, Portable, Extensible Speech Lab. 
+                            Visit our <a href="http://openspeechplatform.ucsd.edu/">website</a> to learn more.</h3>
+                    </div>
+                    
+                    <Dialog open={this.state.openSettings} onClose={this.handleSettingsClose}>
+                            <DialogTitle>Settings</DialogTitle>
+                            <Grid container spacing={3}  className={classes.settingsWindow}>
+                                <Grid item>
+                                    <Typography>Select the number of bands of your device</Typography>
+                                    <Select
+                                        value={this.state.tenBand}
+                                        onChange={this.handleBandSwitch}
+                                    >
+                                        <MenuItem value={false}>Six Band</MenuItem>
+                                        <MenuItem value={true}>Ten Band</MenuItem>
+                                    </Select>
+                                    <Dialog open={this.state.showBandSwitchMsg} onClose={this.handleSwitchMsgClose}>
+                                        <Grid container className={classes.switchMsgWindow}>
+                                            <Typography style={{marginBottom: 10}}>
+                                                Successfully switched to the {this.state.tenBand ? "ten band" : "six band"} mode
+                                            </Typography>
+                                            <Button onClick={this.handleSwitchMsgClose} color="primary" variant="contained">OK</Button>
+                                        </Grid>
+                                    </Dialog>
+                                </Grid>
+    
+                                <Grid item className={classes.saveSettingsButton}>
+                                    <Button color='primary' variant="contained" onClick={this.handleSettingsClose}>Done</Button>
+                                </Grid>
+                            </Grid>
+                        </Dialog>
+                    <Grid container spacing={10} direction='column'>
+                        <Grid item xs={12}>
+                            <Grid container spacing={10} className={classes.gridContainer} >
+                                <Grid item xs={12} md={6} lg={4}>
+                                    <MuiThemeProvider theme={tealTheme}>
+                                        <Link to={'/main/researcherpage'}>
+                                            <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                <Typography component="div">
+                                                    <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                        Researcher Page
+                                                    </Box>
+                                                    <Box textAlign="center" m={1}>
+                                                        Includes amplification, noise and feedback parameters.
+                                                    </Box>
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    </MuiThemeProvider>
+                                </Grid>
+                                
+                                <Grid item item item xs={12} md={6} lg={4}>
+                                    <MuiThemeProvider theme={tealTheme}>
+                                        <Link to={'/main/beamformingDemo'}>
+                                            <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                <Typography component="div">
+                                                    <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                        Beamforming Task
+                                                    </Box>
+                                                    <Box textAlign="center">
+                                                        Manipulation of the parameters associated with OSP’s adaptive beamformer
+                                                    </Box>
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    </MuiThemeProvider>
+                                </Grid>
+                                <Grid item item item xs={12} md={6} lg={4}>
+                                        <MuiThemeProvider theme={tealTheme}>
+                                            <Link to={'/main/FourAFCDemo'}>
+                                                <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                    <Typography component="div">
+                                                        <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                            4 Alternative Forced Choice (4 AFC) Task
+                                                        </Box>
+                                                        <Box textAlign="center" >
+                                                            Mobile-assisted word recognition tests using minimal contrast sets.
+                                                        </Box>
+                                                    </Typography>
+                                                </Button>
+                                            </Link>
+                                        </MuiThemeProvider>
+                                    </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Grid container spacing={10} className={classes.gridContainer} >
+                                    
+                                    <Grid item item xs={12} md={6} lg={4}>
+                                    <MuiThemeProvider theme={tealTheme}>
+                                        <Link to={'/main/freppingDemo'}>
+                                            <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                <Typography component="div">
+                                                    <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                        Freping
+                                                    </Box>
+                                                    <Box textAlign="center" m={1}>
+                                                        Includes amplification, noise and feedback parameters.
+                                                    </Box>
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    </MuiThemeProvider>
+                                </Grid>
+                                    <Grid item item item xs={12} md={6} lg={4}>
+                                        <MuiThemeProvider theme={tealTheme}>
+                                            <Link to={'/main/reset'}>
+                                                <Button onClick={this.reset} variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                    <Typography component="div">
+                                                        <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                            Reset
+                                                        </Box>
+                                                        <Box textAlign="center" >
+                                                            Reset to Original Prescription
+                                                        </Box>
+                                                    </Typography>
+                                                </Button>
+                                            </Link>
+                                        </MuiThemeProvider>
+                                    </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </div>
+            );
+        } 
+        else {
+            return (
+                <div className={classes.root}>
+                    <div className={classes.settingsBar} style={{
+                        display:"flex",
+                        justifyContent:"flex-end",}}>
+                            <SettingsIcon className={classes.iconHover} fontSize="large" onClick={this.handleSettingsClick}></SettingsIcon>
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignContent: "center",
+                    }}
+                    >
+                        <h1 className="display-5"> The Open Speech Platform </h1>
+                    </div>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignContent: "center",
+                    }}
+                    >
+                        <h3 className="display-5"> A Real-time, Open, Portable, Extensible Speech Lab. 
+                            Visit our <a href="http://openspeechplatform.ucsd.edu/">website</a> to learn more.</h3>
+                    </div>
+                    
+                    <Dialog open={this.state.openSettings} onClose={this.handleSettingsClose}>
+                            <DialogTitle>Settings</DialogTitle>
+                            <Grid container spacing={3}  className={classes.settingsWindow}>
+                                <Grid item>
+                                    <Typography>Select the number of bands of your device</Typography>
+                                    <Select
+                                        value={this.state.tenBand}
+                                        onChange={this.handleBandSwitch}
+                                    >
+                                        <MenuItem value={false}>Six Band</MenuItem>
+                                        <MenuItem value={true}>Ten Band</MenuItem>
+                                    </Select>
+                                    <Dialog open={this.state.showBandSwitchMsg} onClose={this.handleSwitchMsgClose}>
+                                        <Grid container className={classes.switchMsgWindow}>
+                                            <Typography style={{marginBottom: 10}}>
+                                                Successfully switched to the {this.state.tenBand ? "ten band" : "six band"} mode
+                                            </Typography>
+                                            <Button onClick={this.handleSwitchMsgClose} color="primary" variant="contained">OK</Button>
+                                        </Grid>
+                                    </Dialog>
+                                </Grid>
+    
+                                <Grid item className={classes.saveSettingsButton}>
+                                    <Button color='primary' variant="contained" onClick={this.handleSettingsClose}>Done</Button>
+                                </Grid>
+                            </Grid>
+                        </Dialog>
+                    <Grid container spacing={10} direction='column'>
+                        <Grid item xs={12}>
+                            <Grid container spacing={10} className={classes.gridContainer} >
+                                <Grid item xs={12} md={6} lg={4}>
+                                    <MuiThemeProvider theme={tealTheme}>
+                                        <Link to={'/main/researcherpage'}>
+                                            <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                <Typography component="div">
+                                                    <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                        Researcher Page
+                                                    </Box>
+                                                    <Box textAlign="center" m={1}>
+                                                        Includes amplification, noise and feedback parameters.
+                                                    </Box>
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    </MuiThemeProvider>
+                                </Grid>
+                                <Grid item item item xs={12} md={6} lg={4}>
+                                    <MuiThemeProvider theme={tealTheme}>
+                                        <Link to={'/main/beamformingDemo'}>
+                                            <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                <Typography component="div">
+                                                    <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                        Beamforming Task
+                                                    </Box>
+                                                    <Box textAlign="center">
+                                                        Manipulation of the parameters associated with OSP’s adaptive beamformer
+                                                    </Box>
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    </MuiThemeProvider>
+                                </Grid>
+                                <Grid item item item xs={12} md={6} lg={4}>
+                                        <MuiThemeProvider theme={tealTheme}>
+                                            <Link to={'/main/FourAFCDemo'}>
+                                                <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                    <Typography component="div">
+                                                        <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                            4 Alternative Forced Choice (4 AFC) Task
+                                                        </Box>
+                                                        <Box textAlign="center" >
+                                                            Mobile-assisted word recognition tests using minimal contrast sets.
+                                                        </Box>
+                                                    </Typography>
+                                                </Button>
+                                            </Link>
+                                        </MuiThemeProvider>
+                                    </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Grid container spacing={10} className={classes.gridContainer} >
+                                    <Grid item item item xs={12} md={6} lg={4}>
+                                        <MuiThemeProvider theme={tealTheme}>
+                                            <Link to={'/main/coarseFitDemo'}>
+                                                <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                    <Typography component="div">
+                                                        <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                            CoarseFit Task
+                                                        </Box>
+                                                        <Box textAlign="center" >
+                                                            Includes amplification, noise and feedback parameters.
+                                                        </Box>
+                                                    </Typography>
+                                                </Button>
+                                            </Link>
+                                        </MuiThemeProvider>
+                                    </Grid>
+                                    <Grid item item item xs={12} md={6} lg={4}>
+                                        <MuiThemeProvider theme={tealTheme}>
+<<<<<<< HEAD
+		    			// TO DO: set link to Goldilocks Listener PHP page
+=======
+>>>>>>> feature/band-persist
+                                            <Link to={'/main/reset'}>
+                                                <Button onClick={this.reset} variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                    <Typography component="div">
+                                                        <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                            Goldilocks Listener
+                                                        </Box>
+                                                        <Box textAlign="center" >
+                                                            Includes researcher interface and end user interface
+                                                        </Box>
+                                                    </Typography>
+                                                </Button>
+                                            </Link>
+                                        </MuiThemeProvider>
+                                    </Grid>
+
+                                <Grid item item xs={12} md={6} lg={4}>
+                                    <MuiThemeProvider theme={tealTheme}>
+                                        <Link to={'/main/freppingDemo'}>
+                                            <Button variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                <Typography component="div">
+                                                    <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                        Freping
+                                                    </Box>
+                                                    <Box textAlign="center" m={1}>
+                                                        Includes amplification, noise and feedback parameters.
+                                                    </Box>
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    </MuiThemeProvider>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Grid container spacing={10} className={classes.gridContainer} >
+                                    <Grid item item item xs={12} md={6} lg={4}>
+                                        <MuiThemeProvider theme={tealTheme}>
+                                            <Link to={'/main/reset'}>
+                                                <Button onClick={this.reset} variant='outlined' color='primary' style={buttonStyle} variant='contained'>
+                                                    <Typography component="div">
+                                                        <Box textAlign="center" fontWeight="fontWeightBold" fontSize={20}>
+                                                            Reset
+                                                        </Box>
+                                                        <Box textAlign="center" >
+                                                            Reset to Original Prescription
+                                                        </Box>
+                                                    </Typography>
+                                                </Button>
+                                            </Link>
+                                        </MuiThemeProvider>
+                                    </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </div>
+            );
+        }
+        
+    }
+}
+
+export default compose(
+    withStyles(styles)
+)
+(Testing);
+

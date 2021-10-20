@@ -1,0 +1,402 @@
+
+       Lattice Mapping Report File for Design Module 'test_togglepins'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA256 -s 5 -oc
+     Commercial test_arun_impl1.ngd -o test_arun_impl1_map.ncd -pr
+     test_arun_impl1.prf -mp test_arun_impl1.mrp -lpf /home/hari/Documents/osp-w
+     earable-fpga/test_ramp/impl1/test_arun_impl1_synplify.lpf -lpf
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf -c 0 -gui
+     -msgset /home/hari/Documents/osp-wearable-fpga/test_ramp/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA256
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  03/14/19  14:57:51
+
+Design Summary
+--------------
+
+   Number of registers:     36 out of  7485 (0%)
+      PFU registers:           35 out of  6864 (1%)
+      PIO registers:            1 out of   621 (0%)
+   Number of SLICEs:        26 out of  3432 (1%)
+      SLICEs as Logic/ROM:     26 out of  3432 (1%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:         15 out of  3432 (0%)
+   Number of LUT4s:         51 out of  6864 (1%)
+      Number used as logic LUTs:         21
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       30
+      Number used as shift registers:     0
+   Number of PIO sites used: 10 + 4(JTAG) out of 207 (7%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net clock_c: 11 loads, 11 rising, 0 falling (Driver: PIO clock )
+     Net spi_clk_c: 11 loads, 11 rising, 0 falling (Driver: PIO spi_clk )
+
+                                    Page 1
+
+
+
+
+Design:  test_togglepins                               Date:  03/14/19  14:57:51
+
+Design Summary (cont)
+---------------------
+   Number of Clock Enables:  0
+   Number of LSRs:  1
+     Net un7_rampcounter: 7 loads, 7 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net counter3[1]: 8 loads
+     Net counter3[0]: 7 loads
+     Net counter3[3]: 7 loads
+     Net un7_rampcounter: 7 loads
+     Net counter3[2]: 4 loads
+     Net rampcounter[0]: 3 loads
+     Net rampcounter[11]: 3 loads
+     Net rampcounter[1]: 3 loads
+     Net rampcounter[2]: 3 loads
+     Net rampcounter[3]: 3 loads
+
+
+
+
+   Number of warnings:  26
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(38):
+     Semantic error in "IOBUF PORT "adc_data[0]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     ;": Port "adc_data[0]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(39):
+     Semantic error in "IOBUF PORT "adc_data[1]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     ;": Port "adc_data[1]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(40):
+     Semantic error in "IOBUF PORT "adc_data[2]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     ;": Port "adc_data[2]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(41):
+     Semantic error in "IOBUF PORT "adc_data[3]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     ;": Port "adc_data[3]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(42):
+     Semantic error in "IOBUF PORT "adc_data[4]" PULLMODE=NONE IO_TYPE=LVCMOS33
+     ;": Port "adc_data[4]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(43):
+     Semantic error in "IOBUF PORT "adc_data[5]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     ;": Port "adc_data[5]" does not exist in the design. This preference has
+     been disabled.
+
+                                    Page 2
+
+
+
+
+Design:  test_togglepins                               Date:  03/14/19  14:57:51
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(44):
+     Semantic error in "IOBUF PORT "adc_data[6]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     ;": Port "adc_data[6]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(45):
+     Semantic error in "IOBUF PORT "adc_data[7]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     ;": Port "adc_data[7]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(46):
+     Semantic error in "IOBUF PORT "adc_data[8]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     ;": Port "adc_data[8]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(47):
+     Semantic error in "IOBUF PORT "adc_data[9]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     ;": Port "adc_data[9]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(48):
+     Semantic error in "IOBUF PORT "adc_data[10]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     ;": Port "adc_data[10]" does not exist in the design. This preference has
+     been disabled.
+WARNING - map:
+     /home/hari/Documents/osp-wearable-fpga/test_ramp/test_arun.lpf(49):
+     Semantic error in "IOBUF PORT "adc_data[11]" IO_TYPE=LVCMOS33 PULLMODE=NONE
+     DRIVE=NA SLEWRATE=NA ;": Port "adc_data[11]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: IO buffer missing for top level port spi_mosi...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port spi_cs...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](11)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](10)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](9)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](8)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](7)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](6)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](5)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](4)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](3)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](2)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port adc_data[11:0](1)...logic
+     will be discarded.
+
+                                    Page 3
+
+
+
+
+Design:  test_togglepins                               Date:  03/14/19  14:57:51
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: IO buffer missing for top level port adc_data[11:0](0)...logic
+     will be discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| xtal_out            | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| clock               | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| interrupt           | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| adc_pdwn            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk_copy2       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk_copy        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| adc_clk             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi_miso            | OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| spi_clk             | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| xtal_in             | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block pll1/VCC undriven or does not drive anything - clipped.
+Signal pll1/GND undriven or does not drive anything - clipped.
+Signal counter_cry_0_COUT[13] undriven or does not drive anything - clipped.
+Signal un1_rampcounter_cry_0_0_S0 undriven or does not drive anything - clipped.
+     
+Signal N_2 undriven or does not drive anything - clipped.
+Signal un1_rampcounter_s_11_0_S1 undriven or does not drive anything - clipped.
+Signal un1_rampcounter_s_11_0_COUT undriven or does not drive anything -
+     clipped.
+Signal pll1/DPHSRC undriven or does not drive anything - clipped.
+Signal pll1/PLLACK undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO0 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO1 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO2 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO3 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO4 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO5 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO6 undriven or does not drive anything - clipped.
+Signal pll1/PLLDATO7 undriven or does not drive anything - clipped.
+Signal pll1/REFCLK undriven or does not drive anything - clipped.
+Signal pll1/INTLOCK undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  test_togglepins                               Date:  03/14/19  14:57:51
+
+Removed logic (cont)
+--------------------
+Signal pll1/LOCK undriven or does not drive anything - clipped.
+Signal pll1/CLKOS3 undriven or does not drive anything - clipped.
+Signal pll1/CLKOS2 undriven or does not drive anything - clipped.
+Signal pll1/CLKOS undriven or does not drive anything - clipped.
+Signal counter_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Block pll1/GND was optimized away.
+
+Memory Usage
+------------
+
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll1/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      clock_c
+  Output Clock(P):                         PIN      adc_clk_c
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     pll1/CLKFB_t
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+
+                                    Page 5
+
+
+
+
+Design:  test_togglepins                               Date:  03/14/19  14:57:51
+
+PLL/DLL Summary (cont)
+----------------------
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      12.8000
+  Output Clock(P) Frequency (MHz):                   1.6000
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               REFCLK
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          INT_OP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    1
+  CLKOP Divider:                                    8
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+ASIC Components
+---------------
+
+Instance Name: pll1/PLLInst_0
+         Type: EHXPLLJ
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 194 MB
+        
+
+
+
+
+
+
+
+
+                                    Page 6
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

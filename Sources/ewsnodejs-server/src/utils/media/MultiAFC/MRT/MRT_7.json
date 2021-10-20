@@ -1,0 +1,604 @@
+{
+    "words": [
+        {
+            "filename": "F2/F2_b11_w1_orig.wav",
+            "option_A": "dug",
+            "option_B": "dung",
+            "option_C": "duck",
+            "option_D": "dud",
+            "option_E": "dub",
+            "option_F": "done",
+            "answer": "dug"
+        },
+        {
+            "filename": "F2/F2_b11_w2_orig.wav",
+            "option_A": "dug",
+            "option_B": "dung",
+            "option_C": "duck",
+            "option_D": "dud",
+            "option_E": "dub",
+            "option_F": "done",
+            "answer": "dung"
+        },
+        {
+            "filename": "F2/F2_b11_w3_orig.wav",
+            "option_A": "dug",
+            "option_B": "dung",
+            "option_C": "duck",
+            "option_D": "dud",
+            "option_E": "dub",
+            "option_F": "done",
+            "answer": "duck"
+        },
+        {
+            "filename": "F2/F2_b11_w4_orig.wav",
+            "option_A": "dug",
+            "option_B": "dung",
+            "option_C": "duck",
+            "option_D": "dud",
+            "option_E": "dub",
+            "option_F": "done",
+            "answer": "dud"
+        },
+        {
+            "filename": "F2/F2_b11_w5_orig.wav",
+            "option_A": "dug",
+            "option_B": "dung",
+            "option_C": "duck",
+            "option_D": "dud",
+            "option_E": "dub",
+            "option_F": "done",
+            "answer": "dub"
+        },
+        {
+            "filename": "F2/F2_b11_w6_orig.wav",
+            "option_A": "dug",
+            "option_B": "dung",
+            "option_C": "duck",
+            "option_D": "dud",
+            "option_E": "dub",
+            "option_F": "done",
+            "answer": "done"
+        },
+        {
+            "filename": "F2/F2_b12_w1_orig.wav",
+            "option_A": "sum",
+            "option_B": "sun",
+            "option_C": "sung",
+            "option_D": "sup",
+            "option_E": "sub",
+            "option_F": "sud",
+            "answer": "sum"
+        },
+        {
+            "filename": "F2/F2_b12_w2_orig.wav",
+            "option_A": "sum",
+            "option_B": "sun",
+            "option_C": "sung",
+            "option_D": "sup",
+            "option_E": "sub",
+            "option_F": "sud",
+            "answer": "sun"
+        },
+        {
+            "filename": "F2/F2_b12_w3_orig.wav",
+            "option_A": "sum",
+            "option_B": "sun",
+            "option_C": "sung",
+            "option_D": "sup",
+            "option_E": "sub",
+            "option_F": "sud",
+            "answer": "sung"
+        },
+        {
+            "filename": "F2/F2_b12_w4_orig.wav",
+            "option_A": "sum",
+            "option_B": "sun",
+            "option_C": "sung",
+            "option_D": "sup",
+            "option_E": "sub",
+            "option_F": "sud",
+            "answer": "sup"
+        },
+        {
+            "filename": "F2/F2_b12_w5_orig.wav",
+            "option_A": "sum",
+            "option_B": "sun",
+            "option_C": "sung",
+            "option_D": "sup",
+            "option_E": "sub",
+            "option_F": "sud",
+            "answer": "sub"
+        },
+        {
+            "filename": "F2/F2_b12_w6_orig.wav",
+            "option_A": "sum",
+            "option_B": "sun",
+            "option_C": "sung",
+            "option_D": "sup",
+            "option_E": "sub",
+            "option_F": "sud",
+            "answer": "sud"
+        },
+        {
+            "filename": "F2/F2_b13_w1_orig.wav",
+            "option_A": "seep",
+            "option_B": "seen",
+            "option_C": "seethe",
+            "option_D": "seek",
+            "option_E": "seam",
+            "option_F": "seed",
+            "answer": "seep"
+        },
+        {
+            "filename": "F2/F2_b13_w2_orig.wav",
+            "option_A": "seep",
+            "option_B": "seen",
+            "option_C": "seethe",
+            "option_D": "seek",
+            "option_E": "seam",
+            "option_F": "seed",
+            "answer": "seen"
+        },
+        {
+            "filename": "F2/F2_b13_w3_orig.wav",
+            "option_A": "seep",
+            "option_B": "seen",
+            "option_C": "seethe",
+            "option_D": "seek",
+            "option_E": "seam",
+            "option_F": "seed",
+            "answer": "seethe"
+        },
+        {
+            "filename": "F2/F2_b13_w4_orig.wav",
+            "option_A": "seep",
+            "option_B": "seen",
+            "option_C": "seethe",
+            "option_D": "seek",
+            "option_E": "seam",
+            "option_F": "seed",
+            "answer": "seek"
+        },
+        {
+            "filename": "F2/F2_b13_w5_orig.wav",
+            "option_A": "seep",
+            "option_B": "seen",
+            "option_C": "seethe",
+            "option_D": "seek",
+            "option_E": "seam",
+            "option_F": "seed",
+            "answer": "seam"
+        },
+        {
+            "filename": "F2/F2_b13_w6_orig.wav",
+            "option_A": "seep",
+            "option_B": "seen",
+            "option_C": "seethe",
+            "option_D": "seek",
+            "option_E": "seam",
+            "option_F": "seed",
+            "answer": "seed"
+        },
+        {
+            "filename": "F2/F2_b14_w1_orig.wav",
+            "option_A": "knot",
+            "option_B": "taught",
+            "option_C": "got",
+            "option_D": "pot",
+            "option_E": "hot",
+            "option_F": "lot",
+            "answer": "knot"
+        },
+        {
+            "filename": "F2/F2_b14_w2_orig.wav",
+            "option_A": "knot",
+            "option_B": "taught",
+            "option_C": "got",
+            "option_D": "pot",
+            "option_E": "hot",
+            "option_F": "lot",
+            "answer": "taught"
+        },
+        {
+            "filename": "F2/F2_b14_w3_orig.wav",
+            "option_A": "knot",
+            "option_B": "taught",
+            "option_C": "got",
+            "option_D": "pot",
+            "option_E": "hot",
+            "option_F": "lot",
+            "answer": "got"
+        },
+        {
+            "filename": "F2/F2_b14_w4_orig.wav",
+            "option_A": "knot",
+            "option_B": "taught",
+            "option_C": "got",
+            "option_D": "pot",
+            "option_E": "hot",
+            "option_F": "lot",
+            "answer": "pot"
+        },
+        {
+            "filename": "F2/F2_b14_w5_orig.wav",
+            "option_A": "knot",
+            "option_B": "taught",
+            "option_C": "got",
+            "option_D": "pot",
+            "option_E": "hot",
+            "option_F": "lot",
+            "answer": "hot"
+        },
+        {
+            "filename": "F2/F2_b14_w6_orig.wav",
+            "option_A": "knot",
+            "option_B": "taught",
+            "option_C": "got",
+            "option_D": "pot",
+            "option_E": "hot",
+            "option_F": "lot",
+            "answer": "lot"
+        },
+        {
+            "filename": "F2/F2_b15_w1_orig.wav",
+            "option_A": "vest",
+            "option_B": "test",
+            "option_C": "rest",
+            "option_D": "best",
+            "option_E": "west",
+            "option_F": "nest",
+            "answer": "vest"
+        },
+        {
+            "filename": "F2/F2_b15_w2_orig.wav",
+            "option_A": "vest",
+            "option_B": "test",
+            "option_C": "rest",
+            "option_D": "best",
+            "option_E": "west",
+            "option_F": "nest",
+            "answer": "test"
+        },
+        {
+            "filename": "F2/F2_b15_w3_orig.wav",
+            "option_A": "vest",
+            "option_B": "test",
+            "option_C": "rest",
+            "option_D": "best",
+            "option_E": "west",
+            "option_F": "nest",
+            "answer": "rest"
+        },
+        {
+            "filename": "F2/F2_b15_w4_orig.wav",
+            "option_A": "vest",
+            "option_B": "test",
+            "option_C": "rest",
+            "option_D": "best",
+            "option_E": "west",
+            "option_F": "nest",
+            "answer": "best"
+        },
+        {
+            "filename": "F2/F2_b15_w5_orig.wav",
+            "option_A": "vest",
+            "option_B": "test",
+            "option_C": "rest",
+            "option_D": "best",
+            "option_E": "west",
+            "option_F": "nest",
+            "answer": "west"
+        },
+        {
+            "filename": "F2/F2_b15_w6_orig.wav",
+            "option_A": "vest",
+            "option_B": "test",
+            "option_C": "rest",
+            "option_D": "best",
+            "option_E": "west",
+            "option_F": "nest",
+            "answer": "nest"
+        },
+        {
+            "filename": "F2/F2_b16_w1_orig.wav",
+            "option_A": "pig",
+            "option_B": "pill",
+            "option_C": "pin ",
+            "option_D": "pip",
+            "option_E": "pit",
+            "option_F": "pick",
+            "answer": "pig"
+        },
+        {
+            "filename": "F2/F2_b16_w2_orig.wav",
+            "option_A": "pig",
+            "option_B": "pill",
+            "option_C": "pin ",
+            "option_D": "pip",
+            "option_E": "pit",
+            "option_F": "pick",
+            "answer": "pill"
+        },
+        {
+            "filename": "F2/F2_b16_w3_orig.wav",
+            "option_A": "pig",
+            "option_B": "pill",
+            "option_C": "pin ",
+            "option_D": "pip",
+            "option_E": "pit",
+            "option_F": "pick",
+            "answer": "pin "
+        },
+        {
+            "filename": "F2/F2_b16_w4_orig.wav",
+            "option_A": "pig",
+            "option_B": "pill",
+            "option_C": "pin ",
+            "option_D": "pip",
+            "option_E": "pit",
+            "option_F": "pick",
+            "answer": "pip"
+        },
+        {
+            "filename": "F2/F2_b16_w5_orig.wav",
+            "option_A": "pig",
+            "option_B": "pill",
+            "option_C": "pin ",
+            "option_D": "pip",
+            "option_E": "pit",
+            "option_F": "pick",
+            "answer": "pit"
+        },
+        {
+            "filename": "F2/F2_b16_w6_orig.wav",
+            "option_A": "pig",
+            "option_B": "pill",
+            "option_C": "pin ",
+            "option_D": "pip",
+            "option_E": "pit",
+            "option_F": "pick",
+            "answer": "pick"
+        },
+        {
+            "filename": "F2/F2_b17_w1_orig.wav",
+            "option_A": "back",
+            "option_B": "bath",
+            "option_C": "bad",
+            "option_D": "bass",
+            "option_E": "bat",
+            "option_F": "ban",
+            "answer": "back"
+        },
+        {
+            "filename": "F2/F2_b17_w2_orig.wav",
+            "option_A": "back",
+            "option_B": "bath",
+            "option_C": "bad",
+            "option_D": "bass",
+            "option_E": "bat",
+            "option_F": "ban",
+            "answer": "bath"
+        },
+        {
+            "filename": "F2/F2_b17_w3_orig.wav",
+            "option_A": "back",
+            "option_B": "bath",
+            "option_C": "bad",
+            "option_D": "bass",
+            "option_E": "bat",
+            "option_F": "ban",
+            "answer": "bad"
+        },
+        {
+            "filename": "F2/F2_b17_w4_orig.wav",
+            "option_A": "back",
+            "option_B": "bath",
+            "option_C": "bad",
+            "option_D": "bass",
+            "option_E": "bat",
+            "option_F": "ban",
+            "answer": "bass"
+        },
+        {
+            "filename": "F2/F2_b17_w5_orig.wav",
+            "option_A": "back",
+            "option_B": "bath",
+            "option_C": "bad",
+            "option_D": "bass",
+            "option_E": "bat",
+            "option_F": "ban",
+            "answer": "bat"
+        },
+        {
+            "filename": "F2/F2_b17_w6_orig.wav",
+            "option_A": "back",
+            "option_B": "bath",
+            "option_C": "bad",
+            "option_D": "bass",
+            "option_E": "bat",
+            "option_F": "ban",
+            "answer": "ban"
+        },
+        {
+            "filename": "F2/F2_b18_w1_orig.wav",
+            "option_A": "way",
+            "option_B": "may",
+            "option_C": "say",
+            "option_D": "pay",
+            "option_E": "day",
+            "option_F": "gay",
+            "answer": "way"
+        },
+        {
+            "filename": "F2/F2_b18_w2_orig.wav",
+            "option_A": "way",
+            "option_B": "may",
+            "option_C": "say",
+            "option_D": "pay",
+            "option_E": "day",
+            "option_F": "gay",
+            "answer": "may"
+        },
+        {
+            "filename": "F2/F2_b18_w3_orig.wav",
+            "option_A": "way",
+            "option_B": "may",
+            "option_C": "say",
+            "option_D": "pay",
+            "option_E": "day",
+            "option_F": "gay",
+            "answer": "say"
+        },
+        {
+            "filename": "F2/F2_b18_w4_orig.wav",
+            "option_A": "way",
+            "option_B": "may",
+            "option_C": "say",
+            "option_D": "pay",
+            "option_E": "day",
+            "option_F": "gay",
+            "answer": "pay"
+        },
+        {
+            "filename": "F2/F2_b18_w5_orig.wav",
+            "option_A": "way",
+            "option_B": "may",
+            "option_C": "say",
+            "option_D": "pay",
+            "option_E": "day",
+            "option_F": "gay",
+            "answer": "day"
+        },
+        {
+            "filename": "F2/F2_b18_w6_orig.wav",
+            "option_A": "way",
+            "option_B": "may",
+            "option_C": "say",
+            "option_D": "pay",
+            "option_E": "day",
+            "option_F": "gay",
+            "answer": "gay"
+        },
+        {
+            "filename": "F2/F2_b19_w1_orig.wav",
+            "option_A": "pig",
+            "option_B": "big",
+            "option_C": "dig",
+            "option_D": "wig",
+            "option_E": "rig",
+            "option_F": "fig",
+            "answer": "pig"
+        },
+        {
+            "filename": "F2/F2_b19_w2_orig.wav",
+            "option_A": "pig",
+            "option_B": "big",
+            "option_C": "dig",
+            "option_D": "wig",
+            "option_E": "rig",
+            "option_F": "fig",
+            "answer": "big"
+        },
+        {
+            "filename": "F2/F2_b19_w3_orig.wav",
+            "option_A": "pig",
+            "option_B": "big",
+            "option_C": "dig",
+            "option_D": "wig",
+            "option_E": "rig",
+            "option_F": "fig",
+            "answer": "dig"
+        },
+        {
+            "filename": "F2/F2_b19_w4_orig.wav",
+            "option_A": "pig",
+            "option_B": "big",
+            "option_C": "dig",
+            "option_D": "wig",
+            "option_E": "rig",
+            "option_F": "fig",
+            "answer": "wig"
+        },
+        {
+            "filename": "F2/F2_b19_w5_orig.wav",
+            "option_A": "pig",
+            "option_B": "big",
+            "option_C": "dig",
+            "option_D": "wig",
+            "option_E": "rig",
+            "option_F": "fig",
+            "answer": "rig"
+        },
+        {
+            "filename": "F2/F2_b19_w6_orig.wav",
+            "option_A": "pig",
+            "option_B": "big",
+            "option_C": "dig",
+            "option_D": "wig",
+            "option_E": "rig",
+            "option_F": "fig",
+            "answer": "fig"
+        },
+        {
+            "filename": "F2/F2_b20_w1_orig.wav",
+            "option_A": "pale",
+            "option_B": "pace",
+            "option_C": "page",
+            "option_D": "pain",
+            "option_E": "pay",
+            "option_F": "pave",
+            "answer": "pale"
+        },
+        {
+            "filename": "F2/F2_b20_w2_orig.wav",
+            "option_A": "pale",
+            "option_B": "pace",
+            "option_C": "page",
+            "option_D": "pain",
+            "option_E": "pay",
+            "option_F": "pave",
+            "answer": "pace"
+        },
+        {
+            "filename": "F2/F2_b20_w3_orig.wav",
+            "option_A": "pale",
+            "option_B": "pace",
+            "option_C": "page",
+            "option_D": "pain",
+            "option_E": "pay",
+            "option_F": "pave",
+            "answer": "page"
+        },
+        {
+            "filename": "F2/F2_b20_w4_orig.wav",
+            "option_A": "pale",
+            "option_B": "pace",
+            "option_C": "page",
+            "option_D": "pain",
+            "option_E": "pay",
+            "option_F": "pave",
+            "answer": "pain"
+        },
+        {
+            "filename": "F2/F2_b20_w5_orig.wav",
+            "option_A": "pale",
+            "option_B": "pace",
+            "option_C": "page",
+            "option_D": "pain",
+            "option_E": "pay",
+            "option_F": "pave",
+            "answer": "pay"
+        },
+        {
+            "filename": "F2/F2_b20_w6_orig.wav",
+            "option_A": "pale",
+            "option_B": "pace",
+            "option_C": "page",
+            "option_D": "pain",
+            "option_E": "pay",
+            "option_F": "pave",
+            "answer": "pave"
+        }
+    ]
+}

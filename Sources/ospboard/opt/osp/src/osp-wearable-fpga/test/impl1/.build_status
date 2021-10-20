@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1529102867"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1529102944"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1529102949"/>
+            <Task name="Jedec4Xo3l" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen4Xo3l" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1529102855">
+            <Task name="Map" build_result="2" update_result="0" update_time="1529102855"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1529102855"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1529102856"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1529102865">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1529102865"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1529102866"/>
+            <Task name="IOTiming" build_result="0" update_result="2" update_time="1527882217"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1529102413">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1529102413"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1529102379"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="1528999519"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="2" build_time="1529102414">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1529102414"/>
+        </Milestone>
+        <Report name="OWF_test_impl1.bgn" last_build_time="1529102949" last_build_size="4369"/>
+        <Report name="OWF_test_impl1.bit" last_build_time="1529102944" last_build_size="27831"/>
+        <Report name="OWF_test_impl1.edi" last_build_time="1529102412" last_build_size="270298"/>
+        <Report name="OWF_test_impl1.ior" last_build_time="1527882217" last_build_size="1718"/>
+        <Report name="OWF_test_impl1.jed" last_build_time="1529102949" last_build_size="1454402"/>
+        <Report name="OWF_test_impl1.ncd" last_build_time="1529102865" last_build_size="252814"/>
+        <Report name="OWF_test_impl1.ngd" last_build_time="1529102414" last_build_size="221856"/>
+        <Report name="OWF_test_impl1.tw1" last_build_time="1529102855" last_build_size="13413"/>
+        <Report name="OWF_test_impl1.twr" last_build_time="1529102866" last_build_size="49097"/>
+        <Report name="OWF_test_impl1_map.ncd" last_build_time="1529102855" last_build_size="182337"/>
+        <Report name="OWF_test_impl1_mapvho.sdf" last_build_time="1529102856" last_build_size="197332"/>
+        <Report name="OWF_test_impl1_mapvho.vho" last_build_time="1529102856" last_build_size="1355566"/>
+        <Report name="OWF_test_impl1_vho.sdf" last_build_time="1529102867" last_build_size="230778"/>
+        <Report name="OWF_test_impl1_vho.vho" last_build_time="1529102867" last_build_size="1396644"/>
+    </Strategy>
+</BuildStatus>

@@ -1,0 +1,45 @@
+Loading design for application iotiming from file OWF_test_impl1.ncd.
+Design name: OWF_test
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Loading design for application iotiming from file OWF_test_impl1.ncd.
+Design name: OWF_test
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+// Design: OWF_test
+// Package: CABGA256
+// ncd File: OWF_test_impl1.ncd
+// Version: Diamond (64-bit) 3.10.0.111.2
+// Written on Fri Jun  1 12:43:37 2018
+// M: Minimum Performance Grade
+// iotiming OWF_test_impl1.ncd OWF_test_impl1.prf -gui -msgset /data/School/Research/THE_Lab/FPGA/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port       Clock  Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+db_leds[0] db_clk R     7.387         5        2.476          M
+db_leds[1] db_clk R     7.409         5        2.477          M
+db_leds[2] db_clk R     7.685         5        2.560          M
+db_leds[3] db_clk R     7.788         5        2.582          M

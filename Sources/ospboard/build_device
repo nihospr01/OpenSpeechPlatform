@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# script for building OSP software for the PCD
+
+cd `dirname "$0"`
+
+pip3 install rich psutil
+chown -R osp.osp /opt /usr/local
+mkdir -p /home/osp
+chown -R osp.osp /home/osp
+
+su osp << EOSU
+rm -rf /home/osp
+mkdir /home/osp
+
+export LC_ALL=C
+npm config set jobs 8
+./install -d /opt/release/database
+
+cd /usr/local/bin
+ln -s /opt/release/bin/osp osp
+ln -s /opt/release/bin/osp_cli osp_cli
+ln -s /opt/release/bin/pa_devs pa_devs
+ln -s /opt/release/bin/osp_convert osp_convert
+
+cd /opt/liblsl
+mkdir -p build
+cd build
+cmake -DLSL_UNIXFOLDERS=1 -DCMAKE_INSTALL_PREFIX=/usr/local -DLSL_BUILD_EXAMPLES=0 ..
+make
+make install
+
+cd /opt/libimu
+make release
+cp release/log_imu /usr/local/bin
+
+cd /opt/charging-monitor
+gcc -O3 -o /opt/bin/charging_monitor main.c
+
+EOSU
+
+cd /opt/wcn36xx-monitor
+make install
+
+chown -R root.root /usr/local
+
+# clean up
+apt clean
+rm -rf /home/osp/.npm /home/osp/.composer
+rm -f /root/.bash_history
+rm -rf /home/osp/.cache /root/.cache
+rm -rf /opt/liblsl
+rm -rf /opt/libimu
+rm -rf /opt/openMHA

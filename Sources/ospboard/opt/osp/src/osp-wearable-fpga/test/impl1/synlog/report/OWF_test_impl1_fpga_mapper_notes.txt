@@ -1,0 +1,16 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO231 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_clock_gen.vhd":19:2:19:3|Found counter in view:work.OSP_Carrier_Basic(a) instance e_car_clock_gen.lvds_ctr[7:0] 
+@N: FA113 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_sequencer.vhd":82:9:82:35|Pipelining module un12_djb_present[27:32]. For more information, search for "pipelining" in Online Help.
+@N: MF169 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_sequencer.vhd":27:2:27:3|Pushed in register lvdscounter[4:0].
+@N: MF169 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/i2s_dio.vhd":69:2:69:3|Pushed in register i2s_ws.
+@N: MF169 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/i2s_dio.vhd":69:2:69:3|Pushed in register lrst_1.
+@N: MF169 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_core.vhd":68:2:68:3|Pushed in register i2s_lr_st_pre.
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: MT611 :|Automatically generated clock car_clock_gen|divider_derived_clock[1] is not used and is being removed
+@N: MT617 :|Automatically generated clock i2s_dio_0|sclk_ctr_derived_clock[1] has lost its master clock car_clock_gen|divider_derived_clock[1] and is being removed
+@N: MT617 :|Automatically generated clock i2s_dio_1|sclk_ctr_derived_clock[1] has lost its master clock car_clock_gen|divider_derived_clock[1] and is being removed
+@N: FX1056 |Writing EDF file: /data/School/Research/THE_Lab/FPGA/OWF_test/impl1/OWF_test_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

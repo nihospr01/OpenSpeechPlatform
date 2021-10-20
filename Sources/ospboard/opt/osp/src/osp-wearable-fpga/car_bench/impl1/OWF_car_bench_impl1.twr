@@ -1,0 +1,1160 @@
+
+Loading design for application trce from file OWF_car_bench_impl1.ncd.
+Design name: tl_car_bench
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: /usr/local/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
+Wed Jul 11 18:53:59 2018
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o OWF_car_bench_impl1.twr -gui -msgset /data/School/Research/THE_Lab/FPGA/osp-wearable-fpga/car_bench/promote.xml OWF_car_bench_impl1.ncd OWF_car_bench_impl1.prf 
+Design file:     OWF_car_bench_impl1.ncd
+Preference file: OWF_car_bench_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+            866 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.517ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_car_sequencer/lvdscounter_pipe_2  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               5.453ns  (48.9% logic, 51.1% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.453ns physical path delay r_car_core/e_car_sequencer/SLICE_71 to r_car_core/e_car_sequencer/SLICE_63 exceeds
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.517ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_car_sequencer/SLICE_71 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R8C4D.CLK to       R8C4D.Q0 r_car_core/e_car_sequencer/SLICE_71 (from hr_clk_0_0)
+ROUTE        12     0.909       R8C4D.Q0 to       R8C5B.A1 r_car_core/e_car_sequencer/lvdscounter_pipe_2_Q_0
+CTOF_DEL    ---     0.452       R8C5B.A1 to       R8C5B.F1 r_car_core/e_car_sequencer/SLICE_74
+ROUTE         1     0.384       R8C5B.F1 to       R8C5D.C1 r_car_core/e_car_sequencer/N_136
+CTOF_DEL    ---     0.452       R8C5D.C1 to       R8C5D.F1 SLICE_119
+ROUTE         1     0.384       R8C5D.F1 to       R8C5D.C0 r_car_core/e_car_sequencer/N_66
+CTOF_DEL    ---     0.452       R8C5D.C0 to       R8C5D.F0 SLICE_119
+ROUTE         1     0.563       R8C5D.F0 to       R8C4C.D1 r_car_core/e_car_sequencer/N_52
+CTOF_DEL    ---     0.452       R8C4C.D1 to       R8C4C.F1 r_car_core/e_car_sequencer/SLICE_117
+ROUTE         1     0.544       R8C4C.F1 to       R8C4B.D0 r_car_core/e_car_sequencer/N_57
+CTOF_DEL    ---     0.452       R8C4B.D0 to       R8C4B.F0 r_car_core/e_car_sequencer/SLICE_63
+ROUTE         1     0.000       R8C4B.F0 to      R8C4B.DI0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_0 (to hr_clk_0_0)
+                  --------
+                    5.453   (48.9% logic, 51.1% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_71:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C4D.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C4B.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.427ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_car_sequencer/lvdscounter_pipe_2  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               5.363ns  (49.8% logic, 50.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.363ns physical path delay l_car_core/e_car_sequencer/SLICE_14 to l_car_core/e_car_sequencer/SLICE_62 exceeds
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.427ns
+
+ Physical Path Details:
+
+      Data path l_car_core/e_car_sequencer/SLICE_14 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R9C7C.CLK to       R9C7C.Q0 l_car_core/e_car_sequencer/SLICE_14 (from hr_clk_0_0)
+ROUTE        12     0.681       R9C7C.Q0 to      R10C7B.C1 l_car_core/e_car_sequencer/lvdscounter_pipe_2_Q
+CTOF_DEL    ---     0.452      R10C7B.C1 to      R10C7B.F1 l_car_core/e_car_sequencer/SLICE_17
+ROUTE         1     0.384      R10C7B.F1 to      R10C7A.C1 l_car_core/e_car_sequencer/N_138
+CTOF_DEL    ---     0.452      R10C7A.C1 to      R10C7A.F1 l_car_core/SLICE_120
+ROUTE         1     0.544      R10C7A.F1 to      R10C7A.D0 l_car_core/e_car_sequencer/N_99
+CTOF_DEL    ---     0.452      R10C7A.D0 to      R10C7A.F0 l_car_core/SLICE_120
+ROUTE         1     0.541      R10C7A.F0 to      R10C8D.D1 l_car_core/e_car_sequencer/N_81
+CTOF_DEL    ---     0.452      R10C8D.D1 to      R10C8D.F1 l_car_core/e_car_sequencer/SLICE_61
+ROUTE         1     0.544      R10C8D.F1 to      R10C8C.D0 l_car_core/e_car_sequencer/N_87
+CTOF_DEL    ---     0.452      R10C8C.D0 to      R10C8C.F0 l_car_core/e_car_sequencer/SLICE_62
+ROUTE         1     0.000      R10C8C.F0 to     R10C8C.DI0 l_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0 (to hr_clk_0_0)
+                  --------
+                    5.363   (49.8% logic, 50.2% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R9C7C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C8C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.309ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_i2s_dio/i2s_ws  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               5.245ns  (50.9% logic, 49.1% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.245ns physical path delay l_car_core/e_i2s_dio/SLICE_136 to l_car_core/e_car_sequencer/SLICE_62 exceeds
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.309ns
+
+ Physical Path Details:
+
+      Data path l_car_core/e_i2s_dio/SLICE_136 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409     R10C5D.CLK to      R10C5D.Q0 l_car_core/e_i2s_dio/SLICE_136 (from hr_clk_0_0)
+ROUTE         1     0.563      R10C5D.Q0 to      R10C7B.D1 l_car_core/i2s_lr_st
+CTOF_DEL    ---     0.452      R10C7B.D1 to      R10C7B.F1 l_car_core/e_car_sequencer/SLICE_17
+ROUTE         1     0.384      R10C7B.F1 to      R10C7A.C1 l_car_core/e_car_sequencer/N_138
+CTOF_DEL    ---     0.452      R10C7A.C1 to      R10C7A.F1 l_car_core/SLICE_120
+ROUTE         1     0.544      R10C7A.F1 to      R10C7A.D0 l_car_core/e_car_sequencer/N_99
+CTOF_DEL    ---     0.452      R10C7A.D0 to      R10C7A.F0 l_car_core/SLICE_120
+ROUTE         1     0.541      R10C7A.F0 to      R10C8D.D1 l_car_core/e_car_sequencer/N_81
+CTOF_DEL    ---     0.452      R10C8D.D1 to      R10C8D.F1 l_car_core/e_car_sequencer/SLICE_61
+ROUTE         1     0.544      R10C8D.F1 to      R10C8C.D0 l_car_core/e_car_sequencer/N_87
+CTOF_DEL    ---     0.452      R10C8C.D0 to      R10C8C.F0 l_car_core/e_car_sequencer/SLICE_62
+ROUTE         1     0.000      R10C8C.F0 to     R10C8C.DI0 l_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0 (to hr_clk_0_0)
+                  --------
+                    5.245   (50.9% logic, 49.1% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_i2s_dio/SLICE_136:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C5D.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C8C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.171ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/i2s_ws  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               5.107ns  (52.3% logic, 47.7% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.107ns physical path delay SLICE_111 to r_car_core/e_car_sequencer/SLICE_63 exceeds
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.171ns
+
+ Physical Path Details:
+
+      Data path SLICE_111 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409     R10C5C.CLK to      R10C5C.Q0 SLICE_111 (from hr_clk_0_0)
+ROUTE         1     0.563      R10C5C.Q0 to       R8C5B.D1 r_car_core/i2s_lr_st
+CTOF_DEL    ---     0.452       R8C5B.D1 to       R8C5B.F1 r_car_core/e_car_sequencer/SLICE_74
+ROUTE         1     0.384       R8C5B.F1 to       R8C5D.C1 r_car_core/e_car_sequencer/N_136
+CTOF_DEL    ---     0.452       R8C5D.C1 to       R8C5D.F1 SLICE_119
+ROUTE         1     0.384       R8C5D.F1 to       R8C5D.C0 r_car_core/e_car_sequencer/N_66
+CTOF_DEL    ---     0.452       R8C5D.C0 to       R8C5D.F0 SLICE_119
+ROUTE         1     0.563       R8C5D.F0 to       R8C4C.D1 r_car_core/e_car_sequencer/N_52
+CTOF_DEL    ---     0.452       R8C4C.D1 to       R8C4C.F1 r_car_core/e_car_sequencer/SLICE_117
+ROUTE         1     0.544       R8C4C.F1 to       R8C4B.D0 r_car_core/e_car_sequencer/N_57
+CTOF_DEL    ---     0.452       R8C4B.D0 to       R8C4B.F0 r_car_core/e_car_sequencer/SLICE_63
+ROUTE         1     0.000       R8C4B.F0 to      R8C4B.DI0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_0 (to hr_clk_0_0)
+                  --------
+                    5.107   (52.3% logic, 47.7% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C5C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C4B.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.109ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_car_sequencer/lvdscounter[0]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               5.045ns  (43.9% logic, 56.1% route), 5 logic levels.
+
+ Constraint Details:
+
+      5.045ns physical path delay SLICE_10 to l_car_core/e_car_sequencer/SLICE_62 exceeds
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.109ns
+
+ Physical Path Details:
+
+      Data path SLICE_10 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409     R10C5A.CLK to      R10C5A.Q0 SLICE_10 (from hr_clk_0_0)
+ROUTE        13     1.199      R10C5A.Q0 to      R10C7A.B1 l_car_core/e_car_sequencer/lvdscounter[0]
+CTOF_DEL    ---     0.452      R10C7A.B1 to      R10C7A.F1 l_car_core/SLICE_120
+ROUTE         1     0.544      R10C7A.F1 to      R10C7A.D0 l_car_core/e_car_sequencer/N_99
+CTOF_DEL    ---     0.452      R10C7A.D0 to      R10C7A.F0 l_car_core/SLICE_120
+ROUTE         1     0.541      R10C7A.F0 to      R10C8D.D1 l_car_core/e_car_sequencer/N_81
+CTOF_DEL    ---     0.452      R10C8D.D1 to      R10C8D.F1 l_car_core/e_car_sequencer/SLICE_61
+ROUTE         1     0.544      R10C8D.F1 to      R10C8C.D0 l_car_core/e_car_sequencer/N_87
+CTOF_DEL    ---     0.452      R10C8C.D0 to      R10C8C.F0 l_car_core/e_car_sequencer/SLICE_62
+ROUTE         1     0.000      R10C8C.F0 to     R10C8C.DI0 l_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0 (to hr_clk_0_0)
+                  --------
+                    5.045   (43.9% logic, 56.1% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C5A.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C8C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.064ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_car_sequencer/lvdscounter[0]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               5.000ns  (44.3% logic, 55.7% route), 5 logic levels.
+
+ Constraint Details:
+
+      5.000ns physical path delay r_car_core/SLICE_67 to r_car_core/e_car_sequencer/SLICE_63 exceeds
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.064ns
+
+ Physical Path Details:
+
+      Data path r_car_core/SLICE_67 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R8C3A.CLK to       R8C3A.Q0 r_car_core/SLICE_67 (from hr_clk_0_0)
+ROUTE        13     1.292       R8C3A.Q0 to       R8C5D.B1 r_car_core/e_car_sequencer/lvdscounter[0]
+CTOF_DEL    ---     0.452       R8C5D.B1 to       R8C5D.F1 SLICE_119
+ROUTE         1     0.384       R8C5D.F1 to       R8C5D.C0 r_car_core/e_car_sequencer/N_66
+CTOF_DEL    ---     0.452       R8C5D.C0 to       R8C5D.F0 SLICE_119
+ROUTE         1     0.563       R8C5D.F0 to       R8C4C.D1 r_car_core/e_car_sequencer/N_52
+CTOF_DEL    ---     0.452       R8C4C.D1 to       R8C4C.F1 r_car_core/e_car_sequencer/SLICE_117
+ROUTE         1     0.544       R8C4C.F1 to       R8C4B.D0 r_car_core/e_car_sequencer/N_57
+CTOF_DEL    ---     0.452       R8C4B.D0 to       R8C4B.F0 r_car_core/e_car_sequencer/SLICE_63
+ROUTE         1     0.000       R8C4B.F0 to      R8C4B.DI0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_0 (to hr_clk_0_0)
+                  --------
+                    5.000   (44.3% logic, 55.7% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/SLICE_67:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C3A.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C4B.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.142ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_car_sequencer/lvdscounter_pipe_2  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               4.794ns  (46.2% logic, 53.8% route), 5 logic levels.
+
+ Constraint Details:
+
+      4.794ns physical path delay l_car_core/e_car_sequencer/SLICE_14 to l_car_core/e_car_sequencer/SLICE_62 meets
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.142ns
+
+ Physical Path Details:
+
+      Data path l_car_core/e_car_sequencer/SLICE_14 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R9C7C.CLK to       R9C7C.Q0 l_car_core/e_car_sequencer/SLICE_14 (from hr_clk_0_0)
+ROUTE        12     0.905       R9C7C.Q0 to       R9C8A.A1 l_car_core/e_car_sequencer/lvdscounter_pipe_2_Q
+CTOF_DEL    ---     0.452       R9C8A.A1 to       R9C8A.F1 l_car_core/SLICE_130
+ROUTE         3     0.552       R9C8A.F1 to       R9C8A.D0 l_car_core/e_car_sequencer/N_72
+CTOF_DEL    ---     0.452       R9C8A.D0 to       R9C8A.F0 l_car_core/SLICE_130
+ROUTE         1     0.269       R9C8A.F0 to       R9C8B.D0 l_car_core/e_car_sequencer/N_88
+CTOF_DEL    ---     0.452       R9C8B.D0 to       R9C8B.F0 l_car_core/SLICE_128
+ROUTE         1     0.851       R9C8B.F0 to      R10C8C.A0 l_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_1
+CTOF_DEL    ---     0.452      R10C8C.A0 to      R10C8C.F0 l_car_core/e_car_sequencer/SLICE_62
+ROUTE         1     0.000      R10C8C.F0 to     R10C8C.DI0 l_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0 (to hr_clk_0_0)
+                  --------
+                    4.794   (46.2% logic, 53.8% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R9C7C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C8C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.167ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_car_sequencer/lvdscounter_pipe_2  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               4.769ns  (46.5% logic, 53.5% route), 5 logic levels.
+
+ Constraint Details:
+
+      4.769ns physical path delay l_car_core/e_car_sequencer/SLICE_14 to l_car_core/e_car_sequencer/SLICE_62 meets
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.167ns
+
+ Physical Path Details:
+
+      Data path l_car_core/e_car_sequencer/SLICE_14 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R9C7C.CLK to       R9C7C.Q0 l_car_core/e_car_sequencer/SLICE_14 (from hr_clk_0_0)
+ROUTE        12     0.923       R9C7C.Q0 to      R10C7A.A1 l_car_core/e_car_sequencer/lvdscounter_pipe_2_Q
+CTOF_DEL    ---     0.452      R10C7A.A1 to      R10C7A.F1 l_car_core/SLICE_120
+ROUTE         1     0.544      R10C7A.F1 to      R10C7A.D0 l_car_core/e_car_sequencer/N_99
+CTOF_DEL    ---     0.452      R10C7A.D0 to      R10C7A.F0 l_car_core/SLICE_120
+ROUTE         1     0.541      R10C7A.F0 to      R10C8D.D1 l_car_core/e_car_sequencer/N_81
+CTOF_DEL    ---     0.452      R10C8D.D1 to      R10C8D.F1 l_car_core/e_car_sequencer/SLICE_61
+ROUTE         1     0.544      R10C8D.F1 to      R10C8C.D0 l_car_core/e_car_sequencer/N_87
+CTOF_DEL    ---     0.452      R10C8C.D0 to      R10C8C.F0 l_car_core/e_car_sequencer/SLICE_62
+ROUTE         1     0.000      R10C8C.F0 to     R10C8C.DI0 l_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0 (to hr_clk_0_0)
+                  --------
+                    4.769   (46.5% logic, 53.5% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R9C7C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_car_sequencer/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to     R10C8C.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.253ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_car_sequencer/lvdscounter[2]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_car_sequencer/djb_present  (to hr_clk_0_0 +)
+
+   Delay:               4.583ns  (28.6% logic, 71.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.583ns physical path delay r_car_core/e_car_sequencer/SLICE_71 to r_car_core/e_car_sequencer/SLICE_66 meets
+      5.086ns delay constraint less
+      0.001ns skew and
+      0.249ns CE_SET requirement (totaling 4.836ns) by 0.253ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_car_sequencer/SLICE_71 to r_car_core/e_car_sequencer/SLICE_66:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R8C4D.CLK to       R8C4D.Q1 r_car_core/e_car_sequencer/SLICE_71 (from hr_clk_0_0)
+ROUTE         4     1.162       R8C4D.Q1 to       R9C3D.A1 r_car_core/e_car_sequencer/lvdscounter[2]
+CTOF_DEL    ---     0.452       R9C3D.A1 to       R9C3D.F1 SLICE_126
+ROUTE         2     0.893       R9C3D.F1 to       R9C3D.B0 r_car_core/e_car_sequencer/N_63
+CTOF_DEL    ---     0.452       R9C3D.B0 to       R9C3D.F0 SLICE_126
+ROUTE         1     1.215       R9C3D.F0 to       R8C2A.CE r_car_core/e_car_sequencer/djb_present_RNO_0 (to hr_clk_0_0)
+                  --------
+                    4.583   (28.6% logic, 71.4% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_71:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C4D.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_66:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.710     LPLL.CLKOP to      R8C2A.CLK hr_clk_0_0
+                  --------
+                    1.710   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.255ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_car_sequencer/lvdscounter_pipe_1  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_car_sequencer/lvds_io_1  (to hr_clk_0_0 +)
+
+   Delay:               4.681ns  (37.7% logic, 62.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      4.681ns physical path delay r_car_core/e_car_sequencer/SLICE_70 to r_car_core/e_car_sequencer/SLICE_63 meets
+      5.086ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 4.936ns) by 0.255ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_car_sequencer/SLICE_70 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409      R9C3B.CLK to       R9C3B.Q0 r_car_core/e_car_sequencer/SLICE_70 (from hr_clk_0_0)
+ROUTE        10     0.936       R9C3B.Q0 to       R8C3C.B1 r_car_core/e_car_sequencer/lvdscounter_pipe_1_Q_0
+CTOF_DEL    ---     0.452       R8C3C.B1 to       R8C3C.F1 r_car_core/e_car_sequencer/SLICE_72
+ROUTE         1     1.324       R8C3C.F1 to       R9C4B.A0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_a2_1_0
+CTOF_DEL    ---     0.452       R9C4B.A0 to       R9C4B.F0 SLICE_121
+ROUTE         1     0.656       R9C4B.F0 to       R8C4B.C0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_1
+CTOF_DEL    ---     0.452       R8C4B.C0 to       R8C4B.F0 r_car_core/e_car_sequencer/SLICE_63
+ROUTE         1     0.000       R8C4B.F0 to      R8C4B.DI0 r_car_core/e_car_sequencer/un1_i2s_spkr_dat_u_0_0 (to hr_clk_0_0)
+                  --------
+                    4.681   (37.7% logic, 62.3% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_70:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R9C3B.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_car_sequencer/SLICE_63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     1.711     LPLL.CLKOP to      R8C4B.CLK hr_clk_0_0
+                  --------
+                    1.711   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning: 178.476MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "codec_clk_c" 12.288000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "hr_clk_0_0" 196.608000   |             |             |
+MHz ;                                   |  196.608 MHz|  178.476 MHz|   6 *
+                                        |             |             |
+FREQUENCY NET "codec_clk_c" 12.288000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+l_car_core/e_car_sequencer/N_99         |       1|       3|     50.00%
+                                        |        |        |
+l_car_core/e_car_sequencer/N_81         |       1|       3|     50.00%
+                                        |        |        |
+l_car_core/e_car_sequencer/N_87         |       1|       3|     50.00%
+                                        |        |        |
+l_car_core/e_car_sequencer/un1_i2s_spkr_|        |        |
+dat_u_0                                 |       1|       3|     50.00%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_66         |       1|       3|     50.00%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_52         |       1|       3|     50.00%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_57         |       1|       3|     50.00%
+                                        |        |        |
+r_car_core/e_car_sequencer/un1_i2s_spkr_|        |        |
+dat_u_0_0                               |       1|       3|     50.00%
+                                        |        |        |
+l_car_core/e_car_sequencer/N_138        |       1|       2|     33.33%
+                                        |        |        |
+r_car_core/e_car_sequencer/N_136        |       1|       2|     33.33%
+                                        |        |        |
+l_car_core/i2s_lr_st                    |       1|       1|     16.67%
+                                        |        |        |
+l_car_core/e_car_sequencer/lvdscounter[0|        |        |
+]                                       |      13|       1|     16.67%
+                                        |        |        |
+l_car_core/e_car_sequencer/lvdscounter_p|        |        |
+ipe_2_Q                                 |      12|       1|     16.67%
+                                        |        |        |
+r_car_core/i2s_lr_st                    |       1|       1|     16.67%
+                                        |        |        |
+r_car_core/e_car_sequencer/lvdscounter[0|        |        |
+]                                       |      13|       1|     16.67%
+                                        |        |        |
+r_car_core/e_car_sequencer/lvdscounter_p|        |        |
+ipe_2_Q_0                               |      12|       1|     16.67%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: codec_clk_c   Source: codec_clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: hr_clk_0_0   Source: e_primary_pll/PLLInst_0.CLKOP   Loads: 121
+   Covered under: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 6  Score: 1597
+Cumulative negative slack: 1597
+
+Constraints cover 866 paths, 2 nets, and 867 connections (95.70% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
+Wed Jul 11 18:53:59 2018
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o OWF_car_bench_impl1.twr -gui -msgset /data/School/Research/THE_Lab/FPGA/osp-wearable-fpga/car_bench/promote.xml OWF_car_bench_impl1.ncd OWF_car_bench_impl1.prf 
+Design file:     OWF_car_bench_impl1.ncd
+Preference file: OWF_car_bench_impl1.prf
+Device,speed:    LCMXO3LF-6900C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+            866 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/lrst_1  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/i2s_ws  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_111 to SLICE_111 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_111 to SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R10C5C.CLK to      R10C5C.Q1 SLICE_111 (from hr_clk_0_0)
+ROUTE         1     0.152      R10C5C.Q1 to      R10C5C.M0 r_car_core/e_i2s_dio/lrst_1 (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R10C5C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R10C5C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_i2s_dio/in_reg_1/reg[2]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_i2s_dio/in_reg_2/reg[2]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_125 to SLICE_134 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_125 to SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R9C4C.CLK to       R9C4C.Q0 SLICE_125 (from hr_clk_0_0)
+ROUTE         1     0.152       R9C4C.Q0 to       R9C4A.M0 l_car_core/e_i2s_dio/in_2[2] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to SLICE_125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to      R9C4C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to      R9C4A.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_i2s_dio/in_reg_1/reg[3]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_i2s_dio/in_reg_2/reg[3]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_125 to SLICE_134 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_125 to SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R9C4C.CLK to       R9C4C.Q1 SLICE_125 (from hr_clk_0_0)
+ROUTE         1     0.152       R9C4C.Q1 to       R9C4A.M1 l_car_core/e_i2s_dio/in_2[3] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to SLICE_125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to      R9C4C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to SLICE_134:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to      R9C4A.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/out_reg_1/reg[1]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/out_reg_2/reg[1]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay r_car_core/e_i2s_dio/out_reg_1/SLICE_181 to r_car_core/e_i2s_dio/out_reg_2/SLICE_185 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_i2s_dio/out_reg_1/SLICE_181 to r_car_core/e_i2s_dio/out_reg_2/SLICE_185:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R12C4B.CLK to      R12C4B.Q0 r_car_core/e_i2s_dio/out_reg_1/SLICE_181 (from hr_clk_0_0)
+ROUTE         1     0.152      R12C4B.Q0 to      R12C4C.M0 r_car_core/e_i2s_dio/out_2[1] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/out_reg_1/SLICE_181:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R12C4B.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/out_reg_2/SLICE_185:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R12C4C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_i2s_dio/out_reg_1/reg[1]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_i2s_dio/out_reg_2/reg[1]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay l_car_core/e_i2s_dio/out_reg_1/SLICE_154 to l_car_core/e_i2s_dio/out_reg_2/SLICE_158 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path l_car_core/e_i2s_dio/out_reg_1/SLICE_154 to l_car_core/e_i2s_dio/out_reg_2/SLICE_158:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R11C8A.CLK to      R11C8A.Q0 l_car_core/e_i2s_dio/out_reg_1/SLICE_154 (from hr_clk_0_0)
+ROUTE         1     0.152      R11C8A.Q0 to      R11C8C.M0 l_car_core/e_i2s_dio/out_2[1] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_i2s_dio/out_reg_1/SLICE_154:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R11C8A.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_i2s_dio/out_reg_2/SLICE_158:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R11C8C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/in_reg_1/reg[1]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/in_reg_2/reg[1]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay r_car_core/e_i2s_dio/in_reg_1/SLICE_169 to r_car_core/e_i2s_dio/in_reg_2/SLICE_173 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_i2s_dio/in_reg_1/SLICE_169 to r_car_core/e_i2s_dio/in_reg_2/SLICE_173:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R10C2B.CLK to      R10C2B.Q0 r_car_core/e_i2s_dio/in_reg_1/SLICE_169 (from hr_clk_0_0)
+ROUTE         1     0.152      R10C2B.Q0 to      R10C2A.M0 r_car_core/e_i2s_dio/in_2[1] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/in_reg_1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.697     LPLL.CLKOP to     R10C2B.CLK hr_clk_0_0
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/in_reg_2/SLICE_173:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.697     LPLL.CLKOP to     R10C2A.CLK hr_clk_0_0
+                  --------
+                    0.697   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/out_reg_1/reg[4]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/out_reg_2/reg[4]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay r_car_core/e_i2s_dio/out_reg_1/SLICE_183 to r_car_core/e_i2s_dio/out_reg_2/SLICE_187 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_i2s_dio/out_reg_1/SLICE_183 to r_car_core/e_i2s_dio/out_reg_2/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R15C4C.CLK to      R15C4C.Q1 r_car_core/e_i2s_dio/out_reg_1/SLICE_183 (from hr_clk_0_0)
+ROUTE         1     0.152      R15C4C.Q1 to      R15C4A.M1 r_car_core/e_i2s_dio/out_2[4] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/out_reg_1/SLICE_183:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R15C4C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/out_reg_2/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R15C4A.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              l_car_core/e_i2s_dio/out_reg_1/reg[7]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        l_car_core/e_i2s_dio/out_reg_2/reg[7]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay l_car_core/e_i2s_dio/out_reg_1/SLICE_157 to l_car_core/e_i2s_dio/out_reg_2/SLICE_161 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path l_car_core/e_i2s_dio/out_reg_1/SLICE_157 to l_car_core/e_i2s_dio/out_reg_2/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R11C7C.CLK to      R11C7C.Q0 l_car_core/e_i2s_dio/out_reg_1/SLICE_157 (from hr_clk_0_0)
+ROUTE         1     0.152      R11C7C.Q0 to      R11C7B.M0 l_car_core/e_i2s_dio/out_2[7] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_i2s_dio/out_reg_1/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R11C7C.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to l_car_core/e_i2s_dio/out_reg_2/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R11C7B.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/out_reg_1/reg[3]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/out_reg_2/reg[3]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay r_car_core/e_i2s_dio/out_reg_1/SLICE_182 to r_car_core/e_i2s_dio/out_reg_2/SLICE_186 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_i2s_dio/out_reg_1/SLICE_182 to r_car_core/e_i2s_dio/out_reg_2/SLICE_186:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R14C4A.CLK to      R14C4A.Q0 r_car_core/e_i2s_dio/out_reg_1/SLICE_182 (from hr_clk_0_0)
+ROUTE         1     0.152      R14C4A.Q0 to      R14C4B.M0 r_car_core/e_i2s_dio/out_2[3] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/out_reg_1/SLICE_182:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R14C4A.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/out_reg_2/SLICE_186:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R14C4B.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_car_core/e_i2s_dio/in_reg_1/reg[3]  (from hr_clk_0_0 +)
+   Destination:    FF         Data in        r_car_core/e_i2s_dio/in_reg_2/reg[3]  (to hr_clk_0_0 +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay r_car_core/e_i2s_dio/in_reg_1/SLICE_170 to r_car_core/e_i2s_dio/in_reg_2/SLICE_174 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path r_car_core/e_i2s_dio/in_reg_1/SLICE_170 to r_car_core/e_i2s_dio/in_reg_2/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R10C3A.CLK to      R10C3A.Q0 r_car_core/e_i2s_dio/in_reg_1/SLICE_170 (from hr_clk_0_0)
+ROUTE         1     0.152      R10C3A.Q0 to      R10C3D.M0 r_car_core/e_i2s_dio/in_2[3] (to hr_clk_0_0)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/in_reg_1/SLICE_170:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R10C3A.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path e_primary_pll/PLLInst_0 to r_car_core/e_i2s_dio/in_reg_2/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       121     0.698     LPLL.CLKOP to     R10C3D.CLK hr_clk_0_0
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "codec_clk_c" 12.288000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "hr_clk_0_0" 196.608000   |             |             |
+MHz ;                                   |     0.000 ns|     0.304 ns|   1  
+                                        |             |             |
+FREQUENCY NET "codec_clk_c" 12.288000   |             |             |
+MHz ;                                   |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: codec_clk_c   Source: codec_clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: hr_clk_0_0   Source: e_primary_pll/PLLInst_0.CLKOP   Loads: 121
+   Covered under: FREQUENCY NET "hr_clk_0_0" 196.608000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 866 paths, 2 nets, and 867 connections (95.70% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 6 (setup), 0 (hold)
+Score: 1597 (setup), 0 (hold)
+Cumulative negative slack: 1597 (1597+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

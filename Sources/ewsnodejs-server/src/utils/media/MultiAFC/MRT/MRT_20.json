@@ -1,0 +1,604 @@
+{
+    "words": [
+        {
+            "filename": "F4/F4_b41_w1_orig.wav",
+            "option_A": "ray",
+            "option_B": "raise",
+            "option_C": "rate",
+            "option_D": "rave",
+            "option_E": "rake",
+            "option_F": "race",
+            "answer": "ray"
+        },
+        {
+            "filename": "F4/F4_b41_w2_orig.wav",
+            "option_A": "ray",
+            "option_B": "raise",
+            "option_C": "rate",
+            "option_D": "rave",
+            "option_E": "rake",
+            "option_F": "race",
+            "answer": "raise"
+        },
+        {
+            "filename": "F4/F4_b41_w3_orig.wav",
+            "option_A": "ray",
+            "option_B": "raise",
+            "option_C": "rate",
+            "option_D": "rave",
+            "option_E": "rake",
+            "option_F": "race",
+            "answer": "rate"
+        },
+        {
+            "filename": "F4/F4_b41_w4_orig.wav",
+            "option_A": "ray",
+            "option_B": "raise",
+            "option_C": "rate",
+            "option_D": "rave",
+            "option_E": "rake",
+            "option_F": "race",
+            "answer": "rave"
+        },
+        {
+            "filename": "F4/F4_b41_w5_orig.wav",
+            "option_A": "ray",
+            "option_B": "raise",
+            "option_C": "rate",
+            "option_D": "rave",
+            "option_E": "rake",
+            "option_F": "race",
+            "answer": "rake"
+        },
+        {
+            "filename": "F4/F4_b41_w6_orig.wav",
+            "option_A": "ray",
+            "option_B": "raise",
+            "option_C": "rate",
+            "option_D": "rave",
+            "option_E": "rake",
+            "option_F": "race",
+            "answer": "race"
+        },
+        {
+            "filename": "F4/F4_b42_w1_orig.wav",
+            "option_A": "save",
+            "option_B": "same",
+            "option_C": "sale",
+            "option_D": "sane",
+            "option_E": "sake",
+            "option_F": "safe",
+            "answer": "save"
+        },
+        {
+            "filename": "F4/F4_b42_w2_orig.wav",
+            "option_A": "save",
+            "option_B": "same",
+            "option_C": "sale",
+            "option_D": "sane",
+            "option_E": "sake",
+            "option_F": "safe",
+            "answer": "same"
+        },
+        {
+            "filename": "F4/F4_b42_w3_orig.wav",
+            "option_A": "save",
+            "option_B": "same",
+            "option_C": "sale",
+            "option_D": "sane",
+            "option_E": "sake",
+            "option_F": "safe",
+            "answer": "sale"
+        },
+        {
+            "filename": "F4/F4_b42_w4_orig.wav",
+            "option_A": "save",
+            "option_B": "same",
+            "option_C": "sale",
+            "option_D": "sane",
+            "option_E": "sake",
+            "option_F": "safe",
+            "answer": "sane"
+        },
+        {
+            "filename": "F4/F4_b42_w5_orig.wav",
+            "option_A": "save",
+            "option_B": "same",
+            "option_C": "sale",
+            "option_D": "sane",
+            "option_E": "sake",
+            "option_F": "safe",
+            "answer": "sake"
+        },
+        {
+            "filename": "F4/F4_b42_w6_orig.wav",
+            "option_A": "save",
+            "option_B": "same",
+            "option_C": "sale",
+            "option_D": "sane",
+            "option_E": "sake",
+            "option_F": "safe",
+            "answer": "safe"
+        },
+        {
+            "filename": "F4/F4_b43_w1_orig.wav",
+            "option_A": "fill",
+            "option_B": "kill",
+            "option_C": "will",
+            "option_D": "hill",
+            "option_E": "till",
+            "option_F": "bill",
+            "answer": "fill"
+        },
+        {
+            "filename": "F4/F4_b43_w2_orig.wav",
+            "option_A": "fill",
+            "option_B": "kill",
+            "option_C": "will",
+            "option_D": "hill",
+            "option_E": "till",
+            "option_F": "bill",
+            "answer": "kill"
+        },
+        {
+            "filename": "F4/F4_b43_w3_orig.wav",
+            "option_A": "fill",
+            "option_B": "kill",
+            "option_C": "will",
+            "option_D": "hill",
+            "option_E": "till",
+            "option_F": "bill",
+            "answer": "will"
+        },
+        {
+            "filename": "F4/F4_b43_w4_orig.wav",
+            "option_A": "fill",
+            "option_B": "kill",
+            "option_C": "will",
+            "option_D": "hill",
+            "option_E": "till",
+            "option_F": "bill",
+            "answer": "hill"
+        },
+        {
+            "filename": "F4/F4_b43_w5_orig.wav",
+            "option_A": "fill",
+            "option_B": "kill",
+            "option_C": "will",
+            "option_D": "hill",
+            "option_E": "till",
+            "option_F": "bill",
+            "answer": "till"
+        },
+        {
+            "filename": "F4/F4_b43_w6_orig.wav",
+            "option_A": "fill",
+            "option_B": "kill",
+            "option_C": "will",
+            "option_D": "hill",
+            "option_E": "till",
+            "option_F": "bill",
+            "answer": "bill"
+        },
+        {
+            "filename": "F4/F4_b44_w1_orig.wav",
+            "option_A": "sill",
+            "option_B": "sick",
+            "option_C": "sip",
+            "option_D": "sing",
+            "option_E": "sit",
+            "option_F": "sin",
+            "answer": "sill"
+        },
+        {
+            "filename": "F4/F4_b44_w2_orig.wav",
+            "option_A": "sill",
+            "option_B": "sick",
+            "option_C": "sip",
+            "option_D": "sing",
+            "option_E": "sit",
+            "option_F": "sin",
+            "answer": "sick"
+        },
+        {
+            "filename": "F4/F4_b44_w3_orig.wav",
+            "option_A": "sill",
+            "option_B": "sick",
+            "option_C": "sip",
+            "option_D": "sing",
+            "option_E": "sit",
+            "option_F": "sin",
+            "answer": "sip"
+        },
+        {
+            "filename": "F4/F4_b44_w4_orig.wav",
+            "option_A": "sill",
+            "option_B": "sick",
+            "option_C": "sip",
+            "option_D": "sing",
+            "option_E": "sit",
+            "option_F": "sin",
+            "answer": "sing"
+        },
+        {
+            "filename": "F4/F4_b44_w5_orig.wav",
+            "option_A": "sill",
+            "option_B": "sick",
+            "option_C": "sip",
+            "option_D": "sing",
+            "option_E": "sit",
+            "option_F": "sin",
+            "answer": "sit"
+        },
+        {
+            "filename": "F4/F4_b44_w6_orig.wav",
+            "option_A": "sill",
+            "option_B": "sick",
+            "option_C": "sip",
+            "option_D": "sing",
+            "option_E": "sit",
+            "option_F": "sin",
+            "answer": "sin"
+        },
+        {
+            "filename": "F4/F4_b45_w1_orig.wav",
+            "option_A": "bail",
+            "option_B": "gale",
+            "option_C": "sail",
+            "option_D": "tail",
+            "option_E": "pale",
+            "option_F": "male",
+            "answer": "bail"
+        },
+        {
+            "filename": "F4/F4_b45_w2_orig.wav",
+            "option_A": "bail",
+            "option_B": "gale",
+            "option_C": "sail",
+            "option_D": "tail",
+            "option_E": "pale",
+            "option_F": "male",
+            "answer": "gale"
+        },
+        {
+            "filename": "F4/F4_b45_w3_orig.wav",
+            "option_A": "bail",
+            "option_B": "gale",
+            "option_C": "sail",
+            "option_D": "tail",
+            "option_E": "pale",
+            "option_F": "male",
+            "answer": "sail"
+        },
+        {
+            "filename": "F4/F4_b45_w4_orig.wav",
+            "option_A": "bail",
+            "option_B": "gale",
+            "option_C": "sail",
+            "option_D": "tail",
+            "option_E": "pale",
+            "option_F": "male",
+            "answer": "tail"
+        },
+        {
+            "filename": "F4/F4_b45_w5_orig.wav",
+            "option_A": "bail",
+            "option_B": "gale",
+            "option_C": "sail",
+            "option_D": "tail",
+            "option_E": "pale",
+            "option_F": "male",
+            "answer": "pale"
+        },
+        {
+            "filename": "F4/F4_b45_w6_orig.wav",
+            "option_A": "bail",
+            "option_B": "gale",
+            "option_C": "sail",
+            "option_D": "tail",
+            "option_E": "pale",
+            "option_F": "male",
+            "answer": "male"
+        },
+        {
+            "filename": "F4/F4_b46_w1_orig.wav",
+            "option_A": "wick",
+            "option_B": "sick",
+            "option_C": "kick",
+            "option_D": "lick",
+            "option_E": "pick",
+            "option_F": "tick",
+            "answer": "wick"
+        },
+        {
+            "filename": "F4/F4_b46_w2_orig.wav",
+            "option_A": "wick",
+            "option_B": "sick",
+            "option_C": "kick",
+            "option_D": "lick",
+            "option_E": "pick",
+            "option_F": "tick",
+            "answer": "sick"
+        },
+        {
+            "filename": "F4/F4_b46_w3_orig.wav",
+            "option_A": "wick",
+            "option_B": "sick",
+            "option_C": "kick",
+            "option_D": "lick",
+            "option_E": "pick",
+            "option_F": "tick",
+            "answer": "kick"
+        },
+        {
+            "filename": "F4/F4_b46_w4_orig.wav",
+            "option_A": "wick",
+            "option_B": "sick",
+            "option_C": "kick",
+            "option_D": "lick",
+            "option_E": "pick",
+            "option_F": "tick",
+            "answer": "lick"
+        },
+        {
+            "filename": "F4/F4_b46_w5_orig.wav",
+            "option_A": "wick",
+            "option_B": "sick",
+            "option_C": "kick",
+            "option_D": "lick",
+            "option_E": "pick",
+            "option_F": "tick",
+            "answer": "pick"
+        },
+        {
+            "filename": "F4/F4_b46_w6_orig.wav",
+            "option_A": "wick",
+            "option_B": "sick",
+            "option_C": "kick",
+            "option_D": "lick",
+            "option_E": "pick",
+            "option_F": "tick",
+            "answer": "tick"
+        },
+        {
+            "filename": "F4/F4_b47_w1_orig.wav",
+            "option_A": "peace",
+            "option_B": "peas",
+            "option_C": "peak",
+            "option_D": "peach",
+            "option_E": "peat",
+            "option_F": "peel",
+            "answer": "peace"
+        },
+        {
+            "filename": "F4/F4_b47_w2_orig.wav",
+            "option_A": "peace",
+            "option_B": "peas",
+            "option_C": "peak",
+            "option_D": "peach",
+            "option_E": "peat",
+            "option_F": "peel",
+            "answer": "peas"
+        },
+        {
+            "filename": "F4/F4_b47_w3_orig.wav",
+            "option_A": "peace",
+            "option_B": "peas",
+            "option_C": "peak",
+            "option_D": "peach",
+            "option_E": "peat",
+            "option_F": "peel",
+            "answer": "peak"
+        },
+        {
+            "filename": "F4/F4_b47_w4_orig.wav",
+            "option_A": "peace",
+            "option_B": "peas",
+            "option_C": "peak",
+            "option_D": "peach",
+            "option_E": "peat",
+            "option_F": "peel",
+            "answer": "peach"
+        },
+        {
+            "filename": "F4/F4_b47_w5_orig.wav",
+            "option_A": "peace",
+            "option_B": "peas",
+            "option_C": "peak",
+            "option_D": "peach",
+            "option_E": "peat",
+            "option_F": "peel",
+            "answer": "peat"
+        },
+        {
+            "filename": "F4/F4_b47_w6_orig.wav",
+            "option_A": "peace",
+            "option_B": "peas",
+            "option_C": "peak",
+            "option_D": "peach",
+            "option_E": "peat",
+            "option_F": "peel",
+            "answer": "peel"
+        },
+        {
+            "filename": "F4/F4_b48_w1_orig.wav",
+            "option_A": "bun",
+            "option_B": "bus ",
+            "option_C": "but",
+            "option_D": "bug",
+            "option_E": "buck",
+            "option_F": "buff",
+            "answer": "bun"
+        },
+        {
+            "filename": "F4/F4_b48_w2_orig.wav",
+            "option_A": "bun",
+            "option_B": "bus ",
+            "option_C": "but",
+            "option_D": "bug",
+            "option_E": "buck",
+            "option_F": "buff",
+            "answer": "bus "
+        },
+        {
+            "filename": "F4/F4_b48_w3_orig.wav",
+            "option_A": "bun",
+            "option_B": "bus ",
+            "option_C": "but",
+            "option_D": "bug",
+            "option_E": "buck",
+            "option_F": "buff",
+            "answer": "but"
+        },
+        {
+            "filename": "F4/F4_b48_w4_orig.wav",
+            "option_A": "bun",
+            "option_B": "bus ",
+            "option_C": "but",
+            "option_D": "bug",
+            "option_E": "buck",
+            "option_F": "buff",
+            "answer": "bug"
+        },
+        {
+            "filename": "F4/F4_b48_w5_orig.wav",
+            "option_A": "bun",
+            "option_B": "bus ",
+            "option_C": "but",
+            "option_D": "bug",
+            "option_E": "buck",
+            "option_F": "buff",
+            "answer": "buck"
+        },
+        {
+            "filename": "F4/F4_b48_w6_orig.wav",
+            "option_A": "bun",
+            "option_B": "bus ",
+            "option_C": "but",
+            "option_D": "bug",
+            "option_E": "buck",
+            "option_F": "buff",
+            "answer": "buff"
+        },
+        {
+            "filename": "F4/F4_b49_w1_orig.wav",
+            "option_A": "sag",
+            "option_B": "sat",
+            "option_C": "sass",
+            "option_D": "sack",
+            "option_E": "sad",
+            "option_F": "sap",
+            "answer": "sag"
+        },
+        {
+            "filename": "F4/F4_b49_w2_orig.wav",
+            "option_A": "sag",
+            "option_B": "sat",
+            "option_C": "sass",
+            "option_D": "sack",
+            "option_E": "sad",
+            "option_F": "sap",
+            "answer": "sat"
+        },
+        {
+            "filename": "F4/F4_b49_w3_orig.wav",
+            "option_A": "sag",
+            "option_B": "sat",
+            "option_C": "sass",
+            "option_D": "sack",
+            "option_E": "sad",
+            "option_F": "sap",
+            "answer": "sass"
+        },
+        {
+            "filename": "F4/F4_b49_w4_orig.wav",
+            "option_A": "sag",
+            "option_B": "sat",
+            "option_C": "sass",
+            "option_D": "sack",
+            "option_E": "sad",
+            "option_F": "sap",
+            "answer": "sack"
+        },
+        {
+            "filename": "F4/F4_b49_w5_orig.wav",
+            "option_A": "sag",
+            "option_B": "sat",
+            "option_C": "sass",
+            "option_D": "sack",
+            "option_E": "sad",
+            "option_F": "sap",
+            "answer": "sad"
+        },
+        {
+            "filename": "F4/F4_b49_w6_orig.wav",
+            "option_A": "sag",
+            "option_B": "sat",
+            "option_C": "sass",
+            "option_D": "sack",
+            "option_E": "sad",
+            "option_F": "sap",
+            "answer": "sap"
+        },
+        {
+            "filename": "F4/F4_b50_w1_orig.wav",
+            "option_A": "fun",
+            "option_B": "sun",
+            "option_C": "bun",
+            "option_D": "gun",
+            "option_E": "run",
+            "option_F": "nun",
+            "answer": "fun"
+        },
+        {
+            "filename": "F4/F4_b50_w2_orig.wav",
+            "option_A": "fun",
+            "option_B": "sun",
+            "option_C": "bun",
+            "option_D": "gun",
+            "option_E": "run",
+            "option_F": "nun",
+            "answer": "sun"
+        },
+        {
+            "filename": "F4/F4_b50_w3_orig.wav",
+            "option_A": "fun",
+            "option_B": "sun",
+            "option_C": "bun",
+            "option_D": "gun",
+            "option_E": "run",
+            "option_F": "nun",
+            "answer": "bun"
+        },
+        {
+            "filename": "F4/F4_b50_w4_orig.wav",
+            "option_A": "fun",
+            "option_B": "sun",
+            "option_C": "bun",
+            "option_D": "gun",
+            "option_E": "run",
+            "option_F": "nun",
+            "answer": "gun"
+        },
+        {
+            "filename": "F4/F4_b50_w5_orig.wav",
+            "option_A": "fun",
+            "option_B": "sun",
+            "option_C": "bun",
+            "option_D": "gun",
+            "option_E": "run",
+            "option_F": "nun",
+            "answer": "run"
+        },
+        {
+            "filename": "F4/F4_b50_w6_orig.wav",
+            "option_A": "fun",
+            "option_B": "sun",
+            "option_C": "bun",
+            "option_D": "gun",
+            "option_E": "run",
+            "option_F": "nun",
+            "answer": "nun"
+        }
+    ]
+}

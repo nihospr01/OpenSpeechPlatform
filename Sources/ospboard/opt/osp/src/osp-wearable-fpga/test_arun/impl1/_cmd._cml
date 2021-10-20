@@ -1,0 +1,1 @@
+-link    -encrypt        -top test_togglepins -osyn /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/synwork/test_arun_impl1_comp.srs /home/hari/Documents/osp-wearable-fpga/test_arun/impl1/synwork/layer0.srs   

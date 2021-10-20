@@ -1,0 +1,1 @@
+-link    -encrypt        -top tl_djb_bench -osyn /home/hari/Documents/osp-wearable-fpga/djb_bench/impl1/synwork/OWF_djb_bench_impl1_comp.srs /home/hari/Documents/osp-wearable-fpga/djb_bench/impl1/synwork/layer0.srs   

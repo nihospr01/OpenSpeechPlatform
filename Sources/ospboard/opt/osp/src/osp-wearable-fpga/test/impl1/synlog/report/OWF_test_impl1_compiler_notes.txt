@@ -1,0 +1,17 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std.vhd":123:18:123:21|Setting time resolution to ps
+@N:"/data/School/Research/THE_Lab/FPGA/OWF_test/src/osp_carrier_basic.vhd":5:7:5:23|Top entity is set to OSP_Carrier_Basic.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/osp_carrier_basic.vhd":5:7:5:23|Synthesizing work.osp_carrier_basic.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_core.vhd":5:7:5:14|Synthesizing work.car_core.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/i2s_dio.vhd":11:7:11:13|Synthesizing work.i2s_dio.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/sr8_falling.vhd":12:7:12:17|Synthesizing work.sr8_falling.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/r8_rising.vhd":6:7:6:15|Synthesizing work.r8_rising.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/sr8_rising.vhd":12:7:12:16|Synthesizing work.sr8_rising.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_sequencer.vhd":5:7:5:19|Synthesizing work.car_sequencer.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_clock_gen.vhd":7:7:7:19|Synthesizing work.car_clock_gen.a.
+@N: CD630 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/primary_pll.vhd":14:7:14:17|Synthesizing work.primary_pll.structure.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":2175:10:2175:16|Synthesizing work.ehxpllj.syn_black_box.
+@N: CD630 :"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1490:10:1490:12|Synthesizing work.vlo.syn_black_box.
+@N|Running in 64-bit mode
+

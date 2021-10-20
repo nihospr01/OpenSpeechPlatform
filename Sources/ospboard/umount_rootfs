@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sudo umount rootfs/proc
+sudo umount rootfs/sys 
+sudo umount rootfs/dev/pts
+sudo umount rootfs
+if [ $? -ne 0 ]
+then
+    echo "unmount failed."
+    echo "May be blocked on these processes:"
+    ps aux | grep qemu
+    exit 1
+fi
+
+printf "unmounted\n"
+exit 0

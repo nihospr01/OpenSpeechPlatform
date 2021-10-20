@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+import argparse
+import sys
+
+def main(name, passphrase=None):
+
+    with open("/etc/hostname", "w") as f:
+        print(name, file=f)
+
+    with open("/etc/hosts", "r") as f:
+        data = f.read()
+
+    with open("/etc/hosts", "w") as f:
+        for line in data.split('\n'):
+            if line.startswith('127.0.1.1'):
+                print(f"127.0.1.1\t{name}", file=f)
+            else:
+                print(line, file=f)
+
+    with open("/etc/hostapd/hostapd.conf", "r") as f:
+        data = f.read()
+
+    with open("/etc/hostapd/hostapd.conf", "w") as f:
+        for line in data.split('\n'):
+            if line.startswith('ssid='):
+                print(f"ssid={name}", file=f)
+            elif passphrase and line.startswith('wpa_passphrase='):
+                print(f"wpa_passphrase={passphrase}", file=f)
+            else:
+                print(line, file=f)
+
+    print("Done. Reboot for changes to take effect")
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(prog='set_hs_name', 
+        description="Sets the Hostname, SSID and/or WiFi passphrase.  Will set the hostname to match the SSID.")
+    parser.add_argument('-n', "--name", help='Required. SSID (and hostname)')
+    parser.add_argument('-p', "--passphrase", help='Optional. SSID password')
+    args = parser.parse_args()
+    if args.name is None:
+        parser.print_help()
+        sys.exit(1)
+    sys.exit(main(args.name, args.passphrase))

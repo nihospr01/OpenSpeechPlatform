@@ -1,0 +1,15 @@
+"\eOA": history-search-backward
+"\eOB": history-search-forward
+"\eOC": forward-char
+"\eOD": backward-char
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 3
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On

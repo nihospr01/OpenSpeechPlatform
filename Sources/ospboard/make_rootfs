@@ -1,0 +1,36 @@
+#!/bin/bash
+if [[ `id -u` -ne 0 ]]
+then 
+    exec sudo bash "$0" "$@"
+fi
+
+if [ $# -eq 0 ] 
+then
+    printf "Cleans, Sets rootfs version, and Compresses Image\n"
+    printf "Usage: $0 version\n\n"
+    exit
+fi
+
+if grep -qs rootfs /proc/mounts; then
+    echo "rootfs mounted"
+else
+    ./mount_rootfs
+fi
+
+version=$1
+
+printf "Cleaning Rootfs\n"
+
+# save the version
+echo $version > rootfs/etc/osp_rootfs
+
+# Remove /opt and /usr/local
+rm -rf rootfs/opt rootfs/usr/local
+
+printf "Unmounting Rootfs\n"
+./umount_rootfs
+
+printf "Fsck and Compressing Image\n"
+./make_img -c
+
+printf "DONE Building Rootfs\n"

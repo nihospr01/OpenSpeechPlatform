@@ -1,0 +1,34 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sat Sep 29 17:00:07 2018 *
+NOTE DESIGN NAME: tl_djb_bench *
+NOTE DEVICE NAME: LCMXO3LF-6900C-5CABGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS lvds_io : A13 : inout *
+NOTE PINS db_leds[0] : P16 : out *
+NOTE PINS db_clk : C8 : in *
+NOTE PINS test_sync_late : F14 : out *
+NOTE PINS test_sync_early : B16 : out *
+NOTE PINS spi_cs1 : T10 : out *
+NOTE PINS spi_cs0 : P10 : out *
+NOTE PINS spi_miso : R10 : in *
+NOTE PINS spi_mosi : N9 : out *
+NOTE PINS spi_clk : M8 : out *
+NOTE PINS i2s_dspk : T14 : out *
+NOTE PINS i2s_dmic : R13 : in *
+NOTE PINS i2s_ws : M11 : out *
+NOTE PINS i2s_sck : N10 : out *
+NOTE PINS db_leds[7] : H11 : out *
+NOTE PINS db_leds[6] : J13 : out *
+NOTE PINS db_leds[5] : J11 : out *
+NOTE PINS db_leds[4] : L12 : out *
+NOTE PINS db_leds[3] : K11 : out *
+NOTE PINS db_leds[2] : L13 : out *
+NOTE PINS db_leds[1] : N15 : out *
+NOTE PINS db_switches[3] : N1 : in *
+NOTE PINS db_switches[2] : M3 : in *
+NOTE PINS db_switches[1] : P1 : in *
+NOTE PINS db_switches[0] : N2 : in *
+NOTE PINS db_reset : B3 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

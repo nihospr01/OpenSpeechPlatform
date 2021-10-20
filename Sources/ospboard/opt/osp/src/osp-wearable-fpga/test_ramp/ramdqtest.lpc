@@ -1,0 +1,51 @@
+[Device]
+Family=machxo3lf
+PartType=LCMXO3LF-6900C
+PartName=LCMXO3LF-6900C-5BG256C
+SpeedGrade=5
+Package=CABGA256
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=RAM_DQ
+CoreRevision=7.5
+ModuleName=ramdqtest
+SourceFormat=VHDL
+ParameterFileVersion=1.0
+Date=11/28/2018
+Time=16:56:41
+
+[Parameters]
+Verilog=0
+VHDL=1
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+Address=4096
+Data=12
+enByte=0
+ByteSize=9
+OutputEn=1
+ClockEn=0
+Optimization=Speed
+Reset=Sync
+Reset1=Sync
+Init=0
+MemFile=
+MemFormat=bin
+EnECC=0
+Pipeline=0
+Write=Normal
+init_data=0
+
+[FilesGenerated]
+=mem
+
+[Command]
+cmd_line= -w -n ramdqtest -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo3c00f -type ramdq -device LCMXO3LF-6900C -addr_width 12 -data_width 12 -num_words 4096 -outdata REGISTERED -cascade -1 -resetmode SYNC -sync_reset -mem_init0 -writemode NORMAL

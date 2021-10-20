@@ -1,0 +1,1 @@
+-link    -encrypt        -top tl_car_bench -osyn /home/hari/Documents/osp-wearable-fpga/car_bench/impl1/synwork/OWF_car_bench_impl1_comp.srs /home/hari/Documents/osp-wearable-fpga/car_bench/impl1/synwork/layer0.srs   

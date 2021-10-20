@@ -1,0 +1,45 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-layerid|0|-orig_srs|/home/hari/Documents/osp-wearable-fpga/test_ramp/impl1/synwork/test_arun_impl1_comp.srs|-top|test_togglepins|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/linux_a_64/c_vhdl":1501863388
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/location.map":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/snps_haps_pkg.vhd":1528222271
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std1164.vhd":1528222271
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/numeric.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/umr_capim.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/arith.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/unsigned.vhd":1528222271
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/hyperents.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1528222265
+#CUR:"/home/hari/Documents/osp-wearable-fpga/test_ramp/fifotest.vhd":1552587724
+#CUR:"/home/hari/Documents/osp-wearable-fpga/test_ramp/plltest.vhd":1552587724
+#CUR:"/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd":1552599643
+0 "/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd" vhdl
+1 "/home/hari/Documents/osp-wearable-fpga/test_ramp/fifotest.vhd" vhdl
+2 "/home/hari/Documents/osp-wearable-fpga/test_ramp/plltest.vhd" vhdl
+3 "/home/hari/Documents/osp-wearable-fpga/test_ramp/test_togglepins.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 0 
+2 0 
+3 1 2 
+
+# Dependency Lists (Users Of)
+0 2 1 
+1 3 
+2 3 
+3 -1
+
+# Design Unit to File Association
+config work structure_con 1
+arch work fifotest structure 1
+module work fifotest 1
+config work structure_con 2
+arch work plltest structure 2
+module work plltest 2
+arch work test_togglepins a 3
+module work test_togglepins 3
+
+
+# Configuration files used

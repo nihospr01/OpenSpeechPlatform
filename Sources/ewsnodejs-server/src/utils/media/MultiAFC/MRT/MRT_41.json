@@ -1,0 +1,604 @@
+{
+    "words": [
+        {
+            "filename": "M5/M5_b01_w1_orig.wav",
+            "option_A": "went",
+            "option_B": "sent",
+            "option_C": "bent",
+            "option_D": "dent",
+            "option_E": "tent",
+            "option_F": "rent",
+            "answer": "went"
+        },
+        {
+            "filename": "M5/M5_b01_w2_orig.wav",
+            "option_A": "went",
+            "option_B": "sent",
+            "option_C": "bent",
+            "option_D": "dent",
+            "option_E": "tent",
+            "option_F": "rent",
+            "answer": "sent"
+        },
+        {
+            "filename": "M5/M5_b01_w3_orig.wav",
+            "option_A": "went",
+            "option_B": "sent",
+            "option_C": "bent",
+            "option_D": "dent",
+            "option_E": "tent",
+            "option_F": "rent",
+            "answer": "bent"
+        },
+        {
+            "filename": "M5/M5_b01_w4_orig.wav",
+            "option_A": "went",
+            "option_B": "sent",
+            "option_C": "bent",
+            "option_D": "dent",
+            "option_E": "tent",
+            "option_F": "rent",
+            "answer": "dent"
+        },
+        {
+            "filename": "M5/M5_b01_w5_orig.wav",
+            "option_A": "went",
+            "option_B": "sent",
+            "option_C": "bent",
+            "option_D": "dent",
+            "option_E": "tent",
+            "option_F": "rent",
+            "answer": "tent"
+        },
+        {
+            "filename": "M5/M5_b01_w6_orig.wav",
+            "option_A": "went",
+            "option_B": "sent",
+            "option_C": "bent",
+            "option_D": "dent",
+            "option_E": "tent",
+            "option_F": "rent",
+            "answer": "rent"
+        },
+        {
+            "filename": "M5/M5_b02_w1_orig.wav",
+            "option_A": "hold",
+            "option_B": "cold",
+            "option_C": "told",
+            "option_D": "fold",
+            "option_E": "sold",
+            "option_F": "gold",
+            "answer": "hold"
+        },
+        {
+            "filename": "M5/M5_b02_w2_orig.wav",
+            "option_A": "hold",
+            "option_B": "cold",
+            "option_C": "told",
+            "option_D": "fold",
+            "option_E": "sold",
+            "option_F": "gold",
+            "answer": "cold"
+        },
+        {
+            "filename": "M5/M5_b02_w3_orig.wav",
+            "option_A": "hold",
+            "option_B": "cold",
+            "option_C": "told",
+            "option_D": "fold",
+            "option_E": "sold",
+            "option_F": "gold",
+            "answer": "told"
+        },
+        {
+            "filename": "M5/M5_b02_w4_orig.wav",
+            "option_A": "hold",
+            "option_B": "cold",
+            "option_C": "told",
+            "option_D": "fold",
+            "option_E": "sold",
+            "option_F": "gold",
+            "answer": "fold"
+        },
+        {
+            "filename": "M5/M5_b02_w5_orig.wav",
+            "option_A": "hold",
+            "option_B": "cold",
+            "option_C": "told",
+            "option_D": "fold",
+            "option_E": "sold",
+            "option_F": "gold",
+            "answer": "sold"
+        },
+        {
+            "filename": "M5/M5_b02_w6_orig.wav",
+            "option_A": "hold",
+            "option_B": "cold",
+            "option_C": "told",
+            "option_D": "fold",
+            "option_E": "sold",
+            "option_F": "gold",
+            "answer": "gold"
+        },
+        {
+            "filename": "M5/M5_b03_w1_orig.wav",
+            "option_A": "pat",
+            "option_B": "pad",
+            "option_C": "pan",
+            "option_D": "path",
+            "option_E": "pack",
+            "option_F": "pass",
+            "answer": "pat"
+        },
+        {
+            "filename": "M5/M5_b03_w2_orig.wav",
+            "option_A": "pat",
+            "option_B": "pad",
+            "option_C": "pan",
+            "option_D": "path",
+            "option_E": "pack",
+            "option_F": "pass",
+            "answer": "pad"
+        },
+        {
+            "filename": "M5/M5_b03_w3_orig.wav",
+            "option_A": "pat",
+            "option_B": "pad",
+            "option_C": "pan",
+            "option_D": "path",
+            "option_E": "pack",
+            "option_F": "pass",
+            "answer": "pan"
+        },
+        {
+            "filename": "M5/M5_b03_w4_orig.wav",
+            "option_A": "pat",
+            "option_B": "pad",
+            "option_C": "pan",
+            "option_D": "path",
+            "option_E": "pack",
+            "option_F": "pass",
+            "answer": "path"
+        },
+        {
+            "filename": "M5/M5_b03_w5_orig.wav",
+            "option_A": "pat",
+            "option_B": "pad",
+            "option_C": "pan",
+            "option_D": "path",
+            "option_E": "pack",
+            "option_F": "pass",
+            "answer": "pack"
+        },
+        {
+            "filename": "M5/M5_b03_w6_orig.wav",
+            "option_A": "pat",
+            "option_B": "pad",
+            "option_C": "pan",
+            "option_D": "path",
+            "option_E": "pack",
+            "option_F": "pass",
+            "answer": "pass"
+        },
+        {
+            "filename": "M5/M5_b04_w1_orig.wav",
+            "option_A": "lane",
+            "option_B": "lay",
+            "option_C": "late",
+            "option_D": "lake",
+            "option_E": "lace",
+            "option_F": "lame",
+            "answer": "lane"
+        },
+        {
+            "filename": "M5/M5_b04_w2_orig.wav",
+            "option_A": "lane",
+            "option_B": "lay",
+            "option_C": "late",
+            "option_D": "lake",
+            "option_E": "lace",
+            "option_F": "lame",
+            "answer": "lay"
+        },
+        {
+            "filename": "M5/M5_b04_w3_orig.wav",
+            "option_A": "lane",
+            "option_B": "lay",
+            "option_C": "late",
+            "option_D": "lake",
+            "option_E": "lace",
+            "option_F": "lame",
+            "answer": "late"
+        },
+        {
+            "filename": "M5/M5_b04_w4_orig.wav",
+            "option_A": "lane",
+            "option_B": "lay",
+            "option_C": "late",
+            "option_D": "lake",
+            "option_E": "lace",
+            "option_F": "lame",
+            "answer": "lake"
+        },
+        {
+            "filename": "M5/M5_b04_w5_orig.wav",
+            "option_A": "lane",
+            "option_B": "lay",
+            "option_C": "late",
+            "option_D": "lake",
+            "option_E": "lace",
+            "option_F": "lame",
+            "answer": "lace"
+        },
+        {
+            "filename": "M5/M5_b04_w6_orig.wav",
+            "option_A": "lane",
+            "option_B": "lay",
+            "option_C": "late",
+            "option_D": "lake",
+            "option_E": "lace",
+            "option_F": "lame",
+            "answer": "lame"
+        },
+        {
+            "filename": "M5/M5_b05_w1_orig.wav",
+            "option_A": "kit",
+            "option_B": "bit",
+            "option_C": "fit",
+            "option_D": "hit",
+            "option_E": "wit",
+            "option_F": "sit",
+            "answer": "kit"
+        },
+        {
+            "filename": "M5/M5_b05_w2_orig.wav",
+            "option_A": "kit",
+            "option_B": "bit",
+            "option_C": "fit",
+            "option_D": "hit",
+            "option_E": "wit",
+            "option_F": "sit",
+            "answer": "bit"
+        },
+        {
+            "filename": "M5/M5_b05_w3_orig.wav",
+            "option_A": "kit",
+            "option_B": "bit",
+            "option_C": "fit",
+            "option_D": "hit",
+            "option_E": "wit",
+            "option_F": "sit",
+            "answer": "fit"
+        },
+        {
+            "filename": "M5/M5_b05_w4_orig.wav",
+            "option_A": "kit",
+            "option_B": "bit",
+            "option_C": "fit",
+            "option_D": "hit",
+            "option_E": "wit",
+            "option_F": "sit",
+            "answer": "hit"
+        },
+        {
+            "filename": "M5/M5_b05_w5_orig.wav",
+            "option_A": "kit",
+            "option_B": "bit",
+            "option_C": "fit",
+            "option_D": "hit",
+            "option_E": "wit",
+            "option_F": "sit",
+            "answer": "wit"
+        },
+        {
+            "filename": "M5/M5_b05_w6_orig.wav",
+            "option_A": "kit",
+            "option_B": "bit",
+            "option_C": "fit",
+            "option_D": "hit",
+            "option_E": "wit",
+            "option_F": "sit",
+            "answer": "sit"
+        },
+        {
+            "filename": "M5/M5_b06_w1_orig.wav",
+            "option_A": "must",
+            "option_B": "bust",
+            "option_C": "gust",
+            "option_D": "rust",
+            "option_E": "dust",
+            "option_F": "just",
+            "answer": "must"
+        },
+        {
+            "filename": "M5/M5_b06_w2_orig.wav",
+            "option_A": "must",
+            "option_B": "bust",
+            "option_C": "gust",
+            "option_D": "rust",
+            "option_E": "dust",
+            "option_F": "just",
+            "answer": "bust"
+        },
+        {
+            "filename": "M5/M5_b06_w3_orig.wav",
+            "option_A": "must",
+            "option_B": "bust",
+            "option_C": "gust",
+            "option_D": "rust",
+            "option_E": "dust",
+            "option_F": "just",
+            "answer": "gust"
+        },
+        {
+            "filename": "M5/M5_b06_w4_orig.wav",
+            "option_A": "must",
+            "option_B": "bust",
+            "option_C": "gust",
+            "option_D": "rust",
+            "option_E": "dust",
+            "option_F": "just",
+            "answer": "rust"
+        },
+        {
+            "filename": "M5/M5_b06_w5_orig.wav",
+            "option_A": "must",
+            "option_B": "bust",
+            "option_C": "gust",
+            "option_D": "rust",
+            "option_E": "dust",
+            "option_F": "just",
+            "answer": "dust"
+        },
+        {
+            "filename": "M5/M5_b06_w6_orig.wav",
+            "option_A": "must",
+            "option_B": "bust",
+            "option_C": "gust",
+            "option_D": "rust",
+            "option_E": "dust",
+            "option_F": "just",
+            "answer": "just"
+        },
+        {
+            "filename": "M5/M5_b07_w1_orig.wav",
+            "option_A": "teak",
+            "option_B": "team",
+            "option_C": "teal",
+            "option_D": "teach",
+            "option_E": "tear",
+            "option_F": "tease",
+            "answer": "teak"
+        },
+        {
+            "filename": "M5/M5_b07_w2_orig.wav",
+            "option_A": "teak",
+            "option_B": "team",
+            "option_C": "teal",
+            "option_D": "teach",
+            "option_E": "tear",
+            "option_F": "tease",
+            "answer": "team"
+        },
+        {
+            "filename": "M5/M5_b07_w3_orig.wav",
+            "option_A": "teak",
+            "option_B": "team",
+            "option_C": "teal",
+            "option_D": "teach",
+            "option_E": "tear",
+            "option_F": "tease",
+            "answer": "teal"
+        },
+        {
+            "filename": "M5/M5_b07_w4_orig.wav",
+            "option_A": "teak",
+            "option_B": "team",
+            "option_C": "teal",
+            "option_D": "teach",
+            "option_E": "tear",
+            "option_F": "tease",
+            "answer": "teach"
+        },
+        {
+            "filename": "M5/M5_b07_w5_orig.wav",
+            "option_A": "teak",
+            "option_B": "team",
+            "option_C": "teal",
+            "option_D": "teach",
+            "option_E": "tear",
+            "option_F": "tease",
+            "answer": "tear"
+        },
+        {
+            "filename": "M5/M5_b07_w6_orig.wav",
+            "option_A": "teak",
+            "option_B": "team",
+            "option_C": "teal",
+            "option_D": "teach",
+            "option_E": "tear",
+            "option_F": "tease",
+            "answer": "tease"
+        },
+        {
+            "filename": "M5/M5_b08_w1_orig.wav",
+            "option_A": "din",
+            "option_B": "dill",
+            "option_C": "dim",
+            "option_D": "dig",
+            "option_E": "dip",
+            "option_F": "did",
+            "answer": "din"
+        },
+        {
+            "filename": "M5/M5_b08_w2_orig.wav",
+            "option_A": "din",
+            "option_B": "dill",
+            "option_C": "dim",
+            "option_D": "dig",
+            "option_E": "dip",
+            "option_F": "did",
+            "answer": "dill"
+        },
+        {
+            "filename": "M5/M5_b08_w3_orig.wav",
+            "option_A": "din",
+            "option_B": "dill",
+            "option_C": "dim",
+            "option_D": "dig",
+            "option_E": "dip",
+            "option_F": "did",
+            "answer": "dim"
+        },
+        {
+            "filename": "M5/M5_b08_w4_orig.wav",
+            "option_A": "din",
+            "option_B": "dill",
+            "option_C": "dim",
+            "option_D": "dig",
+            "option_E": "dip",
+            "option_F": "did",
+            "answer": "dig"
+        },
+        {
+            "filename": "M5/M5_b08_w5_orig.wav",
+            "option_A": "din",
+            "option_B": "dill",
+            "option_C": "dim",
+            "option_D": "dig",
+            "option_E": "dip",
+            "option_F": "did",
+            "answer": "dip"
+        },
+        {
+            "filename": "M5/M5_b08_w6_orig.wav",
+            "option_A": "din",
+            "option_B": "dill",
+            "option_C": "dim",
+            "option_D": "dig",
+            "option_E": "dip",
+            "option_F": "did",
+            "answer": "did"
+        },
+        {
+            "filename": "M5/M5_b09_w1_orig.wav",
+            "option_A": "bed",
+            "option_B": "led",
+            "option_C": "fed",
+            "option_D": "red",
+            "option_E": "wed",
+            "option_F": "shed",
+            "answer": "bed"
+        },
+        {
+            "filename": "M5/M5_b09_w2_orig.wav",
+            "option_A": "bed",
+            "option_B": "led",
+            "option_C": "fed",
+            "option_D": "red",
+            "option_E": "wed",
+            "option_F": "shed",
+            "answer": "led"
+        },
+        {
+            "filename": "M5/M5_b09_w3_orig.wav",
+            "option_A": "bed",
+            "option_B": "led",
+            "option_C": "fed",
+            "option_D": "red",
+            "option_E": "wed",
+            "option_F": "shed",
+            "answer": "fed"
+        },
+        {
+            "filename": "M5/M5_b09_w4_orig.wav",
+            "option_A": "bed",
+            "option_B": "led",
+            "option_C": "fed",
+            "option_D": "red",
+            "option_E": "wed",
+            "option_F": "shed",
+            "answer": "red"
+        },
+        {
+            "filename": "M5/M5_b09_w5_orig.wav",
+            "option_A": "bed",
+            "option_B": "led",
+            "option_C": "fed",
+            "option_D": "red",
+            "option_E": "wed",
+            "option_F": "shed",
+            "answer": "wed"
+        },
+        {
+            "filename": "M5/M5_b09_w6_orig.wav",
+            "option_A": "bed",
+            "option_B": "led",
+            "option_C": "fed",
+            "option_D": "red",
+            "option_E": "wed",
+            "option_F": "shed",
+            "answer": "shed"
+        },
+        {
+            "filename": "M5/M5_b10_w1_orig.wav",
+            "option_A": "pin",
+            "option_B": "sin",
+            "option_C": "tin",
+            "option_D": "fin",
+            "option_E": "din",
+            "option_F": "win",
+            "answer": "pin"
+        },
+        {
+            "filename": "M5/M5_b10_w2_orig.wav",
+            "option_A": "pin",
+            "option_B": "sin",
+            "option_C": "tin",
+            "option_D": "fin",
+            "option_E": "din",
+            "option_F": "win",
+            "answer": "sin"
+        },
+        {
+            "filename": "M5/M5_b10_w3_orig.wav",
+            "option_A": "pin",
+            "option_B": "sin",
+            "option_C": "tin",
+            "option_D": "fin",
+            "option_E": "din",
+            "option_F": "win",
+            "answer": "tin"
+        },
+        {
+            "filename": "M5/M5_b10_w4_orig.wav",
+            "option_A": "pin",
+            "option_B": "sin",
+            "option_C": "tin",
+            "option_D": "fin",
+            "option_E": "din",
+            "option_F": "win",
+            "answer": "fin"
+        },
+        {
+            "filename": "M5/M5_b10_w5_orig.wav",
+            "option_A": "pin",
+            "option_B": "sin",
+            "option_C": "tin",
+            "option_D": "fin",
+            "option_E": "din",
+            "option_F": "win",
+            "answer": "din"
+        },
+        {
+            "filename": "M5/M5_b10_w6_orig.wav",
+            "option_A": "pin",
+            "option_B": "sin",
+            "option_C": "tin",
+            "option_D": "fin",
+            "option_E": "din",
+            "option_F": "win",
+            "answer": "win"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+----------------------------------------------------------------------
+Report for cell test_togglepins.a
+
+Register bits: 36 of 54912 (0%)
+PIC Latch:       0
+I/O cells:       10
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D       15       100.0
+                            EHXPLLJ        1       100.0
+                            FD1S3AX       23       100.0
+                            FD1S3IX       12       100.0
+                                GSR        1       100.0
+                                 IB        3       100.0
+                                INV        3       100.0
+                            L6MUX21        1       100.0
+                                 OB        7       100.0
+                           OFS1P3DX        1       100.0
+                           ORCALUT4       17       100.0
+                              PFUMX        3       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        2       100.0
+SUB MODULES 
+                            plltest        1       100.0
+                            
+                         TOTAL            93           
+----------------------------------------------------------------------
+Report for cell plltest.netlist
+     Instance path:  pll1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLJ        1       100.0
+                                VHI        1        50.0
+                                VLO        1        50.0
+                            
+                         TOTAL             3           

@@ -1,0 +1,104 @@
+#!/bin/bash
+
+function print_help () {
+    printf "Usage: build_osp [-n] version\n"
+    printf "\tversion\tRequired. A string that will be used to build the output filename.\n"
+}
+
+while getopts "nh" flag; do
+    case "${flag}" in
+        h)
+            print_help
+            ;;
+        *)
+            print_help
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+# uncompress rootfs if it is not there
+if [ ! -f /opt/osp/share/rootfs.img ]; then
+    docker run -v $PWD/opt:/opt --privileged -e OSP_FUNC=unCompress osp-builder 
+fi
+
+build_version=$1
+
+if [ -z "${build_version}" ]; then
+    print_help
+fi
+
+if [[ `id -u` -ne 0 ]]
+then 
+    exec sudo bash "$0" "$@"
+fi
+
+
+if grep -qs rootfs /proc/mounts; then
+    echo "rootfs already mounted"
+else
+    ./mount_rootfs
+fi
+
+
+printf "Building ${build_version}\n"
+
+echo $build_version > rootfs/etc/osp_build
+
+# OSP version
+mkdir -p rootfs/opt
+cp OSP_VERSION rootfs/opt/osp_version
+
+# ROOTFS VERSION
+rootfs_version=`cat ROOTFS_VERSION`
+
+printf "ROOTFS version: ${rootfs_version}\n"
+
+echo ${rootfs_version} > rootfs/etc/osp_rootfs
+
+mkdir -p rootfs/opt/bin rootfs/opt/recordings
+cp opt/osp/share/scripts/djb_amixer_setup.sh rootfs/opt/bin
+
+mkdir -p rootfs/opt/bin/fpga_configuration
+cp opt/osp/share/scripts/fpga_configuration/* rootfs/opt/bin/fpga_configuration
+ 
+cp opt/osp/share/scripts/.inputrc rootfs/root
+cp opt/osp/share/scripts/.bashrc  rootfs/root
+
+mkdir -p rootfs/root/.ssh
+chmod 700 rootfs/root/.ssh
+cp opt/osp/share/scripts/authorized_keys  rootfs/root/.ssh
+chmod 600 rootfs/root/.ssh/authorized_keys
+
+# copy sources into rootfs/opt
+rsync -qav ../ewsnodejs-client rootfs/opt
+rsync -qav ../ewsnodejs-server rootfs/opt
+rsync -qav ../embeddedwebserver rootfs/opt
+rsync -qav ../libosp rootfs/opt
+rsync -qav ../libimu rootfs/opt
+rsync -qav ../liblsl rootfs/opt
+rsync -qa  opt/osp/src/charging-monitor rootfs/opt
+rsync -qa  opt/osp/src/wcn36xx-monitor rootfs/opt
+rsync -qa ../openMHA rootfs/opt
+
+#  cp opt/osp/share/scripts/osp.service rootfs/etc/systemd
+cp opt/osp/share/scripts/rc.local rootfs/etc
+cp -r ../scripts rootfs/opt
+cp build_device rootfs/opt/scripts
+
+rm -rf rootfs/usr/local rootfs/home/osp
+mkdir -p rootfs/usr/local/bin
+cp opt/osp/share/scripts/temp.py rootfs/usr/local/bin/temp
+cp opt/osp/share/scripts/system_check.py rootfs/usr/local/bin/system_check
+cp opt/osp/share/scripts/set_hs_name rootfs/usr/local/bin
+
+# chroot and build OSP
+chroot rootfs opt/scripts/build_device
+
+# If you need to run commands by hand, do this
+# chroot rootfs /bin/bash
+
+rm -rf rootfs/opt/ewsnodejs* rootfs/opt/embeddedwebserver  rootfs/opt/libosp
+rm rootfs/opt/scripts/build_device rootfs/opt/scripts/checkout rootfs/opt/scripts/install rootfs/opt/scripts/run_osp
+
+printf "DONE Building OSP\n"

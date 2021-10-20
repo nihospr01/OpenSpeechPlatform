@@ -1,0 +1,207 @@
+---------------------------------------------------
+Report for cell tl_car_bench
+   Instance path: tl_car_bench
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      96.00        100.0
+                                 IOLGC	       7.00        100.0
+                                  LUT4	     124.00        100.0
+                                 IOREG	          7        100.0
+                                 IOBUF	         36        100.0
+                                PFUREG	        159        100.0
+                                RIPPLE	          8        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             pll_4_usb	          1         0.0
+                         car_clock_gen	          1         7.6
+                            car_core_0	          1        39.7
+                            car_core_1	          1        51.8
+---------------------------------------------------
+Report for cell car_core_0
+   Instance path: tl_car_bench/r_car_core
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.08        39.7
+                                  LUT4	      54.00        43.5
+                                PFUREG	         57        35.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                           i2s_dio_2_1	          1        22.8
+                       car_sequencer_1	          1        16.8
+---------------------------------------------------
+Report for cell car_sequencer_1
+   Instance path: tl_car_bench/r_car_core/e_car_sequencer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      16.17        16.8
+                                  LUT4	      35.00        28.2
+                                PFUREG	         18        11.3
+---------------------------------------------------
+Report for cell i2s_dio_2_1
+   Instance path: tl_car_bench/r_car_core/e_i2s_dio
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      21.92        22.8
+                                  LUT4	      19.00        15.3
+                                PFUREG	         39        24.5
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          sr8_rising_1	          1         4.2
+                        sr8_rising_0_1	          1         4.4
+                         sr8_falling_0	          1         5.6
+                           r8_rising_3	          1         4.5
+                           r8_rising_4	          1         4.2
+---------------------------------------------------
+Report for cell sr8_falling_0
+   Instance path: tl_car_bench/r_car_core/e_i2s_dio/in_lvds_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.33         5.6
+                                  LUT4	       9.00         7.3
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell sr8_rising_1
+   Instance path: tl_car_bench/r_car_core/e_i2s_dio/out_i2s_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.00         4.2
+                                  LUT4	       8.00         6.5
+                                PFUREG	          7         4.4
+---------------------------------------------------
+Report for cell r8_rising_4
+   Instance path: tl_car_bench/r_car_core/e_i2s_dio/out_reg_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.00         4.2
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell r8_rising_3
+   Instance path: tl_car_bench/r_car_core/e_i2s_dio/out_reg_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.33         4.5
+                                  LUT4	       1.00         0.8
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell sr8_rising_0_1
+   Instance path: tl_car_bench/r_car_core/e_i2s_dio/out_lvds_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.25         4.4
+                                  LUT4	       1.00         0.8
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell car_core_1
+   Instance path: tl_car_bench/l_car_core
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      49.75        51.8
+                                  LUT4	      62.00        50.0
+                                PFUREG	         91        57.2
+                                RIPPLE	          3        37.5
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                           i2s_dio_2_0	          1        33.7
+                       car_sequencer_0	          1        17.9
+---------------------------------------------------
+Report for cell car_sequencer_0
+   Instance path: tl_car_bench/l_car_core/e_car_sequencer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.17        17.9
+                                  LUT4	      37.00        29.8
+                                PFUREG	         18        11.3
+---------------------------------------------------
+Report for cell i2s_dio_2_0
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      32.33        33.7
+                                  LUT4	      25.00        20.2
+                                PFUREG	         72        45.3
+                                RIPPLE	          3        37.5
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                            sr8_rising	          1         4.4
+                        sr8_rising_0_0	          1         2.2
+                          sr8_rising_0	          1         2.3
+                           sr8_falling	          1         5.5
+                             r8_rising	          1         3.9
+                           r8_rising_1	          1         2.1
+                           r8_rising_2	          1         2.1
+                           r8_rising_0	          1         4.2
+---------------------------------------------------
+Report for cell sr8_falling
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/in_lvds_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         5.5
+                                  LUT4	       9.00         7.3
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell r8_rising_2
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/in_reg_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         2.1
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell r8_rising_1
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/in_reg_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         2.1
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell sr8_rising_0_0
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/in_i2s_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.08         2.2
+                                  LUT4	       1.00         0.8
+                                PFUREG	          7         4.4
+---------------------------------------------------
+Report for cell sr8_rising
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/out_i2s_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.25         4.4
+                                  LUT4	       9.00         7.3
+                                PFUREG	          7         4.4
+---------------------------------------------------
+Report for cell r8_rising_0
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/out_reg_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.00         4.2
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell r8_rising
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/out_reg_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.75         3.9
+                                  LUT4	       1.00         0.8
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell sr8_rising_0
+   Instance path: tl_car_bench/l_car_core/e_i2s_dio/out_lvds_sr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         2.3
+                                  LUT4	       1.00         0.8
+                                PFUREG	          8         5.0
+---------------------------------------------------
+Report for cell car_clock_gen
+   Instance path: tl_car_bench/e_car_clock_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.25         7.6
+                                  LUT4	       5.00         4.0
+                                PFUREG	         11         6.9
+                                RIPPLE	          5        62.5
+---------------------------------------------------
+Report for cell pll_4_usb
+   Instance path: tl_car_bench/e_pll_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)

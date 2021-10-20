@@ -1,0 +1,74 @@
+#!/bin/bash -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+
+echo "RC.LOCAL" > /var/log/rc.log
+
+# wait up to 10 seconds for /dev/spidev* to appear
+for ((i=1;i<=10;i++)); 
+do 
+	if compgen -G "/dev/spi*" > /dev/null
+	then
+		echo "pidev exists!" >>/var/log/rc.log
+		break	
+	else
+		echo "NO SPI" >> /var/log/rc.log
+		sleep 1
+	fi
+done
+
+if [[ $i -gt 10 ]]
+then
+	echo "SPI TIMEOUT" >> /var/log/rc.log
+	exit 0
+fi
+
+/opt/bin/charging_monitor > /var/log/charge.log 2>&1 &
+
+sleep 3
+
+# FPGA
+/opt/bin/fpga_configuration/configure_fpga.sh
+sleep 1
+
+# start audio and OSP
+/opt/bin/djb_amixer_setup.sh 2>&1 >/dev/null
+export OSP_MEDIA=/opt/release/media
+
+if test -f "/root/.no_osp_startup"
+then
+    printf "/root/.no_osp_startup detected. Skipping OSP.\n"  >> /var/log/rc.log
+else
+	ionice -c 1 /opt/release/bin/osp -m > /var/log/osp.log &
+	/opt/release/bin/start-ews > /var/log/ews.log &
+	/opt/release/bin/start-ews-php > /var/log/ews-php.log &
+
+	# on 5.10 kernel, allowing CPU freq to drop increases interprocess
+	# latency resulting in poor multithreaded audio performance
+	if test -f "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
+	then
+		echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	fi
+fi
+
+# enable mics on PCD case
+amixer cset iface=MIXER,name='DEC1 MUX' 'ADC2'
+amixer cset iface=MIXER,name='CIC1 MUX' 'AMIC'
+amixer set 'ADC2' 100%
+amixer cset iface=MIXER,name='ADC2 MUX' 'INP2'
+
+# Enable IMU to do flip detection
+# If you never use this, comment out to save power
+/usr/local/bin/log_imu -i PCD -c 3 -qF > /opt/recordings/imu_PCD.log &
+
+exit 0

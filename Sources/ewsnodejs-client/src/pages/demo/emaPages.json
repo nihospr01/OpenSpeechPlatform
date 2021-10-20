@@ -1,0 +1,371 @@
+{
+    "pages": [
+       {
+          "text": "Please answer the following questions about your mood and experiences RIGHT NOW, AT THIS PARTICULAR MOMENT.",
+          "isQuestion": 0,
+          "isMultiple": 0,
+          "choices": [
+             ""
+          ],
+          "buttons": 0
+       },
+       {
+          "text": "How happy do you feel right now?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "7: Extremely Happy",
+             "6: (text here)",
+             "5: (text here)",
+             "4: (text here)",
+             "3: (text here)",
+             "2: (text here)",
+             "1: Not at all Happy"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How sad do you feel right now?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - Not at all Sad",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Extremely Sad"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How nervous do you feel right now?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - Not at all Nervous",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Extremely Nervous"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How relaxed do you feel right now?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - Not at all Relaxed",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Extremely Relaxed"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, about how much time did you spend alone?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "0 min",
+             "15 min",
+             "30 min",
+             "45 min",
+             "45 min",
+             "60 min"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "Please answer the following questions about your recent interactions where you talked with others in person or on the telephone DURING THE PAST HOUR. In the past hour, how many interactions did you have?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "⁭0 (none)",
+             "1",
+             "2",
+             "3",
+             "4",
+             "5",
+             "6 or more"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, how much interest or motivation did you have for interacting with others?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - None at all",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very much"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "Please tell us more about these interaction(s) you had IN THE PAST HOUR. Who was interacting with you (check all that apply)?",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "⁭Family",
+             "Roommates or fellow residents",
+             "Staff where I live",
+             "⁭Friends or acquaintances",
+             "⁭Co-workers or classmates",
+             "Treatment providers (case manager, counselor, Dr., etc.)",
+             "Others"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How much warmth or trust did you feel for others in the interaction(s)?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - None at all",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very much"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How much pleasure or enjoyment did you feel in the interaction(s)?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - None at all",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very much"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How well do you think you communicated?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - Terrible, failed, not worth trying",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Great, succeeded, worth the effort"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "What do you think others were thinking about you?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - Unlikeable, stupid or weird",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Likable, smart, or interesting"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How much interest or motivation do you have for engaging in interactions later today?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "1 - None at all",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very much"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "Please describe your activities DURING THE PAST HOUR. In the past hour, about how much time did you spend at home?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "0 min",
+             "15 min",
+             "30 min",
+             "45 min",
+             "60 min"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, did you (check all that apply):",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "⁭Lay down and rest",
+             "⁭Listen to music/radio",
+             "⁭Sit alone",
+             "Hang out or pace",
+             "⁭None of these"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How did you get to where you are or went in the past hour?",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "⁭Walked or rode a bike",
+             "Drove myself",
+             "⁭Got a ride from someone",
+             "Took a bus/train/trolley without help",
+             "Someone helped me take a bus/train/trolley",
+             "⁭Other"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, did you (check all that apply)",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "⁭Visit a beach or park",
+             "⁭Eat out",
+             "Exercise, walk, play sports",
+             "Attend religious service/activity",
+             "Go to cinema/theater/sporting event",
+             "⁭None of these"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, did you (check all that apply)",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "⁭Shop for groceries",
+             "Cook or prepare food",
+             "Clean your home/room",
+             "Pay bills/plan budget",
+             "Use ATM or bank services",
+             "⁭None of these"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, did you (check all that apply)",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "Wash/dry/fold/sort laundry",
+             "Change clothes/get dressed",
+             "Brush teeth (or dentures)",
+             "Groom (hair, nails, etc.)",
+             "Shower or bathe",
+             "⁭None of these"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, did you (check all that apply)",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "Work on arts and crafts/hobby",
+             "Read book/magazine/newspaper",
+             "Play a musical instrument",
+             "Use the internet or computer",
+             "Play cards/games",
+             "⁭None of these"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "In the past hour, did you (check all that apply)",
+          "isQuestion": 1,
+          "isMultiple": 1,
+          "choices": [
+             "Visit a clubhouse/community center",
+             "Go to a doctor",
+             "Go to therapy/counseling or group",
+             "Attend a support group (AA, etc.)",
+             "Meet with case manager/social worker",
+             "⁭None of these"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How much did you enjoy the activity(ies) you just marked?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "⁭1 - Not at all",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very much"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How well did you do the activity(ies) you just marked?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "⁭1 - Very poorly",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very well"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "How much did someone else help you or prompt you to do the activity(ies)?",
+          "isQuestion": 1,
+          "isMultiple": 0,
+          "choices": [
+             "⁭1 - Not at all",
+             "2 - (text here)",
+             "3 - (text here)",
+             "4 - (text here)",
+             "5 - (text here)",
+             "6 - (text here)",
+             "7 - Very much"
+          ],
+          "buttons": 1
+       },
+       {
+          "text": "Thank you for completing the survey. Please revisit the survey at a later time.",
+          "isQuestion": 0,
+          "isMultiple": 0,
+          "choices": [
+             ""
+          ],
+          "buttons": 2
+       }
+    ]
+ }

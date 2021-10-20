@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1535503013"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1538264143"/>
+            <Task name="Jedec4Xo3l" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen4Xo3l" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1538264135">
+            <Task name="Map" build_result="2" update_result="0" update_time="1538264135"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1538264141">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1538264141"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1531360439"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1538264135">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1538264135"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1538263880"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="1531362411"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="2" build_time="1538264135">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1538264135"/>
+        </Milestone>
+        <Report name="OWF_car_bench_impl1.bgn" last_build_time="1538264143" last_build_size="4364"/>
+        <Report name="OWF_car_bench_impl1.bit" last_build_time="1535503013" last_build_size="27809"/>
+        <Report name="OWF_car_bench_impl1.edi" last_build_time="1538264134" last_build_size="247336"/>
+        <Report name="OWF_car_bench_impl1.jed" last_build_time="1538264143" last_build_size="1454385"/>
+        <Report name="OWF_car_bench_impl1.ncd" last_build_time="1538264141" last_build_size="224411"/>
+        <Report name="OWF_car_bench_impl1.ngd" last_build_time="1538264135" last_build_size="200899"/>
+        <Report name="OWF_car_bench_impl1.twr" last_build_time="1531360439" last_build_size="54071"/>
+        <Report name="OWF_car_bench_impl1_map.ncd" last_build_time="1538264135" last_build_size="161270"/>
+    </Strategy>
+</BuildStatus>

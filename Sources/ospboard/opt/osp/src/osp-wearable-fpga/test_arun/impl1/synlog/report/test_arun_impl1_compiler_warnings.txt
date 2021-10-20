@@ -1,0 +1,2 @@
+@W: CD638 :"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":23:8:23:15|Signal counter4 is undriven. Either assign the signal a value or remove the signal declaration.
+

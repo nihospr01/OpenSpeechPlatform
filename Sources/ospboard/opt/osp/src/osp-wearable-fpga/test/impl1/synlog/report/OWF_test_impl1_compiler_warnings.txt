@@ -1,0 +1,2 @@
+@W: CL169 :"/data/School/Research/THE_Lab/FPGA/OWF_test/src/car_sequencer.vhd":27:2:27:3|Pruning unused register lvds_io_cl_11. Make sure that there are no unused intermediate registers.
+

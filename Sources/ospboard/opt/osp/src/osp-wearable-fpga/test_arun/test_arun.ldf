@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="test_arun" device="LCMXO3LF-6900C-5BG256C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="fifotest"/>
+        <Source name="test_togglepins.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="fifotest.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="fifotest"/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="test_arun.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="test_arun1.sty"/>
+</BaliProject>

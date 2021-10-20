@@ -1,0 +1,75 @@
+#!/bin/bash
+
+function print_help () {
+    printf "Usage: make_dist [-f] {version}\n"
+    printf "\tversion\tRequired. A string that will be used to build the output filename.\n"
+    printf "\t-f\tForce.  Ignores timestamp checks.\n\n"
+}
+
+force=0
+help=0
+while getopts fh flag
+do
+    case "${flag}" in
+        f) force=1;;
+        h) help=1;;
+    esac
+done
+
+if [ $help -ne 0 ]
+then
+    print_help
+    exit 1
+fi
+
+if [ $force -eq 0 ]
+then
+    if [ opt/osp/share/rootfs.img -nt opt/osp/share/rootfs.simg ]
+    then
+        printf "Warning: rootfs.img is newer than rootfs.simg.\n"
+        printf "If you still want to do this, rerun make_dist with \"-f\"\n\n"
+        exit 1
+    fi
+fi
+
+ARG1=${@:$OPTIND:1}
+if [ -z "$ARG1" ]
+then
+    print_help
+else
+    version=$ARG1
+fi
+
+printf "Making Mac/Linux distribution file \"pcd-$version.zip\"\n"
+mkdir -p dist/pcd-$version/opt/osp/share
+pandoc --pdf-engine=xelatex  --listings -H listings-setup.tex --toc -V urlcolor=NavyBlue -V toccolor=Red -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --highlight-style=tango README.md -o dist/pcd-$version/README.pdf
+pushd dist/pcd-$version
+mkdir -p opt/osp/var/build
+rsync -a ../../opt/osp/share/dragonboard-410c-bootloader-emmc-linux-159 opt/osp/share
+cp ../../opt/osp/var/build/boot-v9.img opt/osp/var/build
+cp ../../opt/osp/share/rootfs.simg opt/osp/share
+cp ../../pcdtool .
+rsync -a ../../mac .
+cp ../../ospboard_id .
+chmod 600 ospboard_id
+cd ..
+zip -r pcd-$version.zip pcd-$version
+popd
+
+printf "Making Windows distribution file \"pcd-windows-$version.zip\"\n"
+mkdir -p dist/pcd-windows-$version/opt/osp/share
+pandoc --pdf-engine=xelatex  --listings -H listings-setup.tex --toc -V urlcolor=NavyBlue -V toccolor=Red -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --highlight-style=tango README.md -o dist/pcd-windows-$version/README.pdf
+pandoc --pdf-engine=xelatex  --listings -H listings-setup.tex --toc -V urlcolor=NavyBlue -V toccolor=Red -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --highlight-style=tango WINDOWS.md -o dist/pcd-windows-$version/WINDOWS.pdf
+pushd dist/pcd-windows-$version
+mkdir -p opt/osp/var/build
+rsync -a ../../opt/osp/share/dragonboard-410c-bootloader-emmc-linux-159 opt/osp/share
+cp ../../opt/osp/var/build/boot-v9.img opt/osp/var/build
+cp ../../opt/osp/share/rootfs.simg opt/osp/share
+cp ../../pcdtool pcdtool.py
+rsync -a ../../win .
+mv win/pcdtool.exe .
+cp ../../ospboard_id .
+chmod 600 ospboard_id
+cd ..
+zip -r pcd-windows-$version.zip pcd-windows-$version
+popd

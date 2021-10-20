@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="pll_4_usb" module="PLL" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2018 07 17 16:59:59.137" version="5.8" type="Module" synthesis="synplify" source_format="VHDL">
+  <Package>
+		<File name="pll_4_usb.lpc" type="lpc" modified="2018 07 17 16:59:57.000"/>
+		<File name="pll_4_usb.vhd" type="top_level_vhdl" modified="2018 07 17 16:59:57.000"/>
+		<File name="pll_4_usb_tmpl.vhd" type="template_vhdl" modified="2018 07 17 16:59:57.000"/>
+  </Package>
+</DiamondModule>

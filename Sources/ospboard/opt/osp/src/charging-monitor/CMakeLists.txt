@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(ChargingMonitor)
+include_directories(.)
+file(GLOB SOURCES *.c)
+add_executable(chargingMonitor ${SOURCES})

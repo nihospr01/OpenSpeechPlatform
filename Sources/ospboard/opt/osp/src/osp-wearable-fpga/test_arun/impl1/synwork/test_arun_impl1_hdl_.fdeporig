@@ -1,0 +1,42 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-top|test_togglepins|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-fileorder|/home/hari/Documents/osp-wearable-fpga/test_arun/impl1/syntmp/hdlorder.tcl"
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/linux_a_64/c_vhdl":1501863388
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/location.map":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/snps_haps_pkg.vhd":1528222271
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/std1164.vhd":1528222271
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/numeric.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/umr_capim.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/arith.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/unsigned.vhd":1528222271
+#CUR:"/usr/local/diamond/3.10_x64/synpbase/lib/vhd/hyperents.vhd":1528222270
+#CUR:"/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd":1528222265
+#CUR:"/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd":1552676023
+#CUR:"/home/hari/Documents/osp-wearable-fpga/test_arun/fifotest.vhd":1543453376
+#CUR:"/home/hari/Documents/osp-wearable-fpga/test_arun/plltest.vhd":1544818287
+0 "/usr/local/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd" vhdl
+1 "/home/hari/Documents/osp-wearable-fpga/test_arun/test_togglepins.vhd" vhdl
+2 "/home/hari/Documents/osp-wearable-fpga/test_arun/fifotest.vhd" vhdl
+3 "/home/hari/Documents/osp-wearable-fpga/test_arun/plltest.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 2 3 
+2 0 
+3 0 
+
+# Dependency Lists (Users Of)
+0 3 2 
+1 -1
+2 1 
+3 1 
+
+# Design Unit to File Association
+arch work test_togglepins a 1
+module work test_togglepins 1
+config work structure_con 2
+arch work fifotest structure 2
+module work fifotest 2
+config work structure_con 3
+arch work plltest structure 3
+module work plltest 3

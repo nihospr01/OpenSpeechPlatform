@@ -1,0 +1,49 @@
+----------------------------------------------------------------------
+Report for cell test_togglepins.a
+
+Register bits: 27 of 54912 (0%)
+PIC Latch:       0
+I/O cells:       23
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        8       100.0
+                            EHXPLLJ        1       100.0
+                            FD1S3AX       20       100.0
+                            FD1S3IX        6       100.0
+                                GSR        1       100.0
+                                 IB       16       100.0
+                                INV        2       100.0
+                            L6MUX21        1       100.0
+                                 OB        7       100.0
+                           OFS1P3DX        1       100.0
+                           ORCALUT4       21       100.0
+                              PFUMX        3       100.0
+                                PUR        1       100.0
+                                VHI        3       100.0
+                                VLO        3       100.0
+                            fifo8kb       12       100.0
+SUB MODULES 
+                           fifotest        1       100.0
+                            plltest        1       100.0
+                            
+                         TOTAL           108           
+----------------------------------------------------------------------
+Report for cell plltest.netlist
+     Instance path:  pll1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLJ        1       100.0
+                                VHI        1        33.3
+                                VLO        1        33.3
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell fifotest.netlist
+     Instance path:  fifo
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                VHI        1        33.3
+                                VLO        1        33.3
+                            fifo8kb       12       100.0
+                            
+                         TOTAL            14           

@@ -1,0 +1,20 @@
+---------------------------------------------------
+Report for cell test_togglepins
+   Instance path: test_togglepins
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      26.00        100.0
+                                 IOLGC	       1.00        100.0
+                                  LUT4	      21.00        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	         10        100.0
+                                PFUREG	         35        100.0
+                                RIPPLE	         15        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               plltest	          1         0.0
+---------------------------------------------------
+Report for cell plltest
+   Instance path: test_togglepins/pll1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)

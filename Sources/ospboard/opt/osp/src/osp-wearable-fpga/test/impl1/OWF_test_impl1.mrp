@@ -1,0 +1,534 @@
+
+      Lattice Mapping Report File for Design Module 'OSP_Carrier_Basic'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA256 -s 5 -oc
+     Commercial OWF_test_impl1.ngd -o OWF_test_impl1_map.ncd -pr
+     OWF_test_impl1.prf -mp OWF_test_impl1.mrp -lpf /data/School/Resea
+     rch/THE_Lab/FPGA/OWF_test/impl1/OWF_test_impl1_synplify.lpf -lpf
+     /data/School/Research/THE_Lab/FPGA/OWF_test/OWF_test.lpf -c 0
+     -gui -msgset /data/School/Research/THE_Lab/FPGA/OWF_test/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA256
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  06/15/18  15:47:34
+
+Design Summary
+--------------
+
+   Number of registers:    196 out of  7485 (3%)
+      PFU registers:          189 out of  6864 (3%)
+      PIO registers:            7 out of   621 (1%)
+   Number of SLICEs:       113 out of  3432 (3%)
+      SLICEs as Logic/ROM:    113 out of  3432 (3%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:          5 out of  3432 (0%)
+   Number of LUT4s:        149 out of  6864 (2%)
+      Number used as logic LUTs:        139
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       10
+      Number used as shift registers:     0
+   Number of PIO sites used: 37 + 4(JTAG) out of 207 (20%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net hr_clk_0_0: 121 loads, 121 rising, 0 falling (Driver:
+     e_primary_pll/PLLInst_0 )
+
+                                    Page 1
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+Design Summary (cont)
+---------------------
+     Net codec_clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO codec_clk )
+   Number of Clock Enables:  22
+     Net lvdscounter_RNIJSM32[1]: 1 loads, 0 LSLICEs
+     Net sclk_ctr_RNIC02F1[0]: 5 loads, 4 LSLICEs
+     Net djb_got167_0_a2_0_RNIVNUN1: 1 loads, 0 LSLICEs
+     Net un2_divider: 30 loads, 30 LSLICEs
+     Net G_81: 9 loads, 9 LSLICEs
+     Net r_car_core/e_car_sequencer/djb_present_RNO_0: 1 loads, 1 LSLICEs
+     Net djb_got167_0_a2_0_RNIHQFK1: 1 loads, 0 LSLICEs
+     Net lvdscounter_RNIHD4G2[1]: 1 loads, 0 LSLICEs
+     Net r_car_core/e_i2s_dio/in_lvds_sr/buf_cnv_2[0]: 5 loads, 5 LSLICEs
+     Net r_car_core/e_i2s_dio/reg_cnv_1[0]: 8 loads, 8 LSLICEs
+     Net G_90: 4 loads, 4 LSLICEs
+     Net G_87: 5 loads, 4 LSLICEs
+     Net r_car_core/e_i2s_dio/reg_cnv_2[0]: 8 loads, 8 LSLICEs
+     Net r_car_core/e_i2s_dio/out_lvds_sr/buf_cnv_0[0]: 4 loads, 4 LSLICEs
+     Net r_car_core/e_i2s_dio/i2s_ws_0_sqmuxa_0_a2_RNIBM2F1: 1 loads, 1 LSLICEs
+     Net l_car_core/e_car_sequencer/djb_present_RNO: 1 loads, 1 LSLICEs
+     Net l_car_core/e_i2s_dio/in_lvds_sr/buf_cnv_1[0]: 5 loads, 5 LSLICEs
+     Net l_car_core/e_i2s_dio/reg_cnv[0]: 8 loads, 8 LSLICEs
+     Net sclk_ctr_RNIC02F1_0[0]: 5 loads, 4 LSLICEs
+     Net l_car_core/e_i2s_dio/reg_cnv_0[0]: 8 loads, 8 LSLICEs
+     Net l_car_core/e_i2s_dio/out_lvds_sr/buf_cnv[0]: 4 loads, 4 LSLICEs
+     Net l_car_core/e_i2s_dio/i2s_ws_0_sqmuxa_0_a2_RNI56JC1: 2 loads, 2 LSLICEs
+   Number of local set/reset loads for net db_reset_c merged into GSR:  196
+   Number of LSRs:  1
+     Net db_reset_c: 1 loads, 0 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net un2_divider: 34 loads
+     Net e_car_clock_gen.divider[0]: 16 loads
+     Net seq_reset: 16 loads
+     Net e_car_clock_gen.divider[1]: 15 loads
+     Net G_81: 15 loads
+     Net l_car_core/e_car_sequencer/lvdscounter[0]: 13 loads
+     Net r_car_core/e_car_sequencer/lvdscounter[0]: 13 loads
+     Net l_car_core/e_car_sequencer/lvdscounter_pipe_2_Q: 12 loads
+     Net r_car_core/e_car_sequencer/lvdscounter_pipe_2_Q_0: 12 loads
+     Net l_car_core/e_car_sequencer/lvdscounter_pipe_3_Q: 10 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'db_reset_c' to infer global GSR net.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+IO (PIO) Attributes (cont)
+--------------------------
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| l_lvds_io           | BIDIR     | BLVDS25E  | IN         |
++---------------------+-----------+-----------+------------+
+| db_leds[0]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_clk              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi3_cs3            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi3_cs0            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi3_miso           | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| spi3_mosi           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi3_clk            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi1_cs2            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi1_cs0            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi1_miso           | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| spi1_mosi           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| spi1_clk            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i2s2_d1             | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i2s2_d0             | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i2s2_ws             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i2s2_sck            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i2s1_d1             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i2s1_d0             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i2s1_ws             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i2s1_sck            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| xtal_in             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| xtal_out            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| codec_clk           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| r_lvds_io           | BIDIR     | BLVDS25E  | IN         |
++---------------------+-----------+-----------+------------+
+| db_leds[7]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_leds[6]          | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 3
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| db_leds[5]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_leds[4]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_leds[3]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_leds[2]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_leds[1]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_switches[3]      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_switches[2]      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_switches[1]      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_switches[0]      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| db_reset            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block e_primary_pll/VCC undriven or does not drive anything - clipped.
+Block l_car_core/GND undriven or does not drive anything - clipped.
+Block l_car_core/VCC undriven or does not drive anything - clipped.
+Block l_car_core/e_i2s_dio/GND undriven or does not drive anything - clipped.
+Block l_car_core/e_i2s_dio/VCC undriven or does not drive anything - clipped.
+Block l_car_core/e_i2s_dio/out_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_2/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_reg_2/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/out_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_reg_2/GND undriven or does not drive anything -
+     clipped.
+
+                                    Page 4
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+Removed logic (cont)
+--------------------
+Block l_car_core/e_i2s_dio/in_reg_2/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_i2s_dio/in_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_car_sequencer/VCC undriven or does not drive anything -
+     clipped.
+Block l_car_core/e_car_sequencer/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/GND undriven or does not drive anything - clipped.
+Block r_car_core/VCC undriven or does not drive anything - clipped.
+Block r_car_core/e_i2s_dio/GND undriven or does not drive anything - clipped.
+Block r_car_core/e_i2s_dio/VCC undriven or does not drive anything - clipped.
+Block r_car_core/e_i2s_dio/out_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_2/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_reg_2/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/out_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_i2s_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_i2s_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_reg_1/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_reg_1/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_reg_2/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_reg_2/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_lvds_sr/GND undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_i2s_dio/in_lvds_sr/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_car_sequencer/VCC undriven or does not drive anything -
+     clipped.
+Block r_car_core/e_car_sequencer/GND undriven or does not drive anything -
+     clipped.
+Signal e_primary_pll/GND undriven or does not drive anything - clipped.
+Signal e_car_clock_gen/GND undriven or does not drive anything - clipped.
+Signal e_primary_pll/CLKINTFB undriven or does not drive anything - clipped.
+Signal e_primary_pll/DPHSRC undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLACK undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO0 undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+Removed logic (cont)
+--------------------
+Signal e_primary_pll/PLLDATO1 undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO2 undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO3 undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO4 undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO5 undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO6 undriven or does not drive anything - clipped.
+Signal e_primary_pll/PLLDATO7 undriven or does not drive anything - clipped.
+Signal e_primary_pll/REFCLK undriven or does not drive anything - clipped.
+Signal e_primary_pll/INTLOCK undriven or does not drive anything - clipped.
+Signal e_primary_pll/LOCK undriven or does not drive anything - clipped.
+Signal e_primary_pll/CLKOS3 undriven or does not drive anything - clipped.
+Signal e_primary_pll/CLKOS2 undriven or does not drive anything - clipped.
+Signal e_primary_pll/CLKOS undriven or does not drive anything - clipped.
+Signal e_car_clock_gen/lvds_ctr_s_0_S1[7] undriven or does not drive anything -
+     clipped.
+Signal e_car_clock_gen/lvds_ctr_s_0_COUT[7] undriven or does not drive anything
+     - clipped.
+Signal e_car_clock_gen/lvds_ctr_cry_0_S0[0] undriven or does not drive anything
+     - clipped.
+Signal e_car_clock_gen/N_1 undriven or does not drive anything - clipped.
+Block e_primary_pll/GND was optimized away.
+Block e_car_clock_gen/GND was optimized away.
+
+Memory Usage
+------------
+
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                e_primary_pll/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      codec_clk_c
+  Output Clock(P):                         NODE     hr_clk_0_0
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     hr_clk_0_0
+  Reset Signal:                            PIN      db_reset_c
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+
+                                    Page 6
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+PLL/DLL Summary (cont)
+----------------------
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      12.2880
+  Output Clock(P) Frequency (MHz):                  196.6080
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    16
+  CLKOP Divider:                                    3
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+ASIC Components
+---------------
+
+Instance Name: e_primary_pll/PLLInst_0
+         Type: EHXPLLJ
+
+                                    Page 7
+
+
+
+
+Design:  OSP_Carrier_Basic                             Date:  06/15/18  15:47:34
+
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'db_reset_c' of the design has been inferred as Global
+        Set Reset (GSR). The reset signal used for GSR control is 'db_reset_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 196 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 8
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

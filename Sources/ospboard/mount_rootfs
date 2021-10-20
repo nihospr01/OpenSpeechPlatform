@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# uncompress rootfs if it is not there
+if [ ! -f /opt/osp/share/rootfs.img ]; then
+    docker run -v $PWD/opt:/opt --privileged -e OSP_FUNC=unCompress osp-builder 
+fi
+sudo chown $USER.$USER opt/osp/share/rootfs.img
+
+# Build OSP Sources
+e2fsck -fy ./opt/osp/share/rootfs.img   
+resize2fs ./opt/osp/share/rootfs.img 8G             
+e2fsck -fy ./opt/osp/share/rootfs.img   
+
+mkdir -p rootfs/dev/pts rootfs/sys rootfs/proc
+sudo mount -t ext4 -o rw,loop,auto opt/osp/share/rootfs.img rootfs
+sudo mount -t devpts devpts rootfs/dev/pts
+sudo mount -t sysfs sysfs rootfs/sys
+sudo mount -t proc proc  rootfs/proc
+
+printf "Filesystem mounted at rootfs\n"

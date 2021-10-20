@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "test_arun_impl1.log"
+-o "test_arun_impl1.csv"
+-pr "test_arun_impl1.prf"

@@ -1,0 +1,98 @@
+Loading design for application iotiming from file OWF_car_field_v6_fmexg_impl1.ncd.
+Design name: tl_car_field
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+Loading design for application iotiming from file OWF_car_field_v6_fmexg_impl1.ncd.
+Design name: tl_car_field
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA256
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Final          Version 37.4.
+// Design: tl_car_field
+// Package: CABGA256
+// ncd File: OWF_car_field_v6_fmexg_impl1.ncd
+// Version: Diamond (64-bit) 3.10.0.111.2
+// Written on Fri Nov 15 12:54:21 2019
+// M: Minimum Performance Grade
+// iotiming OWF_car_field_v6_fmexg_impl1.ncd OWF_car_field_v6_fmexg_impl1.prf -gui -msgset /home/hari/Documents/osp-wearable-fpga/car_field_v6_fmexg/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port           Clock      Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+fmexg_mic_sync ext_clk_in R     4.427      5      -0.939     M
+i2s1_d0        ext_clk_in R     0.398      M       0.578     M
+l_lvds_io      ext_clk_in R     5.389      5       0.970     5
+r_lvds_io      ext_clk_in R     6.145      5       0.970     5
+spi1_clk       ext_clk_in R     5.911      5      -1.328     M
+spi1_cs0       ext_clk_in R     5.996      5      -1.595     M
+spi1_cs2       ext_clk_in R     4.611      5      -1.251     M
+spi1_mosi      ext_clk_in R     5.248      5      -1.320     M
+spi3_clk       ext_clk_in R     7.125      5      -1.740     M
+spi3_cs0       ext_clk_in R     5.997      5      -1.589     M
+spi3_cs3       ext_clk_in R     5.885      5      -1.649     M
+spi3_mosi      ext_clk_in R     6.267      5      -1.659     M
+spi4_cs        spi4_clk   F     1.809      5       2.464     5
+volplus_mute   ext_clk_in R     0.757      5       3.871     5
+
+
+// Clock to Output Delay
+
+Port         Clock      Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+adc_clk      ext_clk_in R    12.848         5        4.326          M
+i2s1_sck     ext_clk_in R     9.311         5        3.088          M
+i2s1_ws      ext_clk_in R     9.687         5        3.197          M
+i2s2_d0      ext_clk_in R     6.696         5        2.338          M
+i2s2_d1      ext_clk_in R     6.696         5        2.338          M
+i2s2_sck     ext_clk_in R    10.033         5        3.312          M
+i2s2_ws      ext_clk_in R     9.311         5        3.088          M
+l_lvds_io    ext_clk_in R    10.626         5        2.861          M
+led4_muteout ext_clk_in R    13.122         5        5.144          M
+r_lvds_io    ext_clk_in R    10.626         5        2.915          M
+spi1_miso    ext_clk_in R     6.696         5        2.338          M
+spi3_miso    ext_clk_in R     6.696         5        2.338          M
+spi4_miso    spi4_clk   F    11.130         5        3.785          M
+test_l2      ext_clk_in R     9.042         5        3.237          M
+test_m1      ext_clk_in R     8.608         5        3.109          M
+test_m2      ext_clk_in R     8.659         5        3.120          M
+
+
+// Internal_Clock to Input
+
+Port           Internal_Clock       
+--------------------------------------------------------
+adc_data[0]    e_fmexg_core/clkdiv12
+adc_data[10]   e_fmexg_core/clkdiv12
+adc_data[11]   e_fmexg_core/clkdiv12
+adc_data[1]    e_fmexg_core/clkdiv12
+adc_data[2]    e_fmexg_core/clkdiv12
+adc_data[3]    e_fmexg_core/clkdiv12
+adc_data[4]    e_fmexg_core/clkdiv12
+adc_data[5]    e_fmexg_core/clkdiv12
+adc_data[6]    e_fmexg_core/clkdiv12
+adc_data[7]    e_fmexg_core/clkdiv12
+adc_data[8]    e_fmexg_core/clkdiv12
+adc_data[9]    e_fmexg_core/clkdiv12
+fmexg_mic_sync e_fmexg_core/clkdiv12
+
+
+// Internal_Clock to Output
+
+Port          Internal_Clock       
+--------------------------------------------------------
+adc_interrupt e_fmexg_core/clkdiv12
+WARNING: you must also run trce with hold speed: 5
+WARNING: you must also run trce with setup speed: M
